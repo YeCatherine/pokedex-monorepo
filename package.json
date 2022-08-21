@@ -6,7 +6,8 @@
     "lerna": "^4.0.0"
   },
   "scripts": {
-    "start": "lerna exec --scope @monorepo/app -- yarn start"
+    "start": "lerna exec --scope @monorepo/app -- yarn start",
+    "start:form": "lerna exec --scope @monorepo/form -- yarn start"
   },
   "workspaces": {
     "packages": [
