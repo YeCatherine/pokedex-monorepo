@@ -9,12 +9,15 @@
     "start": "concurrently \"yarn run start:pokemon:rest\" \"yarn run start:form\" \"yarn nx:graph\"",
     "start:form": "lerna exec --scope @monorepo/form -- yarn start",
     "start:form:storybook": "lerna exec --scope @monorepo/form -- yarn storybook",
-    "start:pokemon": "lerna exec --scope @monorepo/pokemon-rest -- yarn start",
-    "start:pokemon:rest": "lerna exec --scope @monorepo/pokemonrest -- yarn start",
+    "start:form:cyperss": "lerna exec --scope @monorepo/form -- yarn cy:test",
+    "start:pokemon": "lerna exec --scope @monorepo/pokemonrest -- yarn start",
     "start:storybook": "lerna exec --scope @monorepo/storybook -- yarn storybook",
     "format": "lerna run format",
     "test": "lerna run test",
-    "nx:graph": "nx graph"
+    "nx:graph": "nx graph",
+    "clean": "lerna clean",
+    "docs": "lerna run docs",
+    "build": "lerna run build --concurrency=5"
   },
   "workspaces": {
     "packages": [

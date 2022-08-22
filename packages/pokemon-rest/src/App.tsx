@@ -6,11 +6,8 @@ import { formSearchType } from '@/types';
 import { DEFAULT_SEARCH_PARAMS } from '@/constants';
 import { PageContext } from '@/context';
 import { PokemonList, PokemonMovePage, PokemonPage } from '@/components/05-Pages';
-
 import RandomPokemon from '@/components/02-Organisms/RandomPokemon/RandomPokemon';
 import CapturedPokemons from '@/components/03-Molecules/CapturedPokemons/CapturedPokemons';
-// import  from '@/components/05-Pages/PokemonPage';
-// import  from '@/components/05-Pages/PokemonMovePage';
 
 /**
  * Main App.
@@ -50,4 +47,5 @@ const App = () => {
     </ErrorBoundary>
   );
 };
+
 export default App;
