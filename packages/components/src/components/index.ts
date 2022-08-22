@@ -1,25 +1,6 @@
-import AppHeader from './03-Organisms/AppHeader';
-import Layout from './04-Templates/Layout/Layout';
-import DataLoading from './01-Atoms/Loaders/DataLoading/DataLoading';
-import ClearButton from './01-Atoms/Buttons/ClearButton/ClearButton';
-import Checkboxes from './03-Organisms/form/group/Checkboxes';
-import StatusCheckbox
-  from './02-Molecules/Form/Checkbox/StatusCheckbox/StatusCheckbox';
-import SearchBox from './01-Atoms/SearchBox/SearchBox';
-import Spinner from './01-Atoms/Loaders/Spinner';
-// ErrorBoundary.
-import ErrorBoundary from './05-Pages/ErrorBoundary/ErrorBoundary';
+export * from './01-Atoms';
+export * from './02-Molecules';
+export * from './03-Organisms';
+export * from './04-Templates';
+export * from './05-Pages';
 
-export {
-  AppHeader,
-  Layout,
-  DataLoading,
-  ClearButton,
-  StatusCheckbox,
-  Checkboxes,
-  SearchBox,
-  ErrorBoundary,
-  Spinner
-};
-
-export default Layout;

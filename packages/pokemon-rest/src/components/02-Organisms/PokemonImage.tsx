@@ -54,11 +54,5 @@ const PokemonImage: React.FC<IPokemonSimpleComponent> = (props) => {
       alt={pokemon.name}
     />);
 };
-// <ReactImageFallback
-//   src={pokemonImageURL}
-//   fallbackImage={pokemonFallbackImageURL}
-//   initialImage="loader.gif"
-//   alt={pokemon.name}
-//   className="pokemon-main-image"/>;
 
 export default PokemonImage;

@@ -7,6 +7,7 @@ import { Sidebar } from '@/components/04-Templates/Sidebar/Sidebar';
 import { Main } from '@/components/04-Templates/Main/Main';
 
 type SideBarType = JSX.Element | JSX.Element[] | undefined;
+
 /**
  * Lauout type
  */

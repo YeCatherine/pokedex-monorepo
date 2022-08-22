@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '@mui/material/Container';
-import { AppHeader } from '../../index';
+import { AppHeader } from '../../../components';
 
 interface LayoutProps {
   children: React.ReactNode;

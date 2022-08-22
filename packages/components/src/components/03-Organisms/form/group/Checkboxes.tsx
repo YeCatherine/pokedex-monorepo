@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box } from '@mui/material';
-import { StatusCheckbox } from '../../../index';
+import { StatusCheckbox } from '../../../../components';
 
 type CheckboxesProps = {
   state: { [key: string]: boolean };

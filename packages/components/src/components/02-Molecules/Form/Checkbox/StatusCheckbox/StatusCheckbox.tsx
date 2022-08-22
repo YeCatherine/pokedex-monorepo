@@ -7,6 +7,7 @@ type StatusCheckboxProps = {
   value: boolean;
   handleChange: (event: any) => void;
 };
+
 /**
  * Component - Status Checkbox
  * @param name Machine Name
@@ -14,7 +15,7 @@ type StatusCheckboxProps = {
  * @param handleChange
  * @constructor
  */
-export default function StatusCheckbox({
+export function StatusCheckbox({
   name,
   value,
   handleChange
@@ -34,3 +35,5 @@ export default function StatusCheckbox({
     />
   );
 }
+
+export default StatusCheckbox;

@@ -8,12 +8,13 @@ type ErrorStateProps = {
   error?: Error;
   errorInfo?: ErrorInfo;
 };
+
 /**
  * Error boundary Component.
  *
  * Has collapsible component with error.
  */
-export default class ErrorBoundary extends React.Component<{}, { hasError: boolean }> {
+export class ErrorBoundary extends React.Component<{}, { hasError: boolean }> {
   constructor(props: {}) {
     super(props);
     this.state = {
@@ -67,3 +68,5 @@ export default class ErrorBoundary extends React.Component<{}, { hasError: boole
     return this.props.children;
   }
 }
+
+export default ErrorBoundary;

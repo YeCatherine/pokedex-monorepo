@@ -1,4 +1,2 @@
-import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
-
-export { ErrorBoundary };
-export default ErrorBoundary;
+export * from './ErrorBoundary/ErrorBoundary';
+export * from './Page404/Page404';
