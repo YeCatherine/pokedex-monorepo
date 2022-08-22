@@ -1,12 +1,27 @@
-const path = require('path')
+const path = require("path");
+const { getLoader, loaderByName } = require("@craco/craco");
 
-const cracoDefaultConfig = require(
-  path.join(__dirname, '../components', 'craco.config.js'))
+const packages = [];
+packages.push(path.join(__dirname, "../components"));
 
-cracoDefaultConfig.webpack = {
-  alias: {
-    '@': path.resolve(__dirname, 'src')
-  }
-}
+module.exports = {
+  webpack: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    },
+    configure: (webpackConfig, arg) => {
+      const { isFound, match } = getLoader(
+        webpackConfig,
+        loaderByName("babel-loader")
+      );
+      if (isFound) {
+        const include = Array.isArray(match.loader.include)
+          ? match.loader.include
+          : [match.loader.include];
 
-module.exports = cracoDefaultConfig
+        match.loader.include = include.concat(packages);
+      }
+      return webpackConfig;
+    },
+  },
+};
