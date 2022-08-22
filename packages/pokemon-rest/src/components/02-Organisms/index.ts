@@ -1,4 +1,4 @@
 export * from './EvolutionChain/EvolutionChain';
-export * from './PokemonImage';
-export * from './PokemonCard';
-export * from './NotCapturedPokemon';
+export * from './PokemonImage/PokemonImage';
+export * from './PokemonCard/PokemonCard';
+export * from './RandomPokemon/RandomPokemon';

@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { Spinner } from '@monorepo/components';
+import { SearchBox, Spinner } from '@monorepo/components';
 import { pokemonListService } from '@/services';
 import IPokemonData from '@/types/IPokemonData';
-import PokemonCard from '../02-Organisms/PokemonCard';
-import { SearchBox } from '../01-Atoms/Form/SearchBox/SearchBox';
+import PokemonCard from '../02-Organisms/PokemonCard/PokemonCard';
 import Grid from '@mui/material/Grid';
 import useLocalStorage from '@/hooks/useLocalStorage';
 import { getIdFromURL } from '@/services/Common';
 import Box from '@mui/material/Box';
-import { Card } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
+// import { LanguageSwitcher } from '../01-Atoms/Form/LanguageSwitcher/LanguageSwitcher';
 
 enum SortDirection {
   SortIDAsc = 'SortIDAsc',
@@ -33,7 +32,7 @@ const Item = styled(Paper)(({ theme }) => ({
  *
  * @constructor The functional component of PokemonList.
  */
-const PokemonList: React.FC = (props) => {
+export const PokemonList: React.FC = (props) => {
   const [pokemons, setPokemons] = useLocalStorage<Array<IPokemonData>>(
     'pokemonsList', []);
   const [searchPokemon, setSearchPokemon] = useState<string>('');
@@ -138,6 +137,7 @@ const PokemonList: React.FC = (props) => {
 
   return (
     <>
+      {/*<LanguageSwitcher/>*/}
       <SearchBox placeholder="Pokemon name"
                  handleSearch={handleSearch}/>
       <select onChange={handleSortChange}>
@@ -163,9 +163,6 @@ const PokemonList: React.FC = (props) => {
       </select>
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={3}>
-
-          {/*<div*/}
-          {/*  className="list-group d-flex flex-wrap flex-row  align-content-between lazy-test">*/}
           {pokemons.filter(filterPokemon)
             .sort(sortingLogic)
             .map((pokemon, index) =>

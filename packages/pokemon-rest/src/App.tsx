@@ -5,11 +5,18 @@ import Layout from '@/components/04-Templates/Layout/Layout';
 import { formSearchType } from '@/types';
 import { DEFAULT_SEARCH_PARAMS } from '@/constants';
 import { PageContext } from '@/context';
-import PokemonList from '@/components/05-Pages/PokemonList';
-import NotCapturedPokemon from '@/components/02-Organisms/NotCapturedPokemon';
-import CapturedPokemons from '@/components/03-Molecules/CapturedPokemons/CapturedPokemons';
-import PokemonPage from '@/components/05-Pages/PokemonPage';
-import PokemonMovePage from '@/components/05-Pages/PokemonMovePage';
+import {
+  PokemonList,
+  PokemonMovePage,
+  PokemonPage
+} from '@/components/05-Pages';
+
+import RandomPokemon
+  from '@/components/02-Organisms/RandomPokemon/RandomPokemon';
+import CapturedPokemons
+  from '@/components/03-Molecules/CapturedPokemons/CapturedPokemons';
+// import  from '@/components/05-Pages/PokemonPage';
+// import  from '@/components/05-Pages/PokemonMovePage';
 
 /**
  * Main App.
@@ -23,7 +30,7 @@ const App = () => {
 
     const SidebarContent = () => (
       <>
-        <NotCapturedPokemon/>
+        <RandomPokemon/>
         <hr/>
         <CapturedPokemons/>
       </>

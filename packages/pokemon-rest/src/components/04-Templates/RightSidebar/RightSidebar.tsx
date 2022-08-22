@@ -1,12 +1,12 @@
 import React from 'react';
-import NotCapturedPokemon from '../../02-Organisms/NotCapturedPokemon';
+import RandomPokemon from '../../02-Organisms/RandomPokemon/RandomPokemon';
 import CapturedPokemons
   from '../../03-Molecules/CapturedPokemons/CapturedPokemons';
 
 const RightSidebar: React.FC = () => {
   return (
     <>
-      <NotCapturedPokemon/>
+      <RandomPokemon/>
       <hr/>
       <CapturedPokemons/>
     </>

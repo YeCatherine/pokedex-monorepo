@@ -73,9 +73,9 @@
   "scripts": {
     "seed-db": "node src/server/initDb",
     "server": "json-server --watch --port 4002 src/server/db.json",
-    "start": "npm run seed-db && concurrently \"npm run server\" \"PORT=3002 craco start\"",
-    "start:prod": "concurrently --kill-others \"npm run server\" \"npx serve build -l 3002\"",
-    "start:all": "npm run seed-db && concurrently \"npm run server\" \"PORT=3002 craco start\" \"npm run cy:open\" \"npm run storybook\"",
+    "start": "npm run seed-db && concurrently \"npm run server\" \"PORT=3005 craco start\"",
+    "start:prod": "concurrently --kill-others \"npm run server\" \"npx serve build -l 3005\"",
+    "start:all": "npm run seed-db && concurrently \"npm run server\" \"PORT=3005 craco start\" \"npm run cy:open\" \"npm run storybook\"",
     "build": "craco build",
     "test": "craco test --collect-coverage",
     "cy:run": "cypress run",

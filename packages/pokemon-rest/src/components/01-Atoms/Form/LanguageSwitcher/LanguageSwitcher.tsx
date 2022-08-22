@@ -7,7 +7,7 @@ import { useGlobalContext } from '@/context/Context';
  * @param props
  * @constructor The functional component for switching languages.
  */
-const LanguageSwitcher: React.FC<{ className?: string }> = ({ className = '' }) => {
+export const LanguageSwitcher: React.FC<{ className?: string }> = ({ className = '' }) => {
   const [currentLanguage, setCurrentLanguage] = useState<string>('en');
   const [languageList, setLanguageList] = useState<Array<string>>([]);
   const { setLanguage } = useGlobalContext();

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { pokemonListService } from '@/services';
 import usePokemonCapture from '@/hooks/usePokemonCapture';
 import IPokemonData from '@/types/IPokemonData';
-import PokemonCard from './PokemonCard';
+import PokemonCard from '../PokemonCard/PokemonCard';
 import { Spinner } from '@monorepo/components';
 
 /**
@@ -10,7 +10,7 @@ import { Spinner } from '@monorepo/components';
  * @param props Captured pokemon.
  * @constructor of NotCapturedPokemon.
  */
-const NotCapturedPokemon: React.FC = (props) => {
+const RandomPokemon: React.FC = (props) => {
   const [pokemons, setPokemons] = useState<Array<IPokemonData>>([]);
   const { capturedPokemons } = usePokemonCapture();
   const [randomPokemon, setRandomPokemon] = useState<IPokemonData>();
@@ -66,4 +66,4 @@ const NotCapturedPokemon: React.FC = (props) => {
   );
 };
 
-export default NotCapturedPokemon;
+export default RandomPokemon;

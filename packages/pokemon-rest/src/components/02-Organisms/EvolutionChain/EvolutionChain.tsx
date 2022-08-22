@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import IPokemonData from '@/types/IPokemonData';
 import { getIdFromURL } from '@/services/Common';
 import { pokemonListService } from '@/services';
-import PokemonCard from '../PokemonCard';
+import PokemonCard from '../PokemonCard/PokemonCard';
 import List from '@mui/material/List';
 import ListItemText from '@mui/material/ListItemText';
 

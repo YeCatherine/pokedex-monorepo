@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import EvolutionChain from '../02-Organisms/EvolutionChain/EvolutionChain';
 import { useGlobalContext } from '@/context/Context';
-import PokemonCard from '../02-Organisms/PokemonCard';
+import PokemonCard from '../02-Organisms/PokemonCard/PokemonCard';
 import { Spinner } from '@monorepo/components';
 
 /**
@@ -16,7 +16,7 @@ import { Spinner } from '@monorepo/components';
  * @param props The pokemon.
  * @constructor Functional component of pokemon page.
  */
-const PokemonPage: React.FC = (props) => {
+export const PokemonPage: React.FC = (props) => {
   const params = useParams<any>();
   const [pokemon, setPokemon] = useState<IPokemonData>();
   const [pokemonSpecies, setPokemonSpecies] = useState<IPokemonData>();
@@ -55,7 +55,7 @@ const PokemonPage: React.FC = (props) => {
       <Container>
         <Box className={'row'}>
           <Box className="pokemon">
-            <h1>{`My name is "${name}"`}</h1>
+            <h1>{`My name is "${pokemon.name}"`}</h1>
             <PokemonCard pokemon={pokemon}/>
           </Box>
           <Box className="card card-header text-dark text-center">

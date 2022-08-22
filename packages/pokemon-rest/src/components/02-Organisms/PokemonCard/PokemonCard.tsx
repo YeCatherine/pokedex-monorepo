@@ -5,8 +5,8 @@ import Typography from '@mui/material/Typography';
 import { Box, CardActionArea } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { Spinner } from '@monorepo/components';
-import PokemonImage from './PokemonImage';
-import CaptureButton from '../01-Atoms/Form/CaptureButton/CaptureButton';
+import PokemonImage from '../PokemonImage/PokemonImage';
+import CaptureButton from '../../01-Atoms/Form/CaptureButton/CaptureButton';
 import IPokemonSimpleComponent from '@/types/IPokemonSimpleComponent';
 
 /**
@@ -16,7 +16,7 @@ import IPokemonSimpleComponent from '@/types/IPokemonSimpleComponent';
  *
  * @constructor the functional component for pokemon card.
  */
-const PokemonCard: React.FC<IPokemonSimpleComponent> = (props) => {
+export const PokemonCard: React.FC<IPokemonSimpleComponent> = (props) => {
   const { pokemon } = props;
 
   if (!pokemon) {

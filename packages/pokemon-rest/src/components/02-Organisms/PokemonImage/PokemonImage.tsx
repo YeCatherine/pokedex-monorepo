@@ -5,7 +5,7 @@ import IPokemonSimpleComponent from '@/types/IPokemonSimpleComponent';
 import CardMedia from '@mui/material/CardMedia';
 
 /**
- * Gets the image of the pokemon.
+ * Gets the image of the pokemon from services.
  * @param props
  * @constructor The functional component for PokemonImage.
  */

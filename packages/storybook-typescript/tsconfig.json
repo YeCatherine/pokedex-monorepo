@@ -24,7 +24,6 @@
     "experimentalDecorators": true
   },
   "include": [
-    "src",
     ".storybook/*"
   ]
 }

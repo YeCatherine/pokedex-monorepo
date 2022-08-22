@@ -5,14 +5,14 @@ import { pokemonListService } from '@/services';
 
 import { List as Ul, ListItemText as Li } from '@mui/material';
 import Container from '@mui/material/Container';
-import PokemonCard from '../02-Organisms/PokemonCard';
+import PokemonCard from '../02-Organisms/PokemonCard/PokemonCard';
 
 /**
  * Functional component for pokemon move page.
  * @param props Pokemon move name.
  * @constructor The functional component for pokemon move page.
  */
-const PokemonMovePage: React.FC = (props) => {
+export const PokemonMovePage: React.FC = (props) => {
   const params = useParams<any>();
   const [move, setMove] = useState<IPokemonData>();
 

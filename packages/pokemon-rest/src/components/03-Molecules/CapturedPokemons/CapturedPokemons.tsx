@@ -1,5 +1,5 @@
 import React from 'react';
-import PokemonCard from '../../02-Organisms/PokemonCard';
+import PokemonCard from '../../02-Organisms/PokemonCard/PokemonCard';
 import usePokemonCapture from '../../../hooks/usePokemonCapture';
 
 /**
