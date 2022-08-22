@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import { formSearchType, iProgramGrid } from '@/types';
 import { DataLoading } from '@monorepo/components';
-import { prepareProductsData, prepareUrlLink } from '@monorepo/components/src/services';
+import {
+  prepareProductsData
+} from '@monorepo/components/src/services';
+import prepareUrlLink from '@/services/prepareUrlLink';
 import { useDebounce } from '@/hooks/useDebounce/useDebounce';
 
 /**
@@ -12,8 +15,12 @@ import { useDebounce } from '@/hooks/useDebounce/useDebounce';
  *
  * @constructor
  */
+// type formStateProps = {
+//   [key: string]: string
+// }
 const ProgramsTable = ({ formState }) => {
-  const [preparedProducts, setPreparedProducts] = useState<iProgramGrid | null>({ status: false });
+  const [preparedProducts, setPreparedProducts] = useState<iProgramGrid | null>(
+    { status: false });
   const debouncedFormState = useDebounce<formSearchType>(formState, 500);
 
   useEffect(() => {
@@ -30,14 +37,14 @@ const ProgramsTable = ({ formState }) => {
   }, [debouncedFormState]);
 
   if (!preparedProducts.status) {
-    return <DataLoading />;
+    return <DataLoading/>;
   }
 
   return (
     <div
       style={{
         width: '100%',
-        margin: '0 auto',
+        margin: '0 auto'
       }}
     >
       <div style={{ display: 'flex', height: '100%' }}>

@@ -4,6 +4,9 @@
  * @module
  * @param formState
  */
+// type formStateProps = {
+//   [key: string]: string
+// }
 export default function prepareUrlLink(formState) {
   const preparedURL = new URL(`${process.env.REACT_APP_API_URL}/programs`);
 

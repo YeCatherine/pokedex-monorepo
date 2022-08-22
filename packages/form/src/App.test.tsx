@@ -7,10 +7,5 @@ describe('Check that App rendered', () => {
     const wrapper = render(<App />);
     const linkElement = screen.getByText(/Test/i);
     expect(linkElement).toBeInTheDocument();
-
-    // const SearchElement = screen.getByPlaceholderText('/Search By Name/i');
-    // expect(SearchElement).toBeInTheDocument();
-    // const linkElement2 = screen.findByLabelText(/Search By Name/i);
-    // expect(linkElement2).not.toBeEmpty()
   });
 });

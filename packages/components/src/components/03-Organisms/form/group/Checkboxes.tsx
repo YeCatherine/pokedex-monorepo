@@ -1,10 +1,9 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import { StatusCheckbox } from '../../../index';
-import { searchStatusType } from '@/types';
 
 type CheckboxesProps = {
-  state: searchStatusType;
+  state: { [key: string]: boolean };
   handleChange: (event: any) => void;
 };
 
@@ -16,11 +15,12 @@ export const Checkboxes = ({ state, handleChange }: CheckboxesProps) => {
         flex: 1,
         display: 'flex',
         alignContent: 'center',
-        justifyContent: 'flex-end',
+        justifyContent: 'flex-end'
       }}
     >
       {Object.entries(state).map(([name, value]) => (
-        <StatusCheckbox key={name} name={name} value={value} handleChange={handleChange} />
+        <StatusCheckbox key={name} name={name} value={value}
+                        handleChange={handleChange}/>
       ))}
     </Box>
   );
