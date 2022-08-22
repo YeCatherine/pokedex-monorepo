@@ -37,3 +37,8 @@ export type Context = {
   formState: formSearchType[];
   setFormState: React.Dispatch<React.SetStateAction<formSearchType[]>>;
 };
+
+export * from './ICaptureButton';
+export * from './iGeneralPokemonDataItem';
+export * from './IPokemonData';
+export * from './IPokemonSimpleComponent';

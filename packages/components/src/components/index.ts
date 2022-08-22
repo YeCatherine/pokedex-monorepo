@@ -6,6 +6,7 @@ import Checkboxes from './03-Organisms/form/group/Checkboxes';
 import StatusCheckbox
   from './02-Molecules/Form/Checkbox/StatusCheckbox/StatusCheckbox';
 import SearchBox from './01-Atoms/SearchBox/SearchBox';
+import Spinner from './01-Atoms/Loaders/Spinner';
 // ErrorBoundary.
 import ErrorBoundary from './05-Pages/ErrorBoundary/ErrorBoundary';
 
@@ -17,7 +18,8 @@ export {
   StatusCheckbox,
   Checkboxes,
   SearchBox,
-  ErrorBoundary
+  ErrorBoundary,
+  Spinner
 };
 
 export default Layout;

@@ -1,4 +1,4 @@
-import { createContext, useContext } from 'react';
+import React, { createContext, useContext } from 'react';
 
 /**
  * The global content type.
@@ -7,6 +7,7 @@ export type GlobalContent = {
   language: string
   setLanguage: (c: string) => void
 }
+
 export const DEFAULT_LANGUAGE = 'en';
 /**
  * The application Language.

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import RightSidebar from './components/04-Templates/RightSidebar/RightSidebar';
+import RightSidebar from './RightSidebar';
 
 describe('Find element by text', () => {
   it('Check for component "Captured"', () => {
