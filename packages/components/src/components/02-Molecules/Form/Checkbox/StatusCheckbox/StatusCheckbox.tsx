@@ -1,6 +1,6 @@
 import { Checkbox, FormControlLabel } from '@mui/material';
 import React from 'react';
-import toTitleCase from '@/services/toTitleCase';
+import toTitleCase from '../../../../../services/toTitleCase';
 
 type StatusCheckboxProps = {
   name: string;

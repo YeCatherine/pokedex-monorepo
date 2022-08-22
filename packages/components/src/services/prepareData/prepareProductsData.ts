@@ -1,5 +1,5 @@
 import getSymbolFromCurrency from 'currency-symbol-map';
-import { toTitleCase } from '@/services';
+import { toTitleCase } from '../../services';
 
 /**
  * Preparing data for Grid Table.

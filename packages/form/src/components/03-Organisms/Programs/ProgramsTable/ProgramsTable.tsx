@@ -4,7 +4,7 @@ import { PageContext } from '@/context';
 import { iProgramGrid } from '@/types';
 import { DataLoading } from '@monorepo/components';
 import { FETCH_SUCCESS_STATUS } from '@/constants';
-import { prepareProductsData } from '@/services';
+import { prepareProductsData } from '@monorepo/components/src/services';
 import { usePrograms } from '@/hooks/usePrograms';
 
 const ProgramsTable = () => {
