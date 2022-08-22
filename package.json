@@ -10,6 +10,7 @@
     "start:form": "lerna exec --scope @monorepo/form -- yarn start",
     "start:form:storybook": "lerna exec --scope @monorepo/form -- yarn storybook",
     "start:pokemon": "lerna exec --scope @monorepo/pokemon-rest -- yarn start",
+    "start:pokemon:rest": "lerna exec --scope @monorepo/pokemonrest -- yarn start",
     "start:storybook": "lerna exec --scope @monorepo/storybook -- yarn storybook",
     "test": "lerna run test",
     "nx:graph": "nx graph"

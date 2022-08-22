@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 
-type SetValue<T> = Dispatch<SetStateAction<T>>
+type SetValue<T> = Dispatch<SetStateAction<T>>;
 
 /**
  * The useLocalStorage declaration.

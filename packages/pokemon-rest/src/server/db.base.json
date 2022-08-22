@@ -1,0 +1,58 @@
+{
+  "programs": [
+    {
+      "id": 1,
+      "name": "DIA",
+      "return_percentage": "5%",
+      "threshold": 1200,
+      "currency": "EUR",
+      "status": "ACTIVE",
+      "pause_at": null
+    },
+    {
+      "id": 2,
+      "name": "Estrella Galicia",
+      "return_percentage": "10%",
+      "threshold": 1000,
+      "currency": "EUR",
+      "status": "ACTIVE",
+      "pause_at": null
+    },
+    {
+      "id": 3,
+      "name": "Galp",
+      "return_percentage": "3%",
+      "threshold": 300,
+      "currency": "EUR",
+      "status": "ACTIVE",
+      "pause_at": null
+    },
+    {
+      "id": 4,
+      "name": "Havaianas",
+      "return_percentage": "20%",
+      "threshold": 1000,
+      "currency": "EUR",
+      "status": "ACTIVE",
+      "pause_at": null
+    },
+    {
+      "id": 5,
+      "name": "McDonalds",
+      "return_percentage": "10%",
+      "threshold": 1000,
+      "currency": "EUR",
+      "status": "PAUSED",
+      "pause_at": "2022-06-01T16:41:49.427617Z"
+    },
+    {
+      "id": 6,
+      "name": "Naturitas",
+      "return_percentage": "10%",
+      "threshold": 1000,
+      "currency": "EUR",
+      "status": "PAUSE_SCHEDULED",
+      "pause_at": "2022-11-05T16:30:49.427617Z"
+    }
+  ]
+}
