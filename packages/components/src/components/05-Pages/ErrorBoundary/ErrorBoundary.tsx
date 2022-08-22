@@ -20,11 +20,11 @@ export default class ErrorBoundary extends React.Component<{}, { hasError: boole
       hasError: false,
       error: {
         name: '',
-        message: '',
+        message: ''
       },
       errorInfo: {
-        componentStack: '',
-      },
+        componentStack: ''
+      }
     } as ErrorStateProps;
   }
 
@@ -38,7 +38,7 @@ export default class ErrorBoundary extends React.Component<{}, { hasError: boole
     this.setState({
       ...this.state,
       error,
-      errorInfo,
+      errorInfo
     });
   }
 
@@ -51,11 +51,11 @@ export default class ErrorBoundary extends React.Component<{}, { hasError: boole
             <Box sx={{ p: 2, display: 'flex' }}>
               <h2>Something went wrong.</h2>
             </Box>
-            <Divider />
+            <Divider/>
             <Box>
               <details style={{ whiteSpace: 'pre-wrap' }}>
                 {this.state.error && this.state.error.toString()}
-                <br />
+                <br/>
                 {this.state.errorInfo.componentStack}
               </details>
             </Box>

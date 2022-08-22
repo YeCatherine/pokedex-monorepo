@@ -1,2 +1,2 @@
-export * from './useLocalStorage'
-export * from './usePokemonCapture'
+export * from './useLocalStorage';
+export * from './usePokemonCapture';

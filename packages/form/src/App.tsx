@@ -12,13 +12,14 @@ import { PageContext } from '@/context';
  * @constructor
  */
 const App = () => {
-  const [formState, setFormState] = useState<formSearchType>(DEFAULT_SEARCH_PARAMS);
+  const [formState, setFormState] = useState<formSearchType>(
+    DEFAULT_SEARCH_PARAMS);
 
   return (
     <ErrorBoundary>
       <PageContext.Provider value={{ formState, setFormState }}>
         <Layout>
-          <ProgramsPage />
+          <ProgramsPage/>
         </Layout>
       </PageContext.Provider>
     </ErrorBoundary>

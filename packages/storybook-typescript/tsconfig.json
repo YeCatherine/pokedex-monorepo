@@ -1,7 +1,12 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext", "jest"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext",
+      "jest"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -16,7 +21,10 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": ".",
-    "experimentalDecorators": true,
+    "experimentalDecorators": true
   },
-  "include": ["src", ".storybook/*"]
+  "include": [
+    "src",
+    ".storybook/*"
+  ]
 }

@@ -3,6 +3,6 @@ import ProgramsTable from './03-Organisms/Programs/ProgramsTable/ProgramsTable';
 
 export {
   ProgramSearch,
-  ProgramsTable,
+  ProgramsTable
 };
 

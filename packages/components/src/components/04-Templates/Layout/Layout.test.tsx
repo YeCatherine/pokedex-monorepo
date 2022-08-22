@@ -7,7 +7,7 @@ describe('Check that component loaded properly', () => {
     render(
       <Layout>
         <h1>Hello World</h1>
-      </Layout>,
+      </Layout>
     );
     const linkElement = screen.getByText(/Hello World/i);
     expect(linkElement).toBeInTheDocument();

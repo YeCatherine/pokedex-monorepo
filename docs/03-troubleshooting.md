@@ -12,7 +12,8 @@
 
 ## Motivation
 
-The goal of this section is to remove possible issues that could be faced by developers.
+The goal of this section is to remove possible issues that could be faced by
+developers.
 
 ### Husky and Source Tree pre-commit issues
 
@@ -31,8 +32,7 @@ add in th end
 echo "export PATH="$(dirname $(which node)):$PATH"" > ~/.huskyrc
 ```
 
-- step 2.
-  create `~/.huskyrc`
+- step 2. create `~/.huskyrc`
   This loads nvm.sh and sets the correct PATH before running hook
 
 ```

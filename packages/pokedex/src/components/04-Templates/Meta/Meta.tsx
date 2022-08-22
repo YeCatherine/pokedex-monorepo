@@ -1,11 +1,11 @@
-import {Helmet} from "react-helmet";
+import { Helmet } from 'react-helmet';
 
-const Meta = ({title}) => {
-    return (
-        <Helmet>
-            <title>{title}</title>
-        </Helmet>
-    )
-}
+const Meta = ({ title }) => {
+  return (
+    <Helmet>
+      <title>{title}</title>
+    </Helmet>
+  );
+};
 
 export default Meta;

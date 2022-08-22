@@ -11,7 +11,7 @@ const AppHeader = () => {
       elevation={0}
       sx={{
         position: 'relative',
-        borderBottom: (t) => `1px solid ${t.palette.divider}`,
+        borderBottom: (t) => `1px solid ${t.palette.divider}`
       }}
     >
       <Toolbar>

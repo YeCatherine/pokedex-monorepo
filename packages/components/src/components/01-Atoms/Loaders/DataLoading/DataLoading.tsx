@@ -5,7 +5,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 export default function DataLoading() {
   return (
     <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-      <CircularProgress aria-label="Data loading" />
+      <CircularProgress aria-label="Data loading"/>
     </Box>
   );
 }

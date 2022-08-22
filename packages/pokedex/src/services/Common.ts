@@ -6,7 +6,9 @@
  * @return {number} id of content item.
  */
 export const getIdFromURL = (url: string): number | undefined => {
-    if (!url || typeof url === "undefined") return undefined;
-    const urlParts = url.split("/");
-    return Number(urlParts[urlParts.length - 2]);
+  if (!url || typeof url === 'undefined') {
+    return undefined;
+  }
+  const urlParts = url.split('/');
+  return Number(urlParts[urlParts.length - 2]);
 }

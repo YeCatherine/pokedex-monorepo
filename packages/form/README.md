@@ -35,5 +35,6 @@
 - [ ] Proposals and recommendations for future
   - [ ] Add Progressive Web Application support (Workbox)
   - [ ] Change JSON-SERVER to Mirage.js with content generator
-  - [ ] `yarn run exect`.Refactor start script . move to web pack (as development standard)
+  - [ ] `yarn run exect`.Refactor start script . move to web pack (as
+    development standard)
   - [ ] export vscode configs extensions and settings

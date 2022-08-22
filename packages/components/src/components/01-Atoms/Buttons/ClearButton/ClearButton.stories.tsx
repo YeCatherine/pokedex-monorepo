@@ -5,11 +5,11 @@ import ClearButton from './ClearButton';
 
 export default {
   title: 'Atom/Button/ClearButton',
-  component: ClearButton,
+  component: ClearButton
 } as ComponentMeta<typeof ClearButton>;
 
 const Template: ComponentStory<typeof ClearButton> = ({ onClick }) => (
-  <ClearButton onClick={onClick} />
+  <ClearButton onClick={onClick}/>
 );
 
 export const Default = Template.bind({});
@@ -17,5 +17,5 @@ export const Default = Template.bind({});
 Default.args = {
   onClick: () => {
     console.log('click');
-  },
+  }
 };

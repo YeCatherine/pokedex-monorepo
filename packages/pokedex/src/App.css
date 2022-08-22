@@ -35,27 +35,27 @@ input.p-2.flex-grow-1 {
 }
 
 .pokemon-id {
+    font-size: 14px;
     font-weight: bold;
     color: #000;
-    font-size: 14px;
 
 }
 
 /* horizontal and vertival align*/
 .pokemon-name {
     font-size: 1.25rem;
-    text-align: center;
-    text-transform: capitalize;
-    text-decoration: none;
-    color: #000;
-    height: 70px;
     line-height: 70px;
+    height: 70px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #000;
 }
 
 .pokemon-name span {
+    line-height: normal;
     display: inline-block;
     vertical-align: middle;
-    line-height: normal;
 }
 
 .pokemon-name:hover, .pokemon-name:active {
@@ -84,8 +84,8 @@ input.p-2.flex-grow-1 {
 }
 
 .pokemon-moves a {
-    text-decoration: none;
     font-weight: bold;
+    text-decoration: none;
     color: #000;
 }
 

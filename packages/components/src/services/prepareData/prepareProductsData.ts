@@ -28,7 +28,7 @@ const prepareProductsData = (programs: any[]) => {
       { field: 'return_percentage', headerName: 'Cashback', width: 150 },
       { field: 'threshold', headerName: 'Threshold', width: 150 },
       { field: 'status', headerName: 'Status', width: 150 },
-      { field: 'pause_at', headerName: 'Pause Date', width: 150 },
+      { field: 'pause_at', headerName: 'Pause Date', width: 150 }
     ],
     rows: programs.map((item) => {
       const preparedItem = item;
@@ -37,7 +37,8 @@ const prepareProductsData = (programs: any[]) => {
       if (preparedItem.pause_at !== null) {
         const date = moment(item.pause_at);
         preparedItem.pause_at = date.format('YYYY/MM/DD');
-      } else {
+      }
+      else {
         preparedItem.pause_at = '-';
       }
 
@@ -45,7 +46,8 @@ const prepareProductsData = (programs: any[]) => {
       const preparedThreshold = (Number(item.threshold) / 100).toFixed(2);
 
       // Prepare the currency symbol.
-      preparedItem.threshold = `${preparedThreshold} ${getSymbolFromCurrency(item.currency)}`;
+      preparedItem.threshold = `${preparedThreshold} ${getSymbolFromCurrency(
+        item.currency)}`;
 
       // Prepare the format of the status.
       preparedItem.status = toTitleCase(item.status.replace('_', ' '));
@@ -53,7 +55,7 @@ const prepareProductsData = (programs: any[]) => {
       return preparedItem;
     }),
 
-    status: true,
+    status: true
   };
 };
 

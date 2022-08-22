@@ -1,8 +1,8 @@
-const path = require("path");
-const { getLoader, loaderByName } = require("@craco/craco");
+const path = require('path')
+const { getLoader, loaderByName } = require('@craco/craco')
 
-const packages = [];
-packages.push(path.join(__dirname, "../components"));
+const packages = []
+packages.push(path.join(__dirname, '../components'))
 const { pathsToModuleNameMapper } = require('ts-jest')
 const { compilerOptions } = require('./tsconfig.json')
 
@@ -14,17 +14,17 @@ module.exports = {
     configure: (webpackConfig, arg) => {
       const { isFound, match } = getLoader(
         webpackConfig,
-        loaderByName("babel-loader")
-      );
+        loaderByName('babel-loader')
+      )
       if (isFound) {
         const include = Array.isArray(match.loader.include)
           ? match.loader.include
-          : [match.loader.include];
+          : [match.loader.include]
 
-        match.loader.include = include.concat(packages);
+        match.loader.include = include.concat(packages)
       }
-      return webpackConfig;
-    },
+      return webpackConfig
+    }
   },
   jest: {
     configure: {
