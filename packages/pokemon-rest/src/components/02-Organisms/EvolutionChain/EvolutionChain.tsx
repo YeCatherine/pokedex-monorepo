@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import IPokemonData from '@/types/IPokemonData';
 import { getIdFromURL } from '@/services/Common';
-import PokemonListService from '@/services/pokemonListService';
+import { pokemonListService } from '@/services';
 import PokemonCard from '../PokemonCard';
-import { ListGroup as Ul, ListGroupItem as Li } from 'react-bootstrap';
 import List from '@mui/material/List';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+
 /**
  * Item of chain evolution sequence.
  */
@@ -38,7 +36,7 @@ const EvolutionChain: React.FC<IEvolutionComponent> = (props) => {
         return undefined;
       }
 
-      PokemonListService.getEvolutionChain(evolutionId)
+      pokemonListService.getEvolutionChain(evolutionId)
         .then((response: any) => {
           // Restructure chain.
           if (typeof response.data.chain === 'undefined') {
@@ -80,7 +78,7 @@ const EvolutionChain: React.FC<IEvolutionComponent> = (props) => {
     <>
       <h3>Evolution Chain</h3>
       <List>
-      {/*<Ul horizontal className="card text-dark text-center">*/}
+        {/*<Ul horizontal className="card text-dark text-center">*/}
         {evolution.map((currentPokemon, index) => {
           return (<ListItemText>
             <PokemonCard
@@ -88,7 +86,7 @@ const EvolutionChain: React.FC<IEvolutionComponent> = (props) => {
               pokemon={currentPokemon}/>
           </ListItemText>);
         })}
-      {/*</Ul>*/}
+        {/*</Ul>*/}
       </List>
     </>
   );

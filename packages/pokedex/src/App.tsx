@@ -7,6 +7,7 @@ import PokemonList from './components/05-Pages/PokemonList';
 import PokemonPage from './components/05-Pages/PokemonPage';
 import PokemonMovePage from './components/05-Pages/PokemonMovePage';
 import Page404 from './components/05-Pages/Page404';
+
 // import { ErrorBoundary } from '@monorepo/components';
 
 /**
@@ -15,20 +16,20 @@ import Page404 from './components/05-Pages/Page404';
  */
 function App() {
   return (
-      <Layout className="App">
-        <Switch>
-          <Route path="/" exact>
-            <PokemonList/>
-          </Route>
-          <Route path="/pokemon/:name">
-            <PokemonPage/>
-          </Route>
-          <Route path="/move/:name">
-            <PokemonMovePage/>
-          </Route>
-          <Route component={Page404}/>
-        </Switch>
-      </Layout>
+    <Layout className="App">
+      <Switch>
+        <Route path="/" exact>
+          <PokemonList/>
+        </Route>
+        <Route path="/pokemon/:name">
+          <PokemonPage/>
+        </Route>
+        <Route path="/move/:name">
+          <PokemonMovePage/>
+        </Route>
+        <Route component={Page404}/>
+      </Switch>
+    </Layout>
   );
 }
 

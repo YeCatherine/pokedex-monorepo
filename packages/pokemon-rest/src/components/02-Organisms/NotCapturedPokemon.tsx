@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import PokemonListService from '@/services/pokemonListService';
+import { pokemonListService } from '@/services';
 import usePokemonCapture from '@/hooks/usePokemonCapture';
 import IPokemonData from '@/types/IPokemonData';
 import PokemonCard from './PokemonCard';
-import {Spinner} from '@monorepo/components';
+import { Spinner } from '@monorepo/components';
 
 /**
  * Functional component for random notcaptured pokemon.
@@ -19,7 +19,7 @@ const NotCapturedPokemon: React.FC = (props) => {
    * Gets the all pokemon.
    */
   useEffect(() => {
-    PokemonListService.getAll()
+    pokemonListService.getAll()
       .then((response: any) => {
         setPokemons(response.data.results);
       })

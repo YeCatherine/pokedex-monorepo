@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import IPokemonData from '../../types/IPokemonData';
-import PokemonListService from '../../services/PokemonListService';
+import { pokemonListService } from '@/services';
 import {
   Col,
   Container,
@@ -12,7 +12,7 @@ import {
 import EvolutionChain from '../02-Organisms/EvolutionChain/EvolutionChain';
 import { useGlobalContext } from '@/context/Context';
 import PokemonCard from '../02-Organisms/PokemonCard';
-import Spinner from '../01-Atoms/UI/Spinner';
+import { Spinner } from '@monorepo/components';
 
 /**
  * Outputs the list of pokemon weight, height, order, type name, abilities,
@@ -28,7 +28,7 @@ const PokemonPage: React.FC = (props) => {
   const { language } = useGlobalContext();
 
   useEffect(() => {
-    PokemonListService.get(params.name)
+    pokemonListService.get(params.name)
       .then((response: any) => {
         setPokemon(response.data);
       })
@@ -36,7 +36,7 @@ const PokemonPage: React.FC = (props) => {
         console.log(e);
       });
 
-    PokemonListService.getSpecies(params.name)
+    pokemonListService.getSpecies(params.name)
       .then((response: any) => {
         setPokemonSpecies(response.data);
         const translatedName = response.data.names.filter(

@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import PokemonListService from '../../../../services/PokemonListService';
-import { useGlobalContext, DEFAULT_LANGUAGE } from '../../../../services/Context';
+import {
+  DEFAULT_LANGUAGE,
+  useGlobalContext
+} from '../../../../services/Context';
 
 /**
  * The language switcher.
@@ -8,7 +11,8 @@ import { useGlobalContext, DEFAULT_LANGUAGE } from '../../../../services/Context
  * @constructor The functional component for switching languages.
  */
 const LanguageSwitcher: React.FC<{ className?: string }> = ({ className = '' }) => {
-  const [currentLanguage, setCurrentLanguage] = useState<string>(DEFAULT_LANGUAGE);
+  const [currentLanguage, setCurrentLanguage] = useState<string>(
+    DEFAULT_LANGUAGE);
   const [languageList, setLanguageList] = useState<Array<string>>([]);
   const { setLanguage } = useGlobalContext();
 

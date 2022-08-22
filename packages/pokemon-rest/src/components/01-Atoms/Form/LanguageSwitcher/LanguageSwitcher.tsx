@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import PokemonListService from '@/services/pokemonListService';
+import { pokemonListService } from '@/services';
 import { useGlobalContext } from '@/context/Context';
 
 /**
@@ -13,7 +13,7 @@ const LanguageSwitcher: React.FC<{ className?: string }> = ({ className = '' }) 
   const { setLanguage } = useGlobalContext();
 
   useEffect(() => {
-    PokemonListService.getLanguages()
+    pokemonListService.getLanguages()
       .then((response: any) => {
         setLanguageList(response.data.results.map(language => language.name));
       })

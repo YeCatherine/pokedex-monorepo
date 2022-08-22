@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import { ErrorBoundary, Layout } from '@monorepo/components';
+import {
+  ErrorBoundary,
+  Layout,
+  SearchBox,
+  Spinner
+} from '@monorepo/components';
 // import { Programs as ProgramsPage } from '@/pages';
 import { formSearchType } from '@/types';
 import { DEFAULT_SEARCH_PARAMS } from '@/constants';
 import { PageContext } from '@/context';
-import { Route, Switch } from 'react-router-dom';
-import {Spinner, SearchBox} from '@monorepo/components';
 // import PokemonList from './components/05-Pages/PokemonList';
 /**
  * Main App.
@@ -24,7 +27,7 @@ const App = () => {
           {/*<PokemonList/>*/}
           <h1>Test</h1>
           <Spinner/>
-          <SearchBox handleSearch={()=>console.log()} placeholder={'test'}/>
+          <SearchBox handleSearch={() => console.log()} placeholder={'test'}/>
         </Layout>
       </PageContext.Provider>
     </ErrorBoundary>

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { getIdFromURL } from '@/services/Common';
 import IPokemonSimpleComponent from '@/types/IPokemonSimpleComponent';
 import CardMedia from '@mui/material/CardMedia';
+
 /**
  * Gets the image of the pokemon.
  * @param props

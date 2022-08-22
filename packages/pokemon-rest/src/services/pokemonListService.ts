@@ -1,4 +1,4 @@
-import http from '../http-common';
+import http from '@/http-common';
 
 /**
  * Retrieves the Get request from "/pokemon?limit= ".
@@ -51,7 +51,7 @@ const getMove = (name: string): any => {
 /**
  * Retrieves the Get request from separate endpoint.
  */
-const PokemonListService = {
+export const pokemonListService = {
   getAll,
   get,
   getSpecies,
@@ -60,4 +60,4 @@ const PokemonListService = {
   getEvolutionChain
 };
 
-export default PokemonListService;
+export default pokemonListService;
