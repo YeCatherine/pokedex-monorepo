@@ -15,7 +15,7 @@ import { toTitleCase } from '@monorepo/components/src/services';
  *
  * @return
  */
-const prepareProductsData = (programs) => {
+const prepareProductsData = (programs: any[]) => {
   if (!programs || !Array.isArray(programs)) {
     return { status: false };
   }

@@ -8,6 +8,7 @@
   "scripts": {
     "start": "lerna exec --scope @monorepo/app -- yarn start",
     "start:form": "lerna exec --scope @monorepo/form -- yarn start",
+    "start:pokemon": "lerna exec --scope @monorepo/pokemon-rest -- yarn start",
     "start:storybook": "lerna exec --scope @monorepo/storybook -- yarn storybook"
   },
   "workspaces": {
