@@ -4,9 +4,9 @@
 
 ## Table of Contents:
 
-- [Introduction](./01-introduction.md)
-- [Solution Description (Current)](./02-solution-description.md)
-- [Trouble Shooting](./03-troubleshooting.md)
+- [Introduction](01-introduction.md)
+- [Solution Description (Current)](02-solution-description.md)
+- [Trouble Shooting](03-troubleshooting.md)
 
 ---
 

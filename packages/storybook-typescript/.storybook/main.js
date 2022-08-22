@@ -40,7 +40,7 @@
 module.exports = {
   stories: [
     '../src/**/*.stories.mdx',
-    '../../pokedex/src/**/*.stories.@(js|jsx|ts|tsx)'],
+    '../../components/src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
