@@ -35,7 +35,7 @@
     "react-scripts": "4.0.3",
     "react-testing-library": "^8.0.1",
     "typedoc": "^0.21.5",
-    "typescript": "^4.1.2",
+    "typescript": "^4.4.4",
     "web-vitals": "^1.0.1",
     "workbox-background-sync": "^5.1.3",
     "workbox-broadcast-update": "^5.1.3",

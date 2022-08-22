@@ -6,8 +6,9 @@
     "lerna": "^5.4.3"
   },
   "scripts": {
-    "start": "lerna exec --scope @monorepo/app -- yarn start",
+    "start": "concurrently \"yarn run start:pokemon\" \"yarn run start:form\"",
     "start:form": "lerna exec --scope @monorepo/form -- yarn start",
+    "start:form:storybook": "lerna exec --scope @monorepo/form -- yarn storybook",
     "start:pokemon": "lerna exec --scope @monorepo/pokemon-rest -- yarn start",
     "start:storybook": "lerna exec --scope @monorepo/storybook -- yarn storybook"
   },
@@ -15,5 +16,8 @@
     "packages": [
       "packages/**"
     ]
+  },
+  "dependencies": {
+    "concurrently": "^7.3.0"
   }
 }
