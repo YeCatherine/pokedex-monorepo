@@ -30,7 +30,7 @@
     "styled-normalize": "^8.0.7",
     "typedoc": "0.23.9",
     "web-vitals": "^2.1.4",
-    "@todcode/components": "0.1.0"
+    "@monorepo/components": "*"
   },
   "devDependencies": {
     "@cypress/code-coverage": "3.10.0",

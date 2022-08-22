@@ -1,3 +1,5 @@
-import Button from "./components/Button";
+import Button from './components/Button';
+import CompOne from './components/CompOne';
+import CompTwo from './components/CompTwo';
 
-export { Button };
+export { Button, CompOne, CompTwo };

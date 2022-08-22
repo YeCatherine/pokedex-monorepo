@@ -3,11 +3,12 @@
   "private": true,
   "devDependencies": {
     "craco": "^0.0.3",
-    "lerna": "^4.0.0"
+    "lerna": "^5.4.3"
   },
   "scripts": {
     "start": "lerna exec --scope @monorepo/app -- yarn start",
-    "start:form": "lerna exec --scope @monorepo/form -- yarn start"
+    "start:form": "lerna exec --scope @monorepo/form -- yarn start",
+    "start:storybook": "lerna exec --scope @monorepo/storybook -- yarn storybook"
   },
   "workspaces": {
     "packages": [
