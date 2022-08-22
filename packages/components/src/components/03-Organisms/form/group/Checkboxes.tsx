@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box } from '@mui/material';
-import { StatusCheckbox } from '@/components';
+import { StatusCheckbox } from '../../../index';
 import { searchStatusType } from '@/types';
 
 type CheckboxesProps = {

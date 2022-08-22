@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '@mui/material/Container';
-import { AppHeader } from '@/components';
+import {AppHeader} from '@monorepo/components';
 
 export default function Layout({ children }) {
   return (

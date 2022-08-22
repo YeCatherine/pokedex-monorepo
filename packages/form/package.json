@@ -69,7 +69,7 @@
   },
   "scripts": {
     "seed-db": "node src/server/initDb",
-    "server": "json-server --watch --port 4002 --delay 1500 src/server/db.json",
+    "server": "json-server --watch --port 4002 src/server/db.json",
     "start": "npm run seed-db && concurrently \"npm run server\" \"PORT=3002 craco start\"",
     "start:all": "npm run seed-db && concurrently \"npm run server\" \"PORT=3002 craco start\" \"npm run cy:open\" \"npm run storybook\"",
     "build": "craco build",

@@ -1,6 +1,6 @@
 import React, { useEffect, useContext, useReducer } from 'react';
 import { TextField, Box, FormControl, FormGroup } from '@mui/material';
-import { ClearButton, SynchronizationIcon, Checkboxes } from '@/components';
+import { ClearButton, SynchronizationIcon, Checkboxes } from '@monorepo/components';
 import { PageContext } from '@/context';
 import { formSearchReducer, handleFormEvent } from '@/reducers';
 import { FormEvent } from '@/constants';

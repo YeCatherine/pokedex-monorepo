@@ -16,7 +16,7 @@ const AppHeader = () => {
     >
       <Toolbar>
         <Typography variant="h6" color="inherit" noWrap>
-          Triple
+         ⚛️ Form Example
         </Typography>
       </Toolbar>
     </AppBar>

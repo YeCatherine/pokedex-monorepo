@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { Layout, ErrorBoundary } from '@/components';
+import { Layout, ErrorBoundary } from '@monorepo/components';
 import { Programs as ProgramsPage } from '@/pages';
 import { formSearchType } from '@/types';
 import { DEFAULT_SEARCH_PARAMS } from '@/constants';
 import { PageContext } from '@/context';
-import { CompOne, CompTwo } from '@monorepo/components';
 
 // Create a client
 const queryClient = new QueryClient();
@@ -25,8 +24,6 @@ const App = () => {
         <QueryClientProvider client={queryClient}>
           <Layout>
             <ProgramsPage />
-            <CompOne/>
-            <CompTwo/>
           </Layout>
         </QueryClientProvider>
       </PageContext.Provider>

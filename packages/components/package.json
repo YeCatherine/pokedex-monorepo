@@ -4,6 +4,7 @@
   "private": true,
   "main": "./src/index.tsx",
   "dependencies": {
+    "@craco/craco": "^6.4.5",
     "@storybook/react": "^6.5.10",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
