@@ -45,8 +45,10 @@ const NotCapturedPokemon: React.FC = (props) => {
       }
       return x;
     });
+
     setRandomPokemon(
       freePokemons[Math.floor(Math.random() * freePokemons.length)]);
+
   }, [capturedPokemons, pokemons]);
 
   if (!randomPokemon) {

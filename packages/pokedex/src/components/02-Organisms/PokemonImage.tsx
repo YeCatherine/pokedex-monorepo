@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { getIdFromURL } from '../../../services/Common';
-import IPokemonSimpleComponent from '../../../types/IPokemonSimpleComponent';
+import { getIdFromURL } from '../../services/Common';
+import IPokemonSimpleComponent from '../../types/IPokemonSimpleComponent';
 import ReactImageFallback from 'react-image-fallback';
 
 /**

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PokemonImage from '../01-Atoms/UI/PokemonImage';
-import CaptureButton from '../01-Atoms/Form/CaptureButton';
+import PokemonImage from './PokemonImage';
+import CaptureButton from '../01-Atoms/Form/CaptureButton/CaptureButton';
 import IPokemonSimpleComponent from '../../types/IPokemonSimpleComponent';
 import { Card } from 'react-bootstrap';
 import Spinner from '../01-Atoms/UI/Spinner';

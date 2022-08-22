@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import IPokemonData from '../../types/IPokemonData';
-import { getIdFromURL } from '../../services/Common';
-import PokemonListService from '../../services/PokemonListService';
-import PokemonCard from './PokemonCard';
+import IPokemonData from '../../../types/IPokemonData';
+import { getIdFromURL } from '../../../services/Common';
+import PokemonListService from '../../../services/PokemonListService';
+import PokemonCard from '../PokemonCard';
 import { ListGroup as Ul, ListGroupItem as Li } from 'react-bootstrap';
 
 /**

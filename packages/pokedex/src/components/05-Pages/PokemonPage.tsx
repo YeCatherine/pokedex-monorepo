@@ -9,7 +9,7 @@ import {
   ListGroupItem as Li,
   Row
 } from 'react-bootstrap';
-import EvolutionChain from '../02-Organisms/EvolutionChain';
+import EvolutionChain from '../02-Organisms/EvolutionChain/EvolutionChain';
 import { useGlobalContext } from '../../services/Context';
 import PokemonCard from '../02-Organisms/PokemonCard';
 import Spinner from '../01-Atoms/UI/Spinner';

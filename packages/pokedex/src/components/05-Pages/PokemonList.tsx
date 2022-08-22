@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PokemonListService from '../../services/PokemonListService';
 import IPokemonData from '../../types/IPokemonData';
 import PokemonCard from '../02-Organisms/PokemonCard';
-import PokemonSearchBox from '../01-Atoms/Form/PokemonSearchBox';
+import SearchBox from '../01-Atoms/Form/SearchBox/SearchBox';
 import Spinner from '../01-Atoms/UI/Spinner';
 import useLocalStorage from '../../hooks/useLocalStorage';
 import { getIdFromURL } from '../../services/Common';
@@ -124,8 +124,8 @@ const PokemonList: React.FC = (props) => {
 
   return (
     <>
-      <PokemonSearchBox placeholder="Pokemon name"
-                        handleSearch={handleSearch}/>
+      <SearchBox placeholder="Pokemon name"
+                 handleSearch={handleSearch}/>
       <select onChange={handleSortChange}>
         <option
           key={SortDirection.SortIDAsc}
