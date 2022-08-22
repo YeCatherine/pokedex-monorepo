@@ -1,9 +1,8 @@
 # Table of Contents:
 
-- [Task](docs/01-task.md)
-- [Introduction](docs/02-introduction.md)
-- [Solution Description](docs/03-solution-description.md)
-- [Trouble Shooting](docs/04-troubleshooting.md)
+- [Introduction](./docs/01-introduction.md)
+- [Solution Description](./docs/02-solution-description.md)
+- [Trouble Shooting](./docs/03-troubleshooting.md)
 
 - [ ] General:
   - [x] added to yarn

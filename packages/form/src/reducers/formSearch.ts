@@ -1,11 +1,21 @@
+/**
+ *
+ * @module FormComponents
+ */
 import React from 'react';
 import { DEFAULT_SEARCH_PARAMS, FormEvent } from '@/constants';
 
 /**
  * Form Search Reducer Callback.
  *
+ * Get values from 3 types of event "update text", "click on status" and
+ * "clear all" button. and update current form state to expected value.
+ *
  * @param state current form state
+ *
  * @param action form dispatcher action
+ *
+ * @returns updated form state.
  */
 // :<{event:Event, type:FormEvent}>
 export const formSearchReducer = (state, action) => {

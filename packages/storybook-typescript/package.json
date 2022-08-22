@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "@monorepo/components": "*",
-    "@monorepo/components-typescript":"*",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },

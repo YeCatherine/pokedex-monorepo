@@ -1,3 +1,8 @@
+/**
+ * Shared typescript types.
+ *
+ * @module
+ */
 import React from 'react';
 
 export interface IProgram {

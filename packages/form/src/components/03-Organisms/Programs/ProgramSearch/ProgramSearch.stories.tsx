@@ -12,6 +12,8 @@ export default {
 
 // More on component templates:
 // https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof ProgramSearch> = () => <ProgramSearch />;
+const Template: ComponentStory<typeof ProgramSearch> = () => (
+  <ProgramSearch formState={{}} setFormState={() => {}} />
+);
 
 export const Default = Template.bind({});

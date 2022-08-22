@@ -1,5 +1,6 @@
 /**
  * Base Form state.
+ * Contains name and basic statuses.
  */
 export const DEFAULT_SEARCH_PARAMS = {
   name: '',
@@ -11,11 +12,10 @@ export const DEFAULT_SEARCH_PARAMS = {
   isFetching: true,
 };
 
-// @ts-ignore
-export const FETCH_SUCCESS_STATUS = 'success';
-
 /**
  * Form Event Enum
+ *
+ * @enum
  *
  * Define actions:
  *  - Reset - to reset form

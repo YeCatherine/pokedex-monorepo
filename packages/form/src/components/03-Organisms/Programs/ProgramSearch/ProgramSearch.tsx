@@ -1,20 +1,28 @@
-import React, { useEffect, useContext, useReducer } from 'react';
+/**
+ * Program Search Component.
+ * Profile form that handle all program operations.
+ * @module
+ */
+import React, { useEffect, useReducer } from 'react';
 import { TextField, Box, FormControl, FormGroup } from '@mui/material';
-import { ClearButton, SynchronizationIcon, Checkboxes } from '@monorepo/components';
-import { PageContext } from '@/context';
+import { ClearButton, Checkboxes } from '@/components';
 import { formSearchReducer, handleFormEvent } from '@/reducers';
 import { FormEvent } from '@/constants';
 
 /**
  * Program Search Form.
+ *
+ * Support Search by Text and filter by status operations.
+ * Work with HOC "withContext"
  */
-const ProgramSearch = () => {
-  const { formState, setFormState } = useContext(PageContext);
-
+const ProgramSearch = ({ formState, setFormState }) => {
   const [formStateInternal, dispatch] = useReducer(formSearchReducer, formState);
 
   useEffect(() => {
-    setFormState(formStateInternal);
+    // Set only when different.
+    if (formState !== formStateInternal) {
+      setFormState(formStateInternal);
+    }
   }, [formStateInternal]);
 
   return (
@@ -36,7 +44,6 @@ const ProgramSearch = () => {
             value={formStateInternal.name}
             onChange={handleFormEvent(FormEvent.TEXT, dispatch)}
           />
-          <SynchronizationIcon loading={formState.isFetching} />
         </Box>
         <Checkboxes
           state={formStateInternal.statuses}
@@ -47,4 +54,5 @@ const ProgramSearch = () => {
   );
 };
 
+// @ts-ignore
 export default ProgramSearch;

@@ -5,12 +5,15 @@ import { useEffect, useState } from 'react';
  *
  * Main goal - is to limit amount of API request.
  *
- * @param value
+ * @param value that should be decounced
  *
- * @param delay
+ * @param delay - value in microseconds to wait
+ *
+ * @returns value with delay set in varaiable "delay"
  */
 function useDebounce<T>(value: any, delay: number) {
   const [debouncedValue, setDebouncedValue] = useState<T>(value);
+
   useEffect(() => {
     const timer = setTimeout(() => setDebouncedValue(value), delay || 200);
 

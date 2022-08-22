@@ -27,10 +27,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-
 jest-coverage
 .nyc_output
 coverage
 cypress-coverage/
 cypress/videos
 reports
+docs/generated

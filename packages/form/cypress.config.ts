@@ -42,4 +42,11 @@ module.exports = defineConfig({
       getCompareSnapshotsPlugin(on, config);
     },
   },
+
+  component: {
+    devServer: {
+      framework: 'create-react-app',
+      bundler: 'webpack',
+    },
+  },
 });

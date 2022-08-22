@@ -2,8 +2,8 @@
 // https://on.cypress.io/intelligent-code-completion
 /// <reference types="Cypress" />
 
-const { DEFAULT_SEARCH_PARAMS, FormEvent } = require('../../../src/constants');
-const { formSearchReducer } = require('../../../src/reducers');
+const { DEFAULT_SEARCH_PARAMS, FormEvent } = require('@/constants');
+const { formSearchReducer } = require('@/reducers');
 
 const defaultEvent = {
   target: {

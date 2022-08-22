@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "lib": ["es6", "dom", "dom.iterable", "esnext"],
+    "types": ["jest"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -15,13 +16,11 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     },
     "experimentalDecorators": true
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }

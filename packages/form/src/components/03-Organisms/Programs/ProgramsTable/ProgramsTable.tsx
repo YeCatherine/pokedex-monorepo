@@ -1,31 +1,33 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
-import { PageContext } from '@/context';
-import { iProgramGrid } from '@/types';
-import { DataLoading } from '@monorepo/components';
-import { FETCH_SUCCESS_STATUS } from '@/constants';
-import { prepareProductsData } from '@monorepo/components/src/services';
-import { usePrograms } from '@/hooks/usePrograms';
+import { formSearchType, iProgramGrid } from '@/types';
+import { DataLoading } from '@/components';
+import { prepareProductsData, prepareUrlLink } from '@/services';
+import { useDebounce } from '@/hooks/useDebounce/useDebounce';
 
-const ProgramsTable = () => {
-  const { formState, setFormState } = useContext(PageContext);
+/**
+ * Program Table component.
+ *
+ * @param formState - state of the form search
+ *
+ * @constructor
+ */
+const ProgramsTable = ({ formState }) => {
   const [preparedProducts, setPreparedProducts] = useState<iProgramGrid | null>({ status: false });
-
-  const { status, data, error, isFetching } = usePrograms(formState);
+  const debouncedFormState = useDebounce<formSearchType>(formState, 500);
 
   useEffect(() => {
-    if (status === FETCH_SUCCESS_STATUS && isFetching === false) {
+    const href = prepareUrlLink(debouncedFormState);
+
+    (async () => {
+      const data = await fetch(href).then((response) => response.json());
       const productTable = prepareProductsData(data);
+
       if (productTable.status) {
         setPreparedProducts(productTable);
       }
-
-      setFormState({
-        ...formState,
-        isFetching,
-      });
-    }
-  }, [status, data, error, isFetching]);
+    })();
+  }, [debouncedFormState]);
 
   if (!preparedProducts.status) {
     return <DataLoading />;

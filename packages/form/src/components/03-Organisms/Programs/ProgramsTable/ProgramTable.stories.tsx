@@ -12,6 +12,6 @@ export default {
 
 // More on component templates:
 // https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof ProgramsTable> = () => <ProgramsTable />;
+const Template: ComponentStory<typeof ProgramsTable> = () => <ProgramsTable formState={{}} />;
 
 export const Default = Template.bind({});
