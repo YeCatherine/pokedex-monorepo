@@ -1,2 +1,2 @@
-export * from './AppHeader/AppHeader'
-export * from './form/group/Checkboxes'
+export * from './AppHeader/AppHeader';
+export * from './form/group/Checkboxes';

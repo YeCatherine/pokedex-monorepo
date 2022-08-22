@@ -9,7 +9,8 @@ describe('Find element by text', () => {
     expect(linkElement).toBeInTheDocument();
   });
   it('Check sitebar Layout functionality', () => {
-    render(<Layout sidebar={<h2>Sidebar exists</h2>}><h1>Layout Text</h1></Layout>);
+    render(<Layout sidebar={<h2>Sidebar exists</h2>}><h1>Layout Text</h1>
+    </Layout>);
     const linkElement = screen.getByText(/Sidebar exists/i);
     expect(linkElement).toBeInTheDocument();
   });

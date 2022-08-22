@@ -1,4 +1,3 @@
-
 // import { addParameters, configure } from '@storybook/react'
 // import { themes } from '@storybook/theming'
 // //
@@ -8,17 +7,13 @@
 //   }
 // })
 // //
-// const comps = require.context('@monorepo/components/src', true, /.stories.tsx$/);
-// const comps = require.context('@monorepo/components/src', true, /.stories.tsx$/)
-// const form = require.context('@monorepo/form/src', true,
-//   /.stories.tsx$/)
-// const pokedex = require.context('@monorepo/pokemon-rest/src', true,
-//   /.stories.tsx$/)
-// console.log('form', form)
-// console.log('pokedex', pokedex)
-// configure(() => {
-//   comps.keys().forEach(filename => comps(filename))
-// }, module)
+// const comps = require.context('@monorepo/components/src', true,
+// /.stories.tsx$/); const comps = require.context('@monorepo/components/src',
+// true, /.stories.tsx$/) const form = require.context('@monorepo/form/src',
+// true, /.stories.tsx$/) const pokedex =
+// require.context('@monorepo/pokemon-rest/src', true, /.stories.tsx$/)
+// console.log('form', form) console.log('pokedex', pokedex) configure(() => {
+// comps.keys().forEach(filename => comps(filename)) }, module)
 
 // export const parameters = {
 //   a11y: {
@@ -61,16 +56,15 @@ module.exports = {
         }
       }
     }
-  ],
+  ]
   // webpackFinal: config => {
   //   const {
   //     module: {
   //       rules: [, , , , , { oneOf }]
   //     }
   //   } = config
-  //   const babelLoader = oneOf.find(({ test }) => new RegExp(test).test('.ts'))
-  //   babelLoader.include = [/components\/(.*)\/src/, /.storybook/]
-  //   babelLoader.options.sourceType = 'unambiguous'
-  //   return config
+  //   const babelLoader = oneOf.find(({ test }) => new
+  // RegExp(test).test('.ts')) babelLoader.include = [/components\/(.*)\/src/,
+  // /.storybook/] babelLoader.options.sourceType = 'unambiguous' return config
   // }
 }
