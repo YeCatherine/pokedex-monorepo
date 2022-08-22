@@ -49,7 +49,7 @@ const PokemonImage: React.FC<IPokemonSimpleComponent> = (props) => {
   return (
     <CardMedia
       component="img"
-      height="140"
+      height="200"
       image={pokemonImageURL}
       alt={pokemon.name}
     />);

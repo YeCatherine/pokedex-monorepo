@@ -4,9 +4,13 @@ import { pokemonListService } from '@/services';
 import IPokemonData from '@/types/IPokemonData';
 import PokemonCard from '../02-Organisms/PokemonCard';
 import { SearchBox } from '../01-Atoms/Form/SearchBox/SearchBox';
-
+import Grid from '@mui/material/Grid';
 import useLocalStorage from '@/hooks/useLocalStorage';
 import { getIdFromURL } from '@/services/Common';
+import Box from '@mui/material/Box';
+import { Card } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import Paper from '@mui/material/Paper';
 
 enum SortDirection {
   SortIDAsc = 'SortIDAsc',
@@ -15,6 +19,13 @@ enum SortDirection {
   SortNameZA = 'SortNameZA',
 }
 
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary
+}));
 /**
  * Generates the list of pokemon.
  *
@@ -150,15 +161,20 @@ const PokemonList: React.FC = (props) => {
           by Name: Z-A
         </option>
       </select>
-      <div
-        className="list-group d-flex flex-wrap flex-row  align-content-between lazy-test">
-        {pokemons.filter(filterPokemon)
-          .sort(sortingLogic)
-          .map((pokemon, index) =>
-            <PokemonCard key={index} pokemon={pokemon}/>
-          )}
+      <Box sx={{ flexGrow: 1 }}>
+        <Grid container spacing={3}>
 
-      </div>
+          {/*<div*/}
+          {/*  className="list-group d-flex flex-wrap flex-row  align-content-between lazy-test">*/}
+          {pokemons.filter(filterPokemon)
+            .sort(sortingLogic)
+            .map((pokemon, index) =>
+              <Grid item xs={2}>
+                <PokemonCard key={index} pokemon={pokemon}/>
+              </Grid>
+            )}
+        </Grid>
+      </Box>
     </>
   );
 };

@@ -24,7 +24,7 @@ const PokemonCard: React.FC<IPokemonSimpleComponent> = (props) => {
   }
 
   return (
-    <Card sx={{ maxWidth: 145 }}
+    <Card
           className="pokemon-card card text-dark text-center">
       <CardActionArea>
         <PokemonImage pokemon={pokemon}/>
@@ -46,17 +46,5 @@ const PokemonCard: React.FC<IPokemonSimpleComponent> = (props) => {
   );
 };
 
-// <Card style={{ width: '18rem' }}
-//       className="pokemon-card card text-dark text-center">
-//   <Card.Body>
-//     <Card.Text>
-//       <Link className=""
-//             to={`/pokemon/${pokemon.name}`}>
-//         <PokemonImage pokemon={pokemon}/>
-//       </Link>
-//     </Card.Text>
-//     <CaptureButton pokemon={pokemon}/>
-//   </Card.Body>
-// </Card>);
 
 export default PokemonCard;
