@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {Link, useParams} from "react-router-dom";
-import IPokemonData from "../../Types/IPokemonData";
-import PokemonListService from "../../Services/PokemonListService";
+import IPokemonData from "../../types/IPokemonData";
+import PokemonListService from "../../services/PokemonListService";
 import {
     Container,
     Row,
@@ -10,7 +10,7 @@ import {
     ListGroupItem as Li
 } from "react-bootstrap";
 import EvolutionChain from "../UI/EvolutionChain";
-import {useGlobalContext} from '../../Services/Context'
+import {useGlobalContext} from '../../services/Context'
 import PokemonCard from "../UI/PokemonCard";
 import Spinner from "../UI/Spinner";
 

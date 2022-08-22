@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from "react";
-import PokemonListService from "../../Services/PokemonListService";
-import IPokemonData from "../../Types/IPokemonData";
+import PokemonListService from "../../services/PokemonListService";
+import IPokemonData from "../../types/IPokemonData";
 import PokemonCard from "../UI/PokemonCard";
 import PokemonSearchBox from "../UI/PokemonSearchBox";
 import Spinner from "../UI/Spinner";
-import useLocalStorage from "../../Hooks/useLocalStorage";
-import {getIdFromURL} from "../../Services/Common";
+import useLocalStorage from "../../hooks/useLocalStorage";
+import {getIdFromURL} from "../../services/Common";
 
 enum SortDirection {
     SortIDAsc = "SortIDAsc",

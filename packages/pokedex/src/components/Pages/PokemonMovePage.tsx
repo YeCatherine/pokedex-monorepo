@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
-import IPokemonData from "../../Types/IPokemonData";
-import PokemonListService from "../../Services/PokemonListService";
+import IPokemonData from "../../types/IPokemonData";
+import PokemonListService from "../../services/PokemonListService";
 import {Container, ListGroup as Ul, ListGroupItem as Li} from "react-bootstrap";
 import PokemonCard from "../UI/PokemonCard";
 

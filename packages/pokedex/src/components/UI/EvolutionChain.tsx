@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
-import IPokemonData from "../../Types/IPokemonData";
-import {getIdFromURL} from "../../Services/Common";
-import PokemonListService from "../../Services/PokemonListService";
+import IPokemonData from "../../types/IPokemonData";
+import {getIdFromURL} from "../../services/Common";
+import PokemonListService from "../../services/PokemonListService";
 import PokemonCard from "./PokemonCard";
 import {
     ListGroup as Ul,

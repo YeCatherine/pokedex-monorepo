@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
-import PokemonListService from "../../Services/PokemonListService";
-import usePokemonCapture from "../../Hooks/usePokemonCapture";
-import IPokemonData from "../../Types/IPokemonData";
+import PokemonListService from "../../services/PokemonListService";
+import usePokemonCapture from "../../hooks/usePokemonCapture";
+import IPokemonData from "../../types/IPokemonData";
 import PokemonCard from "./PokemonCard";
 import Spinner from "./Spinner";
 

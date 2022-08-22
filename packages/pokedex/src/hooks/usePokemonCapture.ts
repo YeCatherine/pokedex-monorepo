@@ -1,5 +1,5 @@
 import useLocalStorage from "./useLocalStorage";
-import IPokemonData from "../Types/IPokemonData";
+import IPokemonData from "../types/IPokemonData";
 
 interface CapturedPokemonType {
     capturedPokemons: Array<IPokemonData>
