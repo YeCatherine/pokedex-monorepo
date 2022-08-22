@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 import {BrowserRouter as Router} from 'react-router-dom'
 import {Container, Row, Col} from "react-bootstrap";
-import {MyGlobalContext} from '../../services/Context'
-import Header from './Header';
-import RightSidebar from "./RightSidebar";
-import Footer from "./Footer";
+import {MyGlobalContext} from '../../../services/Context'
+import Header from '../Header/Header';
+import RightSidebar from "../RightSidebar/RightSidebar";
+import Footer from "../Footer/Footer";
 
 /**
  * Main Layout component.

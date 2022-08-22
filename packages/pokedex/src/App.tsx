@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Layout from "./components/Layout/Layout";
+import Layout from "./components/04-Templates/Layout/Layout";
 import {Route, Switch} from "react-router-dom";
-import PokemonList from "./components/Pages/PokemonList";
-import PokemonPage from "./components/Pages/PokemonPage";
-import PokemonMovePage from "./components/Pages/PokemonMovePage";
-import Page404 from "./components/Pages/Page404";
+import PokemonList from "./components/05-Pages/PokemonList";
+import PokemonPage from "./components/05-Pages/PokemonPage";
+import PokemonMovePage from "./components/05-Pages/PokemonMovePage";
+import Page404 from "./components/05-Pages/Page404";
 
 /**
  * The App functional component.

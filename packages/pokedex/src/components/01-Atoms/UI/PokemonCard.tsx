@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 import PokemonImage from "./PokemonImage";
 import CaptureButton from "./CaptureButton";
-import IPokemonSimpleComponent from "../../types/IPokemonSimpleComponent";
+import IPokemonSimpleComponent from "../../../types/IPokemonSimpleComponent";
 import {Card} from "react-bootstrap";
 import Spinner from "./Spinner";
 

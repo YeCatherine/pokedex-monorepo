@@ -1,9 +1,9 @@
 import React from "react";
-import usePokemonCapture from "../../hooks/usePokemonCapture";
-import IPokemonSimpleComponent from "../../types/IPokemonSimpleComponent";
+import usePokemonCapture from "../../../hooks/usePokemonCapture";
+import IPokemonSimpleComponent from "../../../types/IPokemonSimpleComponent";
 import {Button, Image} from "react-bootstrap";
-import pokeball from "../../assets/pokeboll-closed.png";
-import pokeballOpened from "../../assets/pokeball-opened.png";
+import pokeball from "../../../assets/pokeboll-closed.png";
+import pokeballOpened from "../../../assets/pokeball-opened.png";
 
 /**
  * The capture button functional component.

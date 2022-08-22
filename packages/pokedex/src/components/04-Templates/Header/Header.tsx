@@ -1,5 +1,5 @@
 import React from "react";
-import LanguageSwitcher from "../UI/LanguageSwitcher";
+import LanguageSwitcher from "../../01-Atoms/UI/LanguageSwitcher";
 import {Link} from "react-router-dom";
 import {Image} from "react-bootstrap";
 

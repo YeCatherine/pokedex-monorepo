@@ -1,6 +1,6 @@
 import React from "react";
 import PokemonCard from "./PokemonCard";
-import usePokemonCapture from "../../hooks/usePokemonCapture";
+import usePokemonCapture from "../../../hooks/usePokemonCapture";
 
 /**
  * Functional component for list of captured pokemon.

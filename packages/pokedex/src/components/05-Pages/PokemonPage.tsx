@@ -9,10 +9,10 @@ import {
     ListGroup as Ul,
     ListGroupItem as Li
 } from "react-bootstrap";
-import EvolutionChain from "../UI/EvolutionChain";
+import EvolutionChain from "../01-Atoms/UI/EvolutionChain";
 import {useGlobalContext} from '../../services/Context'
-import PokemonCard from "../UI/PokemonCard";
-import Spinner from "../UI/Spinner";
+import PokemonCard from "../01-Atoms/UI/PokemonCard";
+import Spinner from "../01-Atoms/UI/Spinner";
 
 /**
  * Outputs the list of pokemon weight, height, order, type name, abilities, moves.

@@ -3,7 +3,7 @@ import {useParams} from "react-router-dom";
 import IPokemonData from "../../types/IPokemonData";
 import PokemonListService from "../../services/PokemonListService";
 import {Container, ListGroup as Ul, ListGroupItem as Li} from "react-bootstrap";
-import PokemonCard from "../UI/PokemonCard";
+import PokemonCard from "../01-Atoms/UI/PokemonCard";
 
 /**
  * Functional component for pokemon move page.

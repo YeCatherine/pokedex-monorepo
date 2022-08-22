@@ -1,5 +1,5 @@
 import React from "react";
-import IPokemonSearchBox from "../../types/IPokemonSearchBox";
+import IPokemonSearchBox from "../../../types/IPokemonSearchBox";
 
 /**
  * Searches pokemon.

@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from "react";
 import PokemonListService from "../../services/PokemonListService";
 import IPokemonData from "../../types/IPokemonData";
-import PokemonCard from "../UI/PokemonCard";
-import PokemonSearchBox from "../UI/PokemonSearchBox";
-import Spinner from "../UI/Spinner";
+import PokemonCard from "../01-Atoms/UI/PokemonCard";
+import PokemonSearchBox from "../01-Atoms/UI/PokemonSearchBox";
+import Spinner from "../01-Atoms/UI/Spinner";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import {getIdFromURL} from "../../services/Common";
 
