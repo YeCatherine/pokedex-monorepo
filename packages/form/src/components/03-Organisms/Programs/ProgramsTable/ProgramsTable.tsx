@@ -17,8 +17,7 @@ import { useDebounce } from '@/hooks/useDebounce/useDebounce';
 //   [key: string]: string
 // }
 const ProgramsTable = ({ formState }) => {
-  const [preparedProducts, setPreparedProducts] = useState<iProgramGrid | null>(
-    { status: false });
+  const [preparedProducts, setPreparedProducts] = useState<iProgramGrid | null>({ status: false });
   const debouncedFormState = useDebounce<formSearchType>(formState, 500);
 
   useEffect(() => {
@@ -35,14 +34,14 @@ const ProgramsTable = ({ formState }) => {
   }, [debouncedFormState]);
 
   if (!preparedProducts.status) {
-    return <DataLoading/>;
+    return <DataLoading />;
   }
 
   return (
     <div
       style={{
         width: '100%',
-        margin: '0 auto'
+        margin: '0 auto',
       }}
     >
       <div style={{ display: 'flex', height: '100%' }}>

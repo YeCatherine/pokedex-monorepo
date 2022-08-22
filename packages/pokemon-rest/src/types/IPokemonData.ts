@@ -7,8 +7,8 @@ interface Sprites {
   front_default: string;
   other: {
     front_default: {
-      front_default: string
-    }
+      front_default: string;
+    };
   };
 }
 
@@ -24,48 +24,48 @@ export interface IPokemonData {
   /**
    * Unique pokemon id.
    */
-  id?: any | null,
+  id?: any | null;
   /**
    * Pokemon name.
    */
-  name: string,
-  names: Array<IGeneralPokemonDataItem>
+  name: string;
+  names: Array<IGeneralPokemonDataItem>;
   /**
    * Url.
    */
-  url: string
+  url: string;
   /**
    * Weight.
    */
-  weight: string,
+  weight: string;
   /**
    * Height
    */
-  height: string,
+  height: string;
   /**
    * Order number
    */
-  order: string,
+  order: string;
   /**
    * Pokemon types.
    */
-  types: Array<{ type: IGeneralPokemonDataItem }>
+  types: Array<{ type: IGeneralPokemonDataItem }>;
 
   /**
    * Abilities.
    */
-  abilities: Array<{ ability: IGeneralPokemonDataItem }>
+  abilities: Array<{ ability: IGeneralPokemonDataItem }>;
   /**
    * Moves interface.
    */
-  moves: Array<{ move: IGeneralPokemonDataItem }>
+  moves: Array<{ move: IGeneralPokemonDataItem }>;
   /**
    * Evolution chain
    */
-  published?: boolean,
-  sprites: Sprites
-  stats: Array<StatsList>
-  evolution_chain?: IGeneralPokemonDataItem
+  published?: boolean;
+  sprites: Sprites;
+  stats: Array<StatsList>;
+  evolution_chain?: IGeneralPokemonDataItem;
 }
 
 export default IPokemonData;

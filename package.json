@@ -12,6 +12,7 @@
     "start:pokemon": "lerna exec --scope @monorepo/pokemon-rest -- yarn start",
     "start:pokemon:rest": "lerna exec --scope @monorepo/pokemonrest -- yarn start",
     "start:storybook": "lerna exec --scope @monorepo/storybook -- yarn storybook",
+    "format": "lerna run format",
     "test": "lerna run test",
     "nx:graph": "nx graph"
   },

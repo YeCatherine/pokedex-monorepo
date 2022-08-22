@@ -17,8 +17,8 @@ const WrapProgramsTable = withContext(ProgramsTable);
 export const Programs = () => {
   return (
     <>
-      <WrapProgramSearch/>
-      <WrapProgramsTable/>
+      <WrapProgramSearch />
+      <WrapProgramsTable />
     </>
   );
 };

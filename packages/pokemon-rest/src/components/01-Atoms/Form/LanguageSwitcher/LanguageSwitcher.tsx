@@ -13,9 +13,10 @@ export const LanguageSwitcher: React.FC<{ className?: string }> = ({ className =
   const { setLanguage } = useGlobalContext();
 
   useEffect(() => {
-    pokemonListService.getLanguages()
+    pokemonListService
+      .getLanguages()
       .then((response: any) => {
-        setLanguageList(response.data.results.map(language => language.name));
+        setLanguageList(response.data.results.map((language) => language.name));
       })
       .catch((e: any) => {
         console.log(e);
@@ -29,10 +30,12 @@ export const LanguageSwitcher: React.FC<{ className?: string }> = ({ className =
 
   return (
     <div className={className}>
-      <select name="languages" value={currentLanguage}
-              onChange={handleChange}>
-        {languageList.map(language => <option
-          key={language} value={language}>{language}</option>)}
+      <select name="languages" value={currentLanguage} onChange={handleChange}>
+        {languageList.map((language) => (
+          <option key={language} value={language}>
+            {language}
+          </option>
+        ))}
       </select>
     </div>
   );

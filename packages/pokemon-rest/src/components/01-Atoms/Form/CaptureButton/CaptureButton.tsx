@@ -9,10 +9,9 @@ export const CaptureToggler = ({ pokemon }) => {
   const { checkCapturedPokemon } = usePokemonCapture();
 
   if (checkCapturedPokemon(pokemon)) {
-    return (<><span>&nbsp;free</span></>);
+    return <span>&nbsp;free</span>;
   }
-  return (<><span>&nbsp;capture</span></>);
-
+  return <span>&nbsp;capture</span>;
 };
 
 /**
@@ -25,11 +24,10 @@ export const CaptureButton: React.FC<IPokemonSimpleComponent> = (props) => {
   const { pokemon } = props;
 
   return (
-    <Button className="capture-free-button"
-            onClick={() => setCapturedPokemons(pokemon)}>
-      <CaptureToggler pokemon={pokemon}/>
-
-    </Button>);
+    <Button className="capture-free-button" onClick={() => setCapturedPokemons(pokemon)}>
+      <CaptureToggler pokemon={pokemon} />
+    </Button>
+  );
 };
 
 export default CaptureButton;

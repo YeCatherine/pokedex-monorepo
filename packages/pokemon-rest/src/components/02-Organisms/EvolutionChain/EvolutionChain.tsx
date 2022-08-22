@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import IPokemonData from '@/types/IPokemonData';
 import { getIdFromURL } from '@/services/Common';
 import { pokemonListService } from '@/services';
-import PokemonCard from '../PokemonCard/PokemonCard';
 import List from '@mui/material/List';
 import ListItemText from '@mui/material/ListItemText';
+import PokemonCard from '../PokemonCard/PokemonCard';
 
 /**
  * Item of chain evolution sequence.
@@ -36,7 +36,8 @@ const EvolutionChain: React.FC<IEvolutionComponent> = (props) => {
         return undefined;
       }
 
-      pokemonListService.getEvolutionChain(evolutionId)
+      pokemonListService
+        .getEvolutionChain(evolutionId)
         .then((response: any) => {
           // Restructure chain.
           if (typeof response.data.chain === 'undefined') {
@@ -50,16 +51,14 @@ const EvolutionChain: React.FC<IEvolutionComponent> = (props) => {
           }
 
           (function getItem(chainItem: IEvolutionChainItem): any {
-              if (chainItem.species) {
-                evolutionList.push(chainItem.species);
-                if (chainItem.evolves_to.length) {
-                  getItem(chainItem.evolves_to[0]);
-                }
+            if (chainItem.species) {
+              evolutionList.push(chainItem.species);
+              if (chainItem.evolves_to.length) {
+                getItem(chainItem.evolves_to[0]);
               }
             }
-          )(evolutionChain);
+          })(evolutionChain);
           setEvolution(evolutionList);
-
         })
         .catch((e: any) => {
           console.log(e);
@@ -78,15 +77,15 @@ const EvolutionChain: React.FC<IEvolutionComponent> = (props) => {
     <>
       <h3>Evolution Chain</h3>
       <List>
-        {/*<Ul horizontal className="card text-dark text-center">*/}
+        {/* <Ul horizontal className="card text-dark text-center"> */}
         {evolution.map((currentPokemon, index) => {
-          return (<ListItemText>
-            <PokemonCard
-              key={index}
-              pokemon={currentPokemon}/>
-          </ListItemText>);
+          return (
+            <ListItemText>
+              <PokemonCard key={index} pokemon={currentPokemon} />
+            </ListItemText>
+          );
         })}
-        {/*</Ul>*/}
+        {/* </Ul> */}
       </List>
     </>
   );

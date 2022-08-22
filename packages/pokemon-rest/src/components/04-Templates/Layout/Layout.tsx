@@ -27,9 +27,11 @@ const SidebarWrapper = ({ sidebar }: { sidebar: SideBarType }) => {
   if (sidebar === undefined) {
     return null;
   }
-  return (<Sidebar gridArea="sidebar" display={{ xs: 'none', md: 'block' }}>
-    {sidebar}
-  </Sidebar>);
+  return (
+    <Sidebar gridArea="sidebar" display={{ xs: 'none', md: 'block' }}>
+      {sidebar}
+    </Sidebar>
+  );
 };
 
 /**
@@ -39,18 +41,12 @@ const SidebarWrapper = ({ sidebar }: { sidebar: SideBarType }) => {
  *
  * @constructor
  */
-const Layout: React.FC<Props> = ({
-  className = 'layout',
-  headerProps,
-  children,
-  sidebar
-}) => {
+const Layout: React.FC<Props> = ({ className = 'layout', headerProps, children, sidebar }) => {
   const [language, setLanguage] = useState<string>(DEFAULT_LANGUAGE);
 
   return (
-    <MyGlobalContext.Provider
-      value={{ language, setLanguage }}>
-      <Router basename={'/pokedex'}>
+    <MyGlobalContext.Provider value={{ language, setLanguage }}>
+      <Router basename="/pokedex">
         <Grid
           className={className}
           display="grid"
@@ -60,12 +56,12 @@ const Layout: React.FC<Props> = ({
           bgcolor="background.paper"
           gridTemplateRows="1fr"
           gridTemplateColumns={{ xs: '1fr', md: 'auto 1fr' }}
-          gridTemplateAreas={{ xs: '\'main\'', md: '\'sidebar main\'' }}
+          gridTemplateAreas={{ xs: "'main'", md: "'sidebar main'" }}
         >
           <Main gridArea="main" headerProps={headerProps}>
             {children}
           </Main>
-          <SidebarWrapper sidebar={sidebar}/>
+          <SidebarWrapper sidebar={sidebar} />
         </Grid>
       </Router>
     </MyGlobalContext.Provider>

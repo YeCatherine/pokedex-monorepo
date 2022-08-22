@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { pokemonListService } from '@/services';
 import usePokemonCapture from '@/hooks/usePokemonCapture';
 import IPokemonData from '@/types/IPokemonData';
-import PokemonCard from '../PokemonCard/PokemonCard';
 import { Spinner } from '@monorepo/components';
+import PokemonCard from '../PokemonCard/PokemonCard';
 
 /**
  * Functional component for random notcaptured pokemon.
@@ -19,7 +19,8 @@ const RandomPokemon: React.FC = (props) => {
    * Gets the all pokemon.
    */
   useEffect(() => {
-    pokemonListService.getAll()
+    pokemonListService
+      .getAll()
       .then((response: any) => {
         setPokemons(response.data.results);
       })
@@ -34,8 +35,8 @@ const RandomPokemon: React.FC = (props) => {
   useEffect(() => {
     let captured: Array<IPokemonData> = Array.from(capturedPokemons);
 
-    const freePokemons = pokemons.filter(x => {
-      for (let capturedIndex in captured) {
+    const freePokemons = pokemons.filter((x) => {
+      for (const capturedIndex in captured) {
         if (captured[capturedIndex].name === x.name) {
           // Remove captured from the list of comparison to reduce task
           // complexity.
@@ -46,21 +47,18 @@ const RandomPokemon: React.FC = (props) => {
       return x;
     });
 
-    setRandomPokemon(
-      freePokemons[Math.floor(Math.random() * freePokemons.length)]);
-
+    setRandomPokemon(freePokemons[Math.floor(Math.random() * freePokemons.length)]);
   }, [capturedPokemons, pokemons]);
 
   if (!randomPokemon) {
-    return (<Spinner/>);
+    return <Spinner />;
   }
 
   return (
     <>
       <h4>See also</h4>
-      <div
-        className="list-group d-flex flex-wrap flex-row justify-content-center">
-        <PokemonCard pokemon={randomPokemon}/>
+      <div className="list-group d-flex flex-wrap flex-row justify-content-center">
+        <PokemonCard pokemon={randomPokemon} />
       </div>
     </>
   );

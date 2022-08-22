@@ -4,9 +4,9 @@ import { createContext, useContext } from 'react';
  * The global content type.
  */
 export type GlobalContent = {
-  language: string
-  setLanguage: (c: string) => void
-}
+  language: string;
+  setLanguage: (c: string) => void;
+};
 
 export const DEFAULT_LANGUAGE = 'en';
 /**
@@ -14,8 +14,7 @@ export const DEFAULT_LANGUAGE = 'en';
  */
 export const MyGlobalContext = createContext<GlobalContent>({
   language: DEFAULT_LANGUAGE,
-  setLanguage: () => {
-  }
+  setLanguage: () => {},
 });
 
 export const useGlobalContext = () => useContext(MyGlobalContext);
