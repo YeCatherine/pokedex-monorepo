@@ -7,13 +7,20 @@ import RightSidebar from '../RightSidebar/RightSidebar';
 import Footer from '../Footer/Footer';
 
 /**
+ * Lauout type
+ */
+type LayoutPropsType = {
+  className: string;
+  children: React.ReactNode;
+}
+/**
  * Main Layout component.
  *
  * @param children
  *
  * @constructor
  */
-const Layout: React.FC<{ className: string }> = ({ className, children }) => {
+const Layout: React.FC<LayoutPropsType> = ({ className, children }) => {
   const [language, setLanguage] = useState<string>('en');
 
   return (
