@@ -11,7 +11,15 @@ import ClearIcon from '@mui/icons-material/Clear';
  * @constructor
  */
 export const ClearButton = ({ onClick }) => {
-  return <Button startIcon={<ClearIcon />} name="reset" aria-label="Reset" onClick={onClick} />;
+  return (
+    <Button
+      id="clear-button"
+      startIcon={<ClearIcon />}
+      name="reset"
+      aria-label="Reset"
+      onClick={onClick}
+    />
+  );
 };
 
 export default ClearButton;

@@ -1,5 +1,12 @@
+/**
+ * Prepare Product Data.
+ *
+ * To meet MUI Data greed content structure requirements.
+ * @module
+ */
 import getSymbolFromCurrency from 'currency-symbol-map';
-import { toTitleCase } from '../../services';
+import moment from 'moment';
+import { toTitleCase } from '@monorepo/components/src/services';
 
 /**
  * Preparing data for Grid Table.
@@ -25,21 +32,27 @@ const prepareProductsData = (programs) => {
     ],
     rows: programs.map((item) => {
       const preparedItem = item;
+
+      // Prepare date format.
       if (preparedItem.pause_at !== null) {
-        const date = new Date(item.pause_at);
-        preparedItem.pause_at = date.toLocaleDateString('en-ZA');
+        const date = moment(item.pause_at);
+        preparedItem.pause_at = date.format('YYYY/MM/DD');
       } else {
         preparedItem.pause_at = '-';
       }
 
+      // Prepare the price.
       const preparedThreshold = (Number(item.threshold) / 100).toFixed(2);
 
+      // Prepare the currency symbol.
       preparedItem.threshold = `${preparedThreshold} ${getSymbolFromCurrency(item.currency)}`;
 
+      // Prepare the format of the status.
       preparedItem.status = toTitleCase(item.status.replace('_', ' '));
 
       return preparedItem;
     }),
+
     status: true,
   };
 };

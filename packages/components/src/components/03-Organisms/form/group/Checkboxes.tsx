@@ -11,6 +11,7 @@ type CheckboxesProps = {
 export const Checkboxes = ({ state, handleChange }: CheckboxesProps) => {
   return (
     <Box
+      id="status-checkboxes"
       sx={{
         flex: 1,
         display: 'flex',

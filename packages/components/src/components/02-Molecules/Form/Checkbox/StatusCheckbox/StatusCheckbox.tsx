@@ -1,6 +1,6 @@
 import { Checkbox, FormControlLabel } from '@mui/material';
 import React from 'react';
-import toTitleCase from '../../../../../services/toTitleCase';
+import {toTitleCase} from '../../../../../services';
 
 type StatusCheckboxProps = {
   name: string;
@@ -14,13 +14,23 @@ type StatusCheckboxProps = {
  * @param handleChange
  * @constructor
  */
-export default function StatusCheckbox({ name, value, handleChange }: StatusCheckboxProps) {
+export default function StatusCheckbox({
+  name,
+  value,
+  handleChange
+}: StatusCheckboxProps) {
+
+  const label: string = toTitleCase(name.replace('_', ' '));
+
   return (
     <FormControlLabel
       sx={{ justifyContent: 'space-around' }}
       key={name}
-      control={<Checkbox checked={value} onChange={handleChange} name={name} />}
-      label={toTitleCase(name.replace('_', ' '))}
+      control={
+        <Checkbox id={`status-${name}`} checked={value} onChange={handleChange}
+                  name={name}/>
+      }
+      label={label}
     />
   );
 }

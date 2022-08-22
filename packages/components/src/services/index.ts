@@ -1,6 +1,6 @@
 import prepareProductsData from './prepareData';
 import toTitleCase from './toTitleCase';
+import prepareUrlLink from './prepareUrlLink';
 
-export { prepareProductsData, toTitleCase };
+export { prepareProductsData, toTitleCase, prepareUrlLink };
 
-export default prepareProductsData;

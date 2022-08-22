@@ -5,7 +5,7 @@
  */
 import React, { useEffect, useReducer } from 'react';
 import { TextField, Box, FormControl, FormGroup } from '@mui/material';
-import { ClearButton, Checkboxes } from '@/components';
+import { ClearButton, Checkboxes } from '@monorepo/components';
 import { formSearchReducer, handleFormEvent } from '@/reducers';
 import { FormEvent } from '@/constants';
 
