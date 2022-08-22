@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PokemonImage from '../01-Atoms/UI/PokemonImage';
-import CaptureButton from '../01-Atoms/UI/CaptureButton';
+import CaptureButton from '../01-Atoms/Form/CaptureButton';
 import IPokemonSimpleComponent from '../../types/IPokemonSimpleComponent';
 import { Card } from 'react-bootstrap';
 import Spinner from '../01-Atoms/UI/Spinner';
@@ -15,6 +15,7 @@ import Spinner from '../01-Atoms/UI/Spinner';
  */
 const PokemonCard: React.FC<IPokemonSimpleComponent> = (props) => {
   const { pokemon } = props;
+
   if (!pokemon) {
     return <Spinner/>;
   }

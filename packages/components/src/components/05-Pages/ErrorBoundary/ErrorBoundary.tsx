@@ -1,7 +1,7 @@
 /* eslint-disable */
 // @ts-nocheck
 import React, { ErrorInfo } from 'react';
-import { Container, Box, Divider, Card } from '@mui/material';
+import { Box, Card, Container, Divider } from '@mui/material';
 
 type ErrorStateProps = {
   hasError: boolean;

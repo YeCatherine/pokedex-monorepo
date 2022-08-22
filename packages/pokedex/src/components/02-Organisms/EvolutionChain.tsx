@@ -3,10 +3,7 @@ import IPokemonData from '../../types/IPokemonData';
 import { getIdFromURL } from '../../services/Common';
 import PokemonListService from '../../services/PokemonListService';
 import PokemonCard from './PokemonCard';
-import {
-  ListGroup as Ul,
-  ListGroupItem as Li
-} from 'react-bootstrap';
+import { ListGroup as Ul, ListGroupItem as Li } from 'react-bootstrap';
 
 /**
  * Item of chain evolution sequence.
@@ -89,6 +86,6 @@ const EvolutionChain: React.FC<IEvolutionComponent> = (props) => {
         })}
       </Ul>
     </>
-  )
-}
+  );
+};
 export default EvolutionChain;

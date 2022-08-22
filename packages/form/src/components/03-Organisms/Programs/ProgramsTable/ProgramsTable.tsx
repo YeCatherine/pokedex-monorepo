@@ -2,9 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import { formSearchType, iProgramGrid } from '@/types';
 import { DataLoading } from '@monorepo/components';
-import {
-  prepareProductsData
-} from '@monorepo/components/src/services';
+import { prepareProductsData } from '@monorepo/components/src/services';
 import prepareUrlLink from '@/services/prepareUrlLink';
 import { useDebounce } from '@/hooks/useDebounce/useDebounce';
 

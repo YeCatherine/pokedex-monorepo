@@ -2,7 +2,7 @@
  * Check that status checkbox is working as expected.
  */
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 import StatusCheckbox from './StatusCheckbox';
 
 describe('Basic testing', () => {

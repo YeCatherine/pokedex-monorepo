@@ -6,7 +6,7 @@ import IPokemonSearchBox from '../../../types/IPokemonSearchBox';
  *
  * @param {IPokemonSearchBox} props Pokemon list.
  *
- * @constructor The functional component of PokemonSearchBox.
+ * @constructor The functional component of SearchBox.
  */
 const PokemonSearchBox: React.FC<IPokemonSearchBox> = (props) => {
   return <input

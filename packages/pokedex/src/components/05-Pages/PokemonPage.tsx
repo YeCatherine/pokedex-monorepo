@@ -3,11 +3,11 @@ import { Link, useParams } from 'react-router-dom';
 import IPokemonData from '../../types/IPokemonData';
 import PokemonListService from '../../services/PokemonListService';
 import {
-  Container,
-  Row,
   Col,
+  Container,
   ListGroup as Ul,
-  ListGroupItem as Li
+  ListGroupItem as Li,
+  Row
 } from 'react-bootstrap';
 import EvolutionChain from '../02-Organisms/EvolutionChain';
 import { useGlobalContext } from '../../services/Context';

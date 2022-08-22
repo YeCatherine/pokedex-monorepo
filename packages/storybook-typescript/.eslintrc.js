@@ -4,7 +4,7 @@ module.exports = {
     'plugin:react/recommended', // Uses the recommended rules from
                                 // @eslint-plugin-react
     'plugin:@typescript-eslint/recommended' // Uses the recommended rules from
-                                             // @typescript-eslint/eslint-plugin
+    // @typescript-eslint/eslint-plugin
   ],
   parserOptions: {
     ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
@@ -21,7 +21,7 @@ module.exports = {
   settings: {
     react: {
       version: 'detect' // Tells eslint-plugin-react to automatically detect
-                         // the version of React to use
+      // the version of React to use
     }
   }
 }

@@ -80,5 +80,6 @@
   },
   "devDependencies": {
     "gh-pages": "^3.2.3"
-  }
+  },
+  "cracoConfig": "craco.config.js"
 }

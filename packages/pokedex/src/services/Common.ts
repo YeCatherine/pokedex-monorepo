@@ -11,4 +11,4 @@ export const getIdFromURL = (url: string): number | undefined => {
   }
   const urlParts = url.split('/');
   return Number(urlParts[urlParts.length - 2]);
-}
+};

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { MyGlobalContext } from '../../../services/Context';
 import Header from '../Header/Header';
 import RightSidebar from '../RightSidebar/RightSidebar';
