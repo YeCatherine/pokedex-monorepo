@@ -20,7 +20,7 @@ interface StatsList {
 /**
  * Pokemon data type.
  */
-export default interface IPokemonData {
+export interface IPokemonData {
   /**
    * Unique pokemon id.
    */
@@ -67,3 +67,5 @@ export default interface IPokemonData {
   stats: Array<StatsList>
   evolution_chain?: IGeneralPokemonDataItem
 }
+
+export default IPokemonData;

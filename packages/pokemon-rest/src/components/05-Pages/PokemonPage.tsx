@@ -2,13 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import IPokemonData from '../../types/IPokemonData';
 import { pokemonListService } from '@/services';
-import {
-  Col,
-  Container,
-  ListGroup as Ul,
-  ListGroupItem as Li,
-  Row
-} from 'react-bootstrap';
+import { List as Ul, ListItemText as Li } from '@mui/material';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
 import EvolutionChain from '../02-Organisms/EvolutionChain/EvolutionChain';
 import { useGlobalContext } from '@/context/Context';
 import PokemonCard from '../02-Organisms/PokemonCard';
@@ -57,49 +53,49 @@ const PokemonPage: React.FC = (props) => {
   return (
     <>
       <Container>
-        <Row>
-          <Col className="pokemon">
+        <Box className={'row'}>
+          <Box className="pokemon">
             <h1>{`My name is "${name}"`}</h1>
             <PokemonCard pokemon={pokemon}/>
-          </Col>
-          <Col className="card card-header text-dark text-center">
+          </Box>
+          <Box className="card card-header text-dark text-center">
             <h3>Base stats</h3>
-            <Ul className="pokemon-base-stats flex-wrap" horizontal>
+            <Ul className="pokemon-base-stats flex-wrap">
               {pokemon.stats.map(st => (
                 <Li key={st.stat.name}>{st.stat.name} - {st.base_stat}</Li>))}
             </Ul>
             <hr/>
             <h3>Abilities</h3>
-            <Ul className="pokemon-abilities flex-wrap" horizontal>
+            <Ul className="pokemon-abilities flex-wrap">
               {pokemon.abilities.map(ability => (
                 <Li key={ability.ability.name}>{ability.ability.name}</Li>))}
             </Ul>
             <hr/>
             <h3>Properties</h3>
-            <Ul className="pokemon-properties flex-wrap" horizontal>
+            <Ul className="pokemon-properties flex-wrap">
               <Li>{`weight - ${pokemon.weight}`}</Li>
               <Li>{`height - ${pokemon.height}`}</Li>
               <Li>{`order - ${pokemon.order}`}</Li>
             </Ul>
             <hr/>
             <h3>Types</h3>
-            <Ul className="pokemon-types flex-wrap" horizontal>
+            <Ul className="pokemon-types flex-wrap">
               {pokemon.types.map(typ => (
                 <Li key={typ.type.name}>{typ.type.name}</Li>))}
             </Ul>
             <hr/>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
+          </Box>
+        </Box>
+        <Box className={'row'}>
+          <Box>
             <EvolutionChain pokemon={pokemon}
                             pokemonSpecies={pokemonSpecies}/>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
+          </Box>
+        </Box>
+        <Box className={'row'}>
+          <Box>
             <h3>Moves</h3>
-            <Ul className="pokemon-moves flex-wrap" horizontal>
+            <Ul className="pokemon-moves flex-wrap">
               {pokemon.moves.map(move => (
                 <Li key={move.move.name}>
                   <Link
@@ -108,10 +104,8 @@ const PokemonPage: React.FC = (props) => {
                   </Link>
                 </Li>))}
             </Ul>
-          </Col>
-        </Row>
-
-
+          </Box>
+        </Box>
       </Container>
     </>);
 };

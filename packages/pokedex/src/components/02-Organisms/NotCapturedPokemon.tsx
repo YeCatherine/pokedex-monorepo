@@ -3,7 +3,7 @@ import PokemonListService from '../../services/PokemonListService';
 import usePokemonCapture from '../../hooks/usePokemonCapture';
 import IPokemonData from '../../types/IPokemonData';
 import PokemonCard from './PokemonCard';
-import Spinner from '../01-Atoms/UI/Spinner';
+import { Spinner } from '@monorepo/components';
 
 /**
  * Functional component for random notcaptured pokemon.

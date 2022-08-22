@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import IPokemonData from '../../types/IPokemonData';
+import { IPokemonData } from '@/types';
 import { pokemonListService } from '@/services';
-import {
-  Container,
-  ListGroup as Ul,
-  ListGroupItem as Li
-} from 'react-bootstrap';
+
+import { List as Ul, ListItemText as Li } from '@mui/material';
+import Container from '@mui/material/Container';
 import PokemonCard from '../02-Organisms/PokemonCard';
 
 /**
