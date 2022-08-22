@@ -24,7 +24,7 @@
     "react-router-dom": "^5.2.0",
     "react-testing-library": "^8.0.1",
     "typedoc": "0.23.9",
-    "web-vitals": "^1.0.1",
+    "web-vitals": "^2.1.4",
     "workbox-background-sync": "^5.1.3",
     "workbox-broadcast-update": "^5.1.3",
     "workbox-cacheable-response": "^5.1.3",
