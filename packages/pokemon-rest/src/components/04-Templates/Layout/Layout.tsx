@@ -43,7 +43,7 @@ const SidebarWrapper = ({ sidebar }: { sidebar: SideBarType }) => {
  */
 const Layout: React.FC<Props> = ({ className = 'layout', headerProps, children, sidebar }) => {
   const [language, setLanguage] = useState<string>(DEFAULT_LANGUAGE);
- 
+
   return (
     <MyGlobalContext.Provider value={{ language, setLanguage }}>
       <Grid
@@ -57,10 +57,10 @@ const Layout: React.FC<Props> = ({ className = 'layout', headerProps, children, 
         gridTemplateColumns={{ xs: '1fr', md: 'auto 1fr' }}
         gridTemplateAreas={{ xs: "'main'", md: "'sidebar main'" }}
       >
-                    <nav>
-            <Link to="/">Home</Link>
-            <Link to="/captured">Captured</Link>
-          </nav>
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/captured">Captured</Link>
+        </nav>
         <Main gridArea="main" headerProps={headerProps}>
           {children}
         </Main>

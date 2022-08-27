@@ -1,1 +1,1 @@
-export * from './prepareUrlLink'
+export * from './prepareUrlLink';

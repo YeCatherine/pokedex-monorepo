@@ -35,15 +35,43 @@ const App = () => {
   return (
     <ErrorBoundary>
       <PageContext.Provider value={{ formState, setFormState }}>
-          <Router>
-            <Routes>
-              <Route path="/" element={<Layout sidebar={<SidebarContent />}><PokemonList /></Layout>} />
-              <Route path="/pokemon/:name" element={<Layout sidebar={<SidebarContent />}><PokemonPage /></Layout>} />
-              <Route path="/move/:name" element={<Layout sidebar={<SidebarContent />}><PokemonMovePage /></Layout>} />
-              <Route path="/captured" element={<Layout sidebar={<SidebarContent />}><Programs/></Layout>} />
-              <Route element={<Page404 />} />
-            </Routes>
-          </Router>
+        <Router>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Layout sidebar={<SidebarContent />}>
+                  <PokemonList />
+                </Layout>
+              }
+            />
+            <Route
+              path="/pokemon/:name"
+              element={
+                <Layout sidebar={<SidebarContent />}>
+                  <PokemonPage />
+                </Layout>
+              }
+            />
+            <Route
+              path="/move/:name"
+              element={
+                <Layout sidebar={<SidebarContent />}>
+                  <PokemonMovePage />
+                </Layout>
+              }
+            />
+            <Route
+              path="/captured"
+              element={
+                <Layout sidebar={<SidebarContent />}>
+                  <Programs />
+                </Layout>
+              }
+            />
+            <Route element={<Page404 />} />
+          </Routes>
+        </Router>
       </PageContext.Provider>
     </ErrorBoundary>
   );
