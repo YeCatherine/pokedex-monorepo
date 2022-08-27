@@ -20,8 +20,8 @@ const WrapProgramsTable = withContext(withContent(DataTable, serverResouce));
 export const Programs = () => {
   return (
     <>
-      <WrapProgramSearch/>
-      <WrapProgramsTable/>
+      <WrapProgramSearch />
+      <WrapProgramsTable />
     </>
   );
 };

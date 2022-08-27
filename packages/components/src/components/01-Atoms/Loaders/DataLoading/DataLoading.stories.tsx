@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import {DataLoading} from './DataLoading';
+import { DataLoading } from './DataLoading';
 
 /**
  * Story for DataLoading component.

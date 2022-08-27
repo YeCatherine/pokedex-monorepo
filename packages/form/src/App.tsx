@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ErrorBoundary, Layout, formSearchType } from '@monorepo/components';
+import { ErrorBoundary, formSearchType, Layout } from '@monorepo/components';
 import { Programs as ProgramsPage } from '@/pages';
 import { DEFAULT_SEARCH_PARAMS } from '@/constants';
 import { FormContext } from '@monorepo/components/src/context';

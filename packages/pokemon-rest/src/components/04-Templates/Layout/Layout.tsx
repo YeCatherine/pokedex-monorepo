@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-import { DEFAULT_LANGUAGE, MyGlobalContext } from '@/context/LanguageContext';
+import React from 'react';
 import Grid, { GridProps } from '@mui/material/Grid';
 import { BoxProps } from '@mui/material';
 import { Sidebar } from '@/components/04-Templates/Sidebar/Sidebar';
 import { Main } from '@/components/04-Templates/Main/Main';
-import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 type SideBarType = JSX.Element | JSX.Element[] | undefined;
 
@@ -42,7 +41,6 @@ const SidebarWrapper = ({ sidebar }: { sidebar: SideBarType }) => {
  * @constructor
  */
 const Layout: React.FC<Props> = ({ className = 'layout', headerProps, children, sidebar }) => {
-
   return (
     <>
       <Grid

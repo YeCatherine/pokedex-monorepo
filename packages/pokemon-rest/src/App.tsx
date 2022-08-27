@@ -36,43 +36,43 @@ const App = () => {
     <ErrorBoundary>
       <PageContext.Provider value={{ formState, setFormState }}>
         <MyGlobalContext.Provider value={{ language, setLanguage }}>
-        <Router>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <Layout sidebar={<SidebarContent />}>
-                  <PokemonList />
-                </Layout>
-              }
-            />
-            <Route
-              path="/pokemon/:name"
-              element={
-                <Layout sidebar={<SidebarContent />}>
-                  <PokemonPage />
-                </Layout>
-              }
-            />
-            <Route
-              path="/move/:name"
-              element={
-                <Layout sidebar={<SidebarContent />}>
-                  <PokemonMovePage />
-                </Layout>
-              }
-            />
-            {/*<Route*/}
-            {/*  path="/captured"*/}
-            {/*  element={*/}
-            {/*    <Layout sidebar={<SidebarContent />}>*/}
-            {/*      <Programs />*/}
-            {/*    </Layout>*/}
-            {/*  }*/}
-            {/*/>*/}
-            <Route element={<Page404 />} />
-          </Routes>
-        </Router>
+          <Router>
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <Layout sidebar={<SidebarContent />}>
+                    <PokemonList />
+                  </Layout>
+                }
+              />
+              <Route
+                path="/pokemon/:name"
+                element={
+                  <Layout sidebar={<SidebarContent />}>
+                    <PokemonPage />
+                  </Layout>
+                }
+              />
+              <Route
+                path="/move/:name"
+                element={
+                  <Layout sidebar={<SidebarContent />}>
+                    <PokemonMovePage />
+                  </Layout>
+                }
+              />
+              {/*<Route*/}
+              {/*  path="/captured"*/}
+              {/*  element={*/}
+              {/*    <Layout sidebar={<SidebarContent />}>*/}
+              {/*      <Programs />*/}
+              {/*    </Layout>*/}
+              {/*  }*/}
+              {/*/>*/}
+              <Route element={<Page404 />} />
+            </Routes>
+          </Router>
         </MyGlobalContext.Provider>
       </PageContext.Provider>
     </ErrorBoundary>

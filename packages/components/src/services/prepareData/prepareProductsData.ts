@@ -67,7 +67,7 @@ export const prepareProductsData = (
       { field: 'pause_at', headerName: 'Pause Date', width: 150 }
     ];
   }
-  ;
+
   return table;
 };
 

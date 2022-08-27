@@ -1,4 +1,4 @@
-import useLocalStorage from './useLocalStorage';
+import { useLocalStorage } from '@monorepo/components';
 import IPokemonData from '../types/IPokemonData';
 
 interface CapturedPokemonType {

@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { SearchBox, Spinner } from '@monorepo/components';
+import { SearchBox, Spinner, useLocalStorage } from '@monorepo/components';
 import { pokemonListService } from '@/services';
 import IPokemonData from '@/types/IPokemonData';
 import Grid from '@mui/material/Grid';
-import useLocalStorage from '@/hooks/useLocalStorage';
 import { getIdFromURL } from '@/services/Common';
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
