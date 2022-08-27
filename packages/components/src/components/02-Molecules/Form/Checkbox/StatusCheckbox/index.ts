@@ -1,4 +1,4 @@
-import { StatusCheckbox } from '@monorepo/form/src/components';
+import { StatusCheckbox } from '../../../../index';
 
 export { StatusCheckbox };
 export default StatusCheckbox;

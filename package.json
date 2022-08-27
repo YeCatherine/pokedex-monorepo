@@ -6,7 +6,8 @@
     "lerna": "^5.4.3"
   },
   "scripts": {
-    "start": "concurrently \"yarn run start:pokemon:rest\" \"yarn run start:form\" \"yarn nx:graph\"",
+    "start0": "concurrently \"yarn run start:pokemon:rest\" \"yarn run start:form\" \"yarn nx:graph\"",
+    "start": "lerna run --parallel start",
     "start:form": "lerna exec --scope @monorepo/form -- yarn start",
     "start:form:storybook": "lerna exec --scope @monorepo/form -- yarn storybook",
     "start:form:cyperss": "lerna exec --scope @monorepo/form -- yarn cy:test",

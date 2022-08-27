@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import DataLoading from './DataLoading';
+import {DataLoading} from './DataLoading';
 
 describe('Check that component loaded properly', () => {
   test('Component Rendered "DataLoading"', () => {
