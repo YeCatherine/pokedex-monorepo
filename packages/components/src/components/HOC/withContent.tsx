@@ -15,7 +15,7 @@ import { formSearchType, iProgramGrid } from '../../types';
  */
 export function withContent(Component, searchCallback) {
   return function ComponentWithContent({ formState }) {
-    const [preparedProducts, setPreparedProducts] = useState<iProgramGrid | null>(
+    const [preparedData, setPreparedData] = useState<iProgramGrid | null>(
       {
         status: false
       });
@@ -29,9 +29,9 @@ export function withContent(Component, searchCallback) {
       const productTable = prepareProductsData(data);
 
       if (productTable.status) {
-        setPreparedProducts(productTable);
+        setPreparedData(productTable);
       }
     }, [data]);
-    return <Component preparedProducts={preparedProducts}/>;
+    return <Component preparedData={preparedData}/>;
   };
 }

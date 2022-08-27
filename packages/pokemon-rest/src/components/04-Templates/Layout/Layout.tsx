@@ -42,28 +42,26 @@ const SidebarWrapper = ({ sidebar }: { sidebar: SideBarType }) => {
  */
 const Layout: React.FC<Props> = ({ className = 'layout', headerProps, children, sidebar }) => {
   return (
-    <>
-      <Grid
-        className={className}
-        display="grid"
-        height="100vh"
-        width="100%"
-        minWidth={(theme) => theme.breakpoints.values.sm}
-        bgcolor="background.paper"
-        gridTemplateRows="1fr"
-        gridTemplateColumns={{ xs: '1fr', md: 'auto 1fr' }}
-        gridTemplateAreas={{ xs: "'main'", md: "'sidebar main'" }}
-      >
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/captured">Captured</Link>
-        </nav>
-        <Main gridArea="main" headerProps={headerProps}>
-          {children}
-        </Main>
-        <SidebarWrapper sidebar={sidebar} />
-      </Grid>
-    </>
+    <Grid
+      className={className}
+      display="grid"
+      height="100vh"
+      width="100%"
+      minWidth={(theme) => theme.breakpoints.values.sm}
+      bgcolor="background.paper"
+      gridTemplateRows="1fr"
+      gridTemplateColumns={{ xs: '1fr', md: 'auto 1fr' }}
+      gridTemplateAreas={{ xs: "'main'", md: "'sidebar main'" }}
+    >
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/captured">Captured</Link>
+      </nav>
+      <Main gridArea="main" headerProps={headerProps}>
+        {children}
+      </Main>
+      <SidebarWrapper sidebar={sidebar} />
+    </Grid>
   );
 };
 

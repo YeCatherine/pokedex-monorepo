@@ -19,4 +19,7 @@ export const serverResouce = async ({ href }) => {
   return response.data;
 };
 
+export const localStorageResource = ({ key }) => {
+  return localStorage.get(key);
+};
 export default useDataSource;

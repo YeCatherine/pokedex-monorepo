@@ -7,18 +7,23 @@
   },
   "scripts": {
     "start0": "concurrently \"yarn run start:pokemon:rest\" \"yarn run start:form\" \"yarn nx:graph\"",
-    "start": "lerna run --parallel start",
+
+    "start": "lerna run start --parallel",
+    "build": "lerna run build --parallel",
+    "test": "CI=true lerna run test --parallel",
+    "typecheck": "lerna run typecheck --parallel",
     "start:form": "lerna exec --scope @monorepo/form -- yarn start",
     "start:form:storybook": "lerna exec --scope @monorepo/form -- yarn storybook",
     "start:form:cyperss": "lerna exec --scope @monorepo/form -- yarn cy:test",
     "start:pokemon": "lerna exec --scope @monorepo/pokemonrest -- yarn start",
     "start:storybook": "lerna exec --scope @monorepo/storybook -- yarn storybook",
     "format": "lerna run format",
-    "test": "lerna run test",
-    "nx:graph": "nx graph",
+    "lint": "lerna run lint --parallel",
+    "lint:fix": "lerna run format --parallel",
+    "graph": "nx graph",
     "clean": "lerna clean",
-    "docs": "lerna run docs",
-    "build": "lerna run build --concurrency=5"
+    "clean:update": "lerna clean && lerna bootstrap",
+    "docs": "lerna run docs"
   },
   "workspaces": {
     "packages": [

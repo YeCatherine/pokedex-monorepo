@@ -54,18 +54,26 @@ export const prepareProductsData = (
   // Prepare columns.
   if (columns) {
     table.columns = columns;
-
   }
   else {
-    table.columns = [
-      { field: 'currency', hide: true, headerName: 'currency' },
-      { field: 'id', hide: true, headerName: 'id' },
-      { field: 'name', headerName: 'Name', flex: 1 },
-      { field: 'return_percentage', headerName: 'Cashback', width: 150 },
-      { field: 'threshold', headerName: 'Threshold', width: 150 },
-      { field: 'status', headerName: 'Status', width: 150 },
-      { field: 'pause_at', headerName: 'Pause Date', width: 150 }
-    ];
+    // table.columns = [
+    //   { field: 'currency', hide: true, headerName: 'currency' },
+    //   { field: 'id', hide: true, headerName: 'id' },
+    //   { field: 'name', headerName: 'Name', flex: 1 },
+    //   { field: 'return_percentage', headerName: 'Cashback', width: 150 },
+    //   { field: 'threshold', headerName: 'Threshold', width: 150 },
+    //   { field: 'status', headerName: 'Status', width: 150 },
+    //   { field: 'pause_at', headerName: 'Pause Date', width: 150 }
+    // ];
+    table.columns = [];
+    Object.entries(table.rows[0]).forEach(([key, value]) => {
+      const rowItem = {
+        field: key,
+        hide: key === 'id' ? true : false,
+        headerName: toTitleCase(key.replace('_', ' '))
+      };
+      table.columns.push(rowItem);
+    });
   }
 
   return table;

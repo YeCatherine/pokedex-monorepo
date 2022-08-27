@@ -4,9 +4,9 @@ import { DataLoading } from '@monorepo/components';
 // import {iProgramGrid} from '@/types';
 // import { GridColumns } from '@mui/x-data-grid/models/colDef/gridColDef';
 
-export const DataTable = ({ preparedProducts }) => {
+export const DataTable = ({ preparedData: preparedData }) => {
 
-  if (!preparedProducts.status) {
+  if (!preparedData.status) {
     return <DataLoading/>;
   }
 
@@ -21,8 +21,8 @@ export const DataTable = ({ preparedProducts }) => {
         <div style={{ flexGrow: 1 }}>
           <DataGrid
             className="programs-datagrid"
-            columns={preparedProducts.columns}
-            rows={preparedProducts.rows}
+            columns={preparedData.columns}
+            rows={preparedData.rows}
             autoHeight
           />
         </div>
