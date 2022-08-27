@@ -8,7 +8,6 @@ import { PageContext } from '@/context';
 import { PokemonList, PokemonMovePage, PokemonPage } from '@/components/05-Pages';
 import RandomPokemon from '@/components/02-Organisms/RandomPokemon/RandomPokemon';
 import CapturedPokemons from '@/components/03-Molecules/CapturedPokemons/CapturedPokemons';
-import { Programs } from '@monorepo/form/src/pages';
 
 /**
  * SidebarContent
@@ -61,14 +60,14 @@ const App = () => {
                 </Layout>
               }
             />
-            <Route
-              path="/captured"
-              element={
-                <Layout sidebar={<SidebarContent />}>
-                  <Programs />
-                </Layout>
-              }
-            />
+            {/*<Route*/}
+            {/*  path="/captured"*/}
+            {/*  element={*/}
+            {/*    <Layout sidebar={<SidebarContent />}>*/}
+            {/*      <Programs />*/}
+            {/*    </Layout>*/}
+            {/*  }*/}
+            {/*/>*/}
             <Route element={<Page404 />} />
           </Routes>
         </Router>

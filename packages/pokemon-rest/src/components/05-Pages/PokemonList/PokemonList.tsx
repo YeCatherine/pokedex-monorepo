@@ -8,7 +8,7 @@ import { getIdFromURL } from '@/services/Common';
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
-import PokemonCard from '../02-Organisms/PokemonCard/PokemonCard';
+import PokemonCard from '../../02-Organisms/PokemonCard/PokemonCard';
 
 // import { LanguageSwitcher } from
 // '../01-Atoms/Form/LanguageSwitcher/LanguageSwitcher';

@@ -5,7 +5,7 @@ import { pokemonListService } from '@/services';
 
 import { List as Ul, ListItemText as Li } from '@mui/material';
 import Container from '@mui/material/Container';
-import PokemonCard from '../02-Organisms/PokemonCard/PokemonCard';
+import PokemonCard from '../../02-Organisms/PokemonCard/PokemonCard';
 
 /**
  * Functional component for pokemon move page.

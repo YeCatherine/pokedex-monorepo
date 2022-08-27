@@ -6,9 +6,9 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { useGlobalContext } from '@/context/Context';
 import { Spinner } from '@monorepo/components';
-import EvolutionChain from '../02-Organisms/EvolutionChain/EvolutionChain';
-import PokemonCard from '../02-Organisms/PokemonCard/PokemonCard';
-import IPokemonData from '../../types/IPokemonData';
+import EvolutionChain from '../../02-Organisms/EvolutionChain/EvolutionChain';
+import PokemonCard from '../../02-Organisms/PokemonCard/PokemonCard';
+import IPokemonData from '../../../types/IPokemonData';
 
 /**
  * Outputs the list of pokemon weight, height, order, type name, abilities,
