@@ -4,7 +4,7 @@ import { pokemonListService } from '@/services';
 import { List as Ul, ListItemText as Li } from '@mui/material';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import { useGlobalContext } from '@/context/Context';
+import { useGlobalContext } from '@/context/LanguageContext';
 import { Spinner } from '@monorepo/components';
 import EvolutionChain from '../../02-Organisms/EvolutionChain/EvolutionChain';
 import PokemonCard from '../../02-Organisms/PokemonCard/PokemonCard';

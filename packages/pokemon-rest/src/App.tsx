@@ -8,6 +8,7 @@ import { PageContext } from '@/context';
 import { PokemonList, PokemonMovePage, PokemonPage } from '@/components/05-Pages';
 import RandomPokemon from '@/components/02-Organisms/RandomPokemon/RandomPokemon';
 import CapturedPokemons from '@/components/03-Molecules/CapturedPokemons/CapturedPokemons';
+import { DEFAULT_LANGUAGE, MyGlobalContext } from '@/context/LanguageContext';
 
 /**
  * SidebarContent
@@ -30,10 +31,11 @@ const SidebarContent = () => (
  */
 const App = () => {
   const [formState, setFormState] = useState<formSearchType>(DEFAULT_SEARCH_PARAMS);
-
+  const [language, setLanguage] = useState<string>(DEFAULT_LANGUAGE);
   return (
     <ErrorBoundary>
       <PageContext.Provider value={{ formState, setFormState }}>
+        <MyGlobalContext.Provider value={{ language, setLanguage }}>
         <Router>
           <Routes>
             <Route
@@ -71,6 +73,7 @@ const App = () => {
             <Route element={<Page404 />} />
           </Routes>
         </Router>
+        </MyGlobalContext.Provider>
       </PageContext.Provider>
     </ErrorBoundary>
   );

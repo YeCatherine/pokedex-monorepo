@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { pokemonListService } from '@/services';
-import { useGlobalContext } from '@/context/Context';
+import { useGlobalContext } from '@/context/LanguageContext';
 
 /**
  * The language switcher.

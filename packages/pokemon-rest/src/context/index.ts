@@ -1,6 +1,2 @@
-/* eslint-disable */
-import { PageContext } from './PageContext';
-
-export { PageContext };
-export default PageContext;
-/* eslint-enable */
+export * from './PageContext';
+export * from './LanguageContext';

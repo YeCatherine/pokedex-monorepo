@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { DEFAULT_LANGUAGE, MyGlobalContext } from '@/context/Context';
+import { DEFAULT_LANGUAGE, MyGlobalContext } from '@/context/LanguageContext';
 import Grid, { GridProps } from '@mui/material/Grid';
 import { BoxProps } from '@mui/material';
 import { Sidebar } from '@/components/04-Templates/Sidebar/Sidebar';
@@ -42,10 +42,9 @@ const SidebarWrapper = ({ sidebar }: { sidebar: SideBarType }) => {
  * @constructor
  */
 const Layout: React.FC<Props> = ({ className = 'layout', headerProps, children, sidebar }) => {
-  const [language, setLanguage] = useState<string>(DEFAULT_LANGUAGE);
 
   return (
-    <MyGlobalContext.Provider value={{ language, setLanguage }}>
+    <>
       <Grid
         className={className}
         display="grid"
@@ -66,7 +65,7 @@ const Layout: React.FC<Props> = ({ className = 'layout', headerProps, children, 
         </Main>
         <SidebarWrapper sidebar={sidebar} />
       </Grid>
-    </MyGlobalContext.Provider>
+    </>
   );
 };
 
