@@ -6,13 +6,7 @@
 import React from 'react';
 
 export interface IProgram {
-  id: string;
-  currency: string;
-  name: string;
-  return_percentage: string;
-  threshold: string;
-  status: string;
-  pause_at: string;
+  [key: string]: string;
 }
 
 export interface iProgramGrid {

@@ -1,3 +1,1 @@
-import prepareUrlLink from './prepareUrlLink';
-
-export default prepareUrlLink;
+export * from './prepareUrlLink';

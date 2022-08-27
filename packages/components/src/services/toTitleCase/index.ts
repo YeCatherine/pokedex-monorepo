@@ -1,3 +1,1 @@
-import toTitleCase from './toTitleCase';
-
-export default toTitleCase;
+export * from './toTitleCase';

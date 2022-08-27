@@ -7,7 +7,7 @@
 // type formStateProps = {
 //   [key: string]: string
 // }
-export default function prepareUrlLink(formState) {
+export function prepareUrlLink(formState): string {
   const preparedURL = new URL(`${process.env.REACT_APP_API_URL}/programs`);
 
   if (formState.name !== '') {
@@ -24,3 +24,5 @@ export default function prepareUrlLink(formState) {
   preparedURL.searchParams.append('_limit', '100');
   return preparedURL.href;
 }
+
+export default prepareUrlLink;

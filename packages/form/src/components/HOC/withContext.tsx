@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { PageContext } from '@/context/PageContext';
+import { FormContext } from '@monorepo/components/src/context';
 
 /**
  * Inject Content into the
@@ -11,9 +11,9 @@ import { PageContext } from '@/context/PageContext';
 export default function withContext(Component) {
   return function ComponentWithContext(props) {
     return (
-      <PageContext.Consumer>
+      <FormContext.Consumer>
         {(contexts) => <Component {...props} {...contexts} />}
-      </PageContext.Consumer>
+      </FormContext.Consumer>
     );
   };
 }

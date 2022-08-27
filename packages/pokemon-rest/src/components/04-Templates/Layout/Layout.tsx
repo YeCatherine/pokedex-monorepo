@@ -4,6 +4,7 @@ import Grid, { GridProps } from '@mui/material/Grid';
 import { BoxProps } from '@mui/material';
 import { Sidebar } from '@/components/04-Templates/Sidebar/Sidebar';
 import { Main } from '@/components/04-Templates/Main/Main';
+import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 
 type SideBarType = JSX.Element | JSX.Element[] | undefined;
 
@@ -56,6 +57,10 @@ const Layout: React.FC<Props> = ({ className = 'layout', headerProps, children, 
         gridTemplateColumns={{ xs: '1fr', md: 'auto 1fr' }}
         gridTemplateAreas={{ xs: "'main'", md: "'sidebar main'" }}
       >
+                    <nav>
+            <Link to="/">Home</Link>
+            <Link to="/captured">Captured</Link>
+          </nav>
         <Main gridArea="main" headerProps={headerProps}>
           {children}
         </Main>

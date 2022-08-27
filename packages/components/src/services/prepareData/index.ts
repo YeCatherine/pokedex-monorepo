@@ -1,3 +1,1 @@
-import prepareProductsData from './prepareProductsData';
-
-export default prepareProductsData;
+export * from './prepareProductsData';

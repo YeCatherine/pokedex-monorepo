@@ -9,6 +9,7 @@ import usePokemonCapture from '../../../hooks/usePokemonCapture';
  */
 const CapturedPokemons: React.FC = (props) => {
   const { capturedPokemons } = usePokemonCapture();
+  console.log({capturedPokemons});
   const list = capturedPokemons.map((currentPokemon, index) => (
     <PokemonCard key={index} pokemon={currentPokemon} />
   ));
