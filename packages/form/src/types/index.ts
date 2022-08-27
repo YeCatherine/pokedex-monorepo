@@ -22,16 +22,16 @@ export interface iProgramGrid {
 }
 
 export type searchStatusType = {
-  active: boolean;
-  paused: boolean;
-  pause_scheduled: boolean;
+  [key: string]: boolean;
 };
 
 export type formSearchType = {
-  name: string;
-  statuses: searchStatusType;
   isFetching?: boolean;
+  [key: string]: string | boolean | searchStatusType;
+  // name: string;
+  // statuses: searchStatusType;
 };
+
 //
 // export type Context = {
 //   formState: formSearchType[];

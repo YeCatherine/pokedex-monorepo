@@ -1,9 +1,11 @@
 import React from 'react';
 import { ProgramSearch, ProgramsTable } from '@/components';
-import withContext from '@/components/HOC/withContext';
+import { withContent, withContext } from '@/components/HOC';
+import { serverResouce } from '@monorepo/components/src/hooks/useDataSource/useDataSource';
 
 const WrapProgramSearch = withContext(ProgramSearch);
-const WrapProgramsTable = withContext(ProgramsTable);
+// Wrap Page data with Context and ServerFunction.
+const WrapProgramsTable = withContext(withContent(ProgramsTable, serverResouce));
 
 /**
  * Programs page.

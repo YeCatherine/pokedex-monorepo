@@ -26,20 +26,7 @@ export interface iProgramGrid {
   status: boolean;
 }
 
-const ProgramsTable = ({ formState }) => {
-  const [preparedProducts, setPreparedProducts] = useState<iProgramGrid | null>({ status: false });
-  const debouncedFormState = useDebounce<formSearchType>(formState, 500);
-  const href = prepareUrlLink(debouncedFormState);
-  const data = useDataSource<iProgramGrid>(serverResouce, { href }, { status: false });
-
-  useEffect(() => {
-    const productTable = prepareProductsData(data);
-
-    if (productTable.status) {
-      setPreparedProducts(productTable);
-    }
-  }, [data]);
-
+const ProgramsTable = ({ preparedProducts }) => {
   if (!preparedProducts.status) {
     return <DataLoading />;
   }

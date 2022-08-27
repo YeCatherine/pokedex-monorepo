@@ -1,3 +1,2 @@
-import withContext from '@/components/HOC/withContext';
-
-export default withContext;
+export * from './withContent';
+export * from './withContext';

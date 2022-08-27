@@ -8,7 +8,7 @@ import { FormContext } from '@monorepo/components/src/context';
  *
  * @returns component with context values inside it.
  */
-export default function withContext(Component) {
+export function withContext(Component) {
   return function ComponentWithContext(props) {
     return (
       <FormContext.Consumer>
