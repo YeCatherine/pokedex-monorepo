@@ -5,6 +5,7 @@ import InputLabel from '@material-ui/core/InputLabel'
 import MenuItem from '@material-ui/core/MenuItem'
 import FormControl from '@material-ui/core/FormControl'
 import Select from '@material-ui/core/Select'
+import { TextField } from '@mui/material'
 
 const pokemonTypes = [
   'Bug',
@@ -24,7 +25,7 @@ const pokemonTypes = [
   'Psychic',
   'Rock',
   'Steel',
-  'Water',
+  'Water'
 ]
 
 const useStyles = makeStyles((theme) => ({
@@ -32,21 +33,21 @@ const useStyles = makeStyles((theme) => ({
     background: '#FFF',
     padding: `${theme.spacing(1)}px ${theme.spacing(2)}px`,
     borderRadius: 4,
-    marginBottom: theme.spacing(2),
+    marginBottom: theme.spacing(2)
   },
   formControl: {
     margin: theme.spacing(1),
     width: 300,
     maxWidth: '100%',
-    background: '#FFF',
-  },
+    background: '#FFF'
+  }
 }))
 
 export function Filters({
   pokemonTypeFilter,
   setPokemonTypeFilter,
   capturedFilter,
-  setCapturedFilter,
+  setCapturedFilter
 }) {
   const classes = useStyles()
 
@@ -60,6 +61,17 @@ export function Filters({
 
   return (
     <Paper variant="outlined" className={classes.optionsContainer}>
+      <FormControl variant="outlined" className={classes.formControl}>
+        <InputLabel>Name</InputLabel>
+        <TextField
+          id="outlined-basic"
+          label="Search By Name"
+          variant="outlined"
+          name="name"
+          value={''}
+          onChange={(e) => {console.log(e.target.value)}}
+        />
+      </FormControl>
       <FormControl variant="outlined" className={classes.formControl}>
         <InputLabel>Type</InputLabel>
         <Select

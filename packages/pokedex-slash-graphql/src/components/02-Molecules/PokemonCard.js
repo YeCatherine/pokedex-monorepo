@@ -27,6 +27,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
+/**
+ * Pokemon Card.
+ *
+ * @param pokemon
+ * @param fetchPokedexData
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export function PokemonCard({ pokemon, fetchPokedexData }) {
   const classes = useStyles()
 

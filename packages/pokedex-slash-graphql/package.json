@@ -14,6 +14,7 @@
     "test": "react-scripts test"
   },
   "dependencies": {
+    "@craco/craco": "6.4.5",
     "@material-ui/core": "^4.12.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -25,8 +26,10 @@
     "@testing-library/user-event": "^14.4.3",
     "onchange": "^7.1.0",
     "prettier": "^2.7.1",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "typescript": "^4.8.2"
   },
+  "cracoConfig": "craco.config.js",
   "eslintConfig": {
     "extends": "react-app"
   },
