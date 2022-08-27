@@ -35,10 +35,7 @@ export const PokemonCard: React.FC<IPokemonSimpleComponent> = (props) => {
                 {pokemon.id && (
                   <>
                     <br />
-                    <span className="pokemon-id">
-(#{pokemon.id}
-)
-</span>
+                    <span className="pokemon-id">(#{pokemon.id})</span>
                   </>
                 )}
               </Typography>

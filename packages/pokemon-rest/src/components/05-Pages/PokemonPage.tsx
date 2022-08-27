@@ -68,8 +68,7 @@ export const PokemonPage: React.FC = (props) => {
           <Ul className="pokemon-base-stats flex-wrap">
             {pokemon.stats.map((st) => (
               <Li key={st.stat.name}>
-                {st.stat.name} -
-{st.base_stat}
+                {st.stat.name} -{st.base_stat}
               </Li>
             ))}
           </Ul>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ErrorBoundary, Page404 } from '@monorepo/components';
 import Layout from '@/components/04-Templates/Layout/Layout';
 import { formSearchType } from '@/types';
@@ -10,6 +10,19 @@ import RandomPokemon from '@/components/02-Organisms/RandomPokemon/RandomPokemon
 import CapturedPokemons from '@/components/03-Molecules/CapturedPokemons/CapturedPokemons';
 
 /**
+ * SidebarContent
+ *
+ * @return {JSX.Element}
+ */
+const SidebarContent = () => (
+  <>
+    <RandomPokemon />
+    <hr />
+    <CapturedPokemons />
+  </>
+);
+
+/**
  * Main App.
  *
  * @return {JSX.Element}
@@ -18,31 +31,17 @@ import CapturedPokemons from '@/components/03-Molecules/CapturedPokemons/Capture
 const App = () => {
   const [formState, setFormState] = useState<formSearchType>(DEFAULT_SEARCH_PARAMS);
 
-  const SidebarContent = () => (
-    <>
-      <RandomPokemon />
-      <hr />
-      <CapturedPokemons />
-    </>
-  );
-
   return (
     <ErrorBoundary>
       <PageContext.Provider value={{ formState, setFormState }}>
-        <Layout sidebar={<SidebarContent />}>
-          <Switch>
-            <Route path="/" exact>
-              <PokemonList />
-            </Route>
-            <Route path="/pokemon/:name">
-              <PokemonPage />
-            </Route>
-            <Route path="/move/:name">
-              <PokemonMovePage />
-            </Route>
-            <Route component={Page404} />
-          </Switch>
-        </Layout>
+          <Router>
+            <Routes>
+              <Route path="/" element={<Layout sidebar={<SidebarContent />}><PokemonList /></Layout>} />
+              <Route path="/pokemon/:name" element={<Layout sidebar={<SidebarContent />}><PokemonPage /></Layout>} />
+              <Route path="/move/:name" element={<Layout sidebar={<SidebarContent />}><PokemonMovePage /></Layout>} />
+              <Route element={<Page404 />} />
+            </Routes>
+          </Router>
       </PageContext.Provider>
     </ErrorBoundary>
   );

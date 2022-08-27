@@ -75,8 +75,7 @@ export const PokemonMovePage: React.FC = (props) => {
             </Li>
             {traverseObject.map((item) => (
               <Li>
-                <strong>{item}</strong> -
-{move[item].name}
+                <strong>{item}</strong> -{move[item].name}
               </Li>
             ))}
           </Ul>
