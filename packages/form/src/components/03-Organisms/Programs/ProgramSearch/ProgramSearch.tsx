@@ -16,7 +16,7 @@ import { FormEvent } from '@/constants';
  * Support Search by Text and filter by status operations.
  * Work with HOC "withContext"
  */
-const ProgramSearch = ({ formState, setFormState }) => {
+export const ProgramSearch = ({ formState, setFormState }) => {
   const [formStateInternal, dispatch] = useReducer(formSearchReducer, formState);
 
   useEffect(() => {

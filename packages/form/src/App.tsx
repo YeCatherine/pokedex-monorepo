@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ErrorBoundary, Layout } from '@monorepo/components';
 import { Programs as ProgramsPage } from '@/pages';
-import { formSearchType } from '@/types';
+import { formSearchType } from '@monorepo/components';
 import { DEFAULT_SEARCH_PARAMS } from '@/constants';
 import { FormContext } from '@monorepo/components/src/context';
 

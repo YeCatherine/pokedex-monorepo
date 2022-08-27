@@ -1,5 +1,5 @@
 import React, { createContext } from 'react';
-import { formSearchType } from '@/types';
+import { formSearchType } from '@monorepo/components/src/types';
 import { DEFAULT_SEARCH_PARAMS } from '@/constants';
 
 /**

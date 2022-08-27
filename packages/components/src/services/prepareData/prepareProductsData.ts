@@ -4,22 +4,11 @@
  * To meet MUI Data greed content structure requirements.
  * @module
  */
-// import { formSearchType, iProgramGrid } from
-// '../../../../pokemon-rest/src/components/03-Organisms/Programs/ProgramsTable/';
 import getSymbolFromCurrency from 'currency-symbol-map';
 import moment from 'moment';
 import { toTitleCase } from '@monorepo/components/src/services';
 import { GridColumns } from '@mui/x-data-grid/models/colDef/gridColDef';
-
-export interface IProgram {
-  [key: string]: string;
-}
-
-export interface iProgramGrid {
-  columns?: GridColumns;
-  rows?: IProgram[];
-  status: boolean;
-}
+import { iProgramGrid } from '../../types';
 
 /**
  * Preparing data for Grid Table.

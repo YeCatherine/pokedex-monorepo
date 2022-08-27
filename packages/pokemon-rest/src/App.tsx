@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ErrorBoundary, Page404 } from '@monorepo/components';
 import Layout from '@/components/04-Templates/Layout/Layout';
-import { formSearchType } from '@/types';
+import { formSearchType } from '@monorepo/components/src/types';
 import { DEFAULT_SEARCH_PARAMS } from '@/constants';
 import { PageContext } from '@/context';
 import { PokemonList, PokemonMovePage, PokemonPage } from '@/components/05-Pages';

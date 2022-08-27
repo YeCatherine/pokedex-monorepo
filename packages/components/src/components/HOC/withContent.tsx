@@ -1,11 +1,10 @@
-import * as React from 'react';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDebounce } from '@monorepo/components/src/hooks/useDebounce/useDebounce';
-import { formSearchType } from '@/types';
 import { useDataSource } from '@monorepo/components/src/hooks/useDataSource/useDataSource';
 import { prepareProductsData } from '@monorepo/components/src/services/prepareData/prepareProductsData';
-import { iProgramGrid } from '@/components/03-Organisms/Programs/ProgramsTable/ProgramsTable';
-import { prepareUrlLink } from '../../services/prepareUrlLink/prepareUrlLink';
+import { prepareUrlLink } from '@monorepo/form/src/services/prepareUrlLink/prepareUrlLink';
+
+import { formSearchType, iProgramGrid } from '../../types';
 
 /**
  * Inject Content into the
@@ -16,12 +15,15 @@ import { prepareUrlLink } from '../../services/prepareUrlLink/prepareUrlLink';
  */
 export function withContent(Component, searchCallback) {
   return function ComponentWithContent({ formState }) {
-    const [preparedProducts, setPreparedProducts] = useState<iProgramGrid | null>({
-      status: false,
-    });
+    const [preparedProducts, setPreparedProducts] = useState<iProgramGrid | null>(
+      {
+        status: false
+      });
+
     const debouncedFormState = useDebounce<formSearchType>(formState, 500);
     const href = prepareUrlLink(debouncedFormState);
-    const data = useDataSource<iProgramGrid>(searchCallback, { href }, { status: false });
+    const data = useDataSource<iProgramGrid>(searchCallback, { href },
+      { status: false });
 
     useEffect(() => {
       const productTable = prepareProductsData(data);
@@ -30,6 +32,6 @@ export function withContent(Component, searchCallback) {
         setPreparedProducts(productTable);
       }
     }, [data]);
-    return <Component preparedProducts={preparedProducts} />;
+    return <Component preparedProducts={preparedProducts}/>;
   };
 }

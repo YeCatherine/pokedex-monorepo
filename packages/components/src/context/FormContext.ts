@@ -1,6 +1,6 @@
 import React, { createContext } from 'react';
-import { formSearchType } from '@/types';
-import { DEFAULT_SEARCH_PARAMS } from '@/constants';
+import { formSearchType } from '../types';
+import { DEFAULT_SEARCH_PARAMS } from '../constants';
 
 /**
  * Basic description of the Context type.

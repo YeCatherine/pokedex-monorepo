@@ -4,10 +4,7 @@
  * @module
  * @param formState
  */
-// type formStateProps = {
-//   [key: string]: string
-// }
-export function prepareUrlLink(formState): string {
+export function prepareUrlLink(formState) {
   const preparedURL = new URL(`${process.env.REACT_APP_API_URL}/programs`);
 
   if (formState.name !== '') {
