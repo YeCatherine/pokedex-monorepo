@@ -32,9 +32,9 @@ export function PokemonCardsList({ pokedexData, fetchPokedexData }) {
   const classes = useStyles()
 
   return pokedexData.length > 0 ? (
-    <Grid container className={classes.root} spacing={2}>
+    <Grid container className={classes.root} spacing={4}>
       {pokedexData.map((pokemon) => (
-        <Grid key={pokemon.name} item xs={12} sm={6} md={4} lg={3}>
+        <Grid key={pokemon.name} item xs={12} sm={12} md={6} lg={4}>
           <PokemonCard pokemon={pokemon} fetchPokedexData={fetchPokedexData} />
         </Grid>
       ))}

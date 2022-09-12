@@ -1,9 +1,10 @@
 import React from 'react'
 import Container from '@material-ui/core/Container'
+import Grid from '@material-ui/core/Grid'
+import Card from '@material-ui/core/Card'
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import CircularProgress from '@material-ui/core/CircularProgress'
-
 import { Filters } from './components/02-Molecules/Filters'
 import { PokemonCardsList } from './components/03-Organisms/PokemonCardsList'
 import pokemonLogo from './assets/pokemon-logo.png'
@@ -75,10 +76,19 @@ export default function App() {
               capturedFilter={capturedFilter}
               setCapturedFilter={setCapturedFilter}
             />
-            <PokemonCardsList
-              pokedexData={pokedexData}
-              fetchPokedexData={fetchPokedexData}
-            />
+            <Grid container className={classes.root} spacing={4}>
+              <Grid item xs={12} sm={12} md={3} lg={3}> 
+                <Card  variant="outlined">
+                  <h2>Section under construction.</h2>
+                </Card>
+              </Grid>
+              <Grid item xs={12} sm={12} md={9} lg={9}>
+                <PokemonCardsList
+                  pokedexData={pokedexData}
+                  fetchPokedexData={fetchPokedexData}
+                />
+              </Grid>
+            </Grid>
           </>
         ) : (
           <div className={classes.loadingContainer}>
