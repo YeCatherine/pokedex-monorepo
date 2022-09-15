@@ -35,7 +35,8 @@ const useStyles = makeStyles((theme) => ({
  * @returns {JSX.Element}
  * @constructor
  */
-export function PokemonCard({ pokemon, fetchPokedexData }) {
+//export function PokemonCard({ pokemon, fetchPokedexData }) {
+export function PokemonCard({ pokemon }) {
   const classes = useStyles()
 
   const handleCapturedChange = async () => {
@@ -52,7 +53,7 @@ export function PokemonCard({ pokemon, fetchPokedexData }) {
     // This was especially important in getting it to remove a Pokemon from the UI
     // when the Captured filter was selected and then a previously captured Pokemon
     // was toggled to no longer be captured.
-    fetchPokedexData()
+    // fetchPokedexData()
   }
 
   return (

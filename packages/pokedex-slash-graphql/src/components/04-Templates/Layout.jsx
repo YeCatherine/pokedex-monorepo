@@ -35,6 +35,7 @@ export const Layout = ({ top, sidebar, children, loading, logo, title }) => {
   if (sidebar !== undefined) {
     columnSize = 3
   }
+
   return (
     <main className={classes.root}>
       <Container>

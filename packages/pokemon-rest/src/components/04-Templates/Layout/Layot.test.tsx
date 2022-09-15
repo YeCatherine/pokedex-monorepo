@@ -12,6 +12,7 @@ describe('Find element by text', () => {
     const linkElement = screen.getByText(/Layout Text/i);
     expect(linkElement).toBeInTheDocument();
   });
+
   it('Check sitebar Layout functionality', () => {
     render(
       <Layout sidebar={<h2>Sidebar exists</h2>}>

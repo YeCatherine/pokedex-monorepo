@@ -35,7 +35,7 @@ export function PokemonCardsList({ pokedexData, fetchPokedexData }) {
     <Grid container className={classes.root} spacing={4}>
       {pokedexData.map((pokemon) => (
         <Grid key={pokemon.name} item xs={12} sm={12} md={6} lg={4}>
-          <PokemonCard pokemon={pokemon} fetchPokedexData={fetchPokedexData} />
+          <PokemonCard pokemon={pokemon} />
         </Grid>
       ))}
     </Grid>

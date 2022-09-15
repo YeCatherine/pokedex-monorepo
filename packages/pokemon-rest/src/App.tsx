@@ -1,5 +1,5 @@
 import React, { Suspense, useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
 import { ErrorBoundary, Page404 } from '@monorepo/components';
 import Layout from '@/components/04-Templates/Layout/Layout';
 import { formSearchType } from '@monorepo/components/src/types';
@@ -9,6 +9,8 @@ import { PageContext } from '@/context';
 import RandomPokemon from '@/components/02-Organisms/RandomPokemon/RandomPokemon';
 import CapturedPokemons from '@/components/03-Molecules/CapturedPokemons/CapturedPokemons';
 import { DEFAULT_LANGUAGE, MyGlobalContext } from '@/context/LanguageContext';
+import './App.css';
+import pokemonLogo from './assets/pokemon-logo.png'
 
 /**
  * SidebarContent
@@ -21,6 +23,12 @@ const SidebarContent = () => (
     <hr />
     <CapturedPokemons />
   </>
+);
+const Navigation = () => (
+  <nav>
+    <Link to="/">Home</Link>
+    <Link to="/captured">Captured</Link>
+  </nav>
 );
 
 const PokemonList = React.lazy(() => import('@/components/05-Pages/PokemonList/PokemonList'));
@@ -39,6 +47,8 @@ const PokemonTable = React.lazy(() => import('@/components/05-Pages/PokemonTable
 const App = () => {
   const [formState, setFormState] = useState<formSearchType>(DEFAULT_SEARCH_PARAMS);
   const [language, setLanguage] = useState<string>(DEFAULT_LANGUAGE);
+
+  // @ts-ignore
   return (
     <ErrorBoundary>
       <PageContext.Provider value={{ formState, setFormState }}>
@@ -49,7 +59,13 @@ const App = () => {
                 <Route
                   path="/"
                   element={
-                    <Layout sidebar={<SidebarContent />}>
+                    <Layout
+                      title={'homepage'}
+                      logo={pokemonLogo}
+                      sidebar={<SidebarContent />}
+
+                      // top={<Navigation/>
+                    >
                       <PokemonList />
                     </Layout>
                   }
