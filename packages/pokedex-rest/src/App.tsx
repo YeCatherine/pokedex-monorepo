@@ -24,6 +24,7 @@ const SidebarContent = () => (
     <CapturedPokemons />
   </>
 );
+
 const Navigation = () => (
   <nav>
     <Link to="/">Home</Link>
@@ -32,6 +33,7 @@ const Navigation = () => (
 );
 
 const PokemonList = React.lazy(() => import('@/components/05-Pages/PokemonList/PokemonList'));
+
 const PokemonMovePage = React.lazy(
   () => import('@/components/05-Pages/PokemonMovePage/PokemonMovePage'),
 );

@@ -11,7 +11,7 @@
 // /.stories.tsx$/); const comps = require.context('@monorepo/components/src',
 // true, /.stories.tsx$/) const form = require.context('@monorepo/form/src',
 // true, /.stories.tsx$/) const pokedex =
-// require.context('@monorepo/pokemon-rest/src', true, /.stories.tsx$/)
+// require.context('@monorepo/pokedex-rest/src', true, /.stories.tsx$/)
 // console.log('form', form) console.log('pokedex', pokedex) configure(() => {
 // comps.keys().forEach(filename => comps(filename)) }, module)
 

@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import Switch from '@material-ui/core/Switch'
 
-import { updatePokemonCapturedStatus } from './services/graphQLUtils'
+import { updatePokemonCapturedStatus } from '../../services/graphQLUtils'
 
 const useStyles = makeStyles((theme) => ({
   root: {
