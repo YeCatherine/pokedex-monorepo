@@ -3,7 +3,7 @@
   "private": true,
   "devDependencies": {
     "craco": "^0.0.3",
-    "lerna": "^5.4.3"
+    "lerna": "^5.5.1"
   },
   "scripts": {
     "start0": "concurrently \"yarn run start:pokemon:rest\" \"yarn run start:form\" \"yarn nx:graph\"",
@@ -13,6 +13,7 @@
     "test": "CI=true lerna run test --parallel",
     "typecheck": "lerna run typecheck --parallel",
     "start:form": "lerna exec --scope @monorepo/form -- yarn start",
+    "start:type:mvc": "lerna exec --scope @monorepo/form -- yarn start",
     "start:form:storybook": "lerna exec --scope @monorepo/form -- yarn storybook",
     "start:form:cyperss": "lerna exec --scope @monorepo/form -- yarn cy:test",
     "start:pokemon": "lerna exec --scope @monorepo/pokemonrest -- yarn start",
@@ -32,6 +33,6 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
-    "concurrently": "^7.3.0"
+    "concurrently": "^7.4.0"
   }
 }
