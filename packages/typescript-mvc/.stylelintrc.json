@@ -1,0 +1,9 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-prettier-scss"],
+  "plugins": ["stylelint-prettier"],
+  "rules": {
+    "number-leading-zero": "always",
+    "number-no-trailing-zeros": true,
+    "prettier/prettier": true
+  }
+}

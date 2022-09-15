@@ -1,0 +1,41 @@
+.card {
+  background-color: $font-color-white;
+  padding: $space-x;
+  width: 100%;
+
+  h3 {
+    font-size: $font-size-list;
+    margin: 0 0 $space-m 0;
+    color: $font-color-black;
+    font-family: $font-family;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      margin-bottom: $space-s;
+      display: flex;
+
+      .apdex {
+        color: $font-color-shadowed-steel;
+        opacity: 0.62;
+        font-family: $font-family;
+        text-decoration: none;
+        padding-right: 35px;
+        width: 30px;
+        font-size: $font-size-apdex;
+      }
+
+      a {
+        color: $font-color-shadowed-steel;
+        font-size: $font-size-list;
+        font-family: $font-family;
+        text-decoration: none;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}

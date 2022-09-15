@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 42px;
+  margin-bottom: 29px;
+  justify-content: space-between;
+  white-space: nowrap;
+
+  .header-left {
+    //width: 800px;
+    display: flex;
+    align-items: flex-end;
+    height: 42px;
+    margin-right: $space-x;
+  }
+
+  span.user-email {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 $space-x 4px 10px;
+    font-size: $font-size-header;
+    flex-grow: 1;
+  }
+
+  .checkbox-rect {
+    padding-bottom: 8px;
+    white-space: nowrap;
+  }
+}

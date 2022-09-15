@@ -1,0 +1,7 @@
+# Ignore artifacts:
+.git
+.idea
+build
+dist
+coverage
+cypress-visual-report

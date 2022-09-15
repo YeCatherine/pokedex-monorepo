@@ -1,0 +1,116 @@
+[new-relic-interview](../README.md) / [Exports](../modules.md) / types
+
+# Module: types
+
+## Table of contents
+
+### Type Aliases
+
+- [ClickEventHandler](types.md#clickeventhandler)
+- [HTMLElementEvent](types.md#htmlelementevent)
+- [HostAppDataType](types.md#hostappdatatype)
+- [HostGroupedType](types.md#hostgroupedtype)
+- [HostGroupedTypeItem](types.md#hostgroupedtypeitem)
+
+## Type Aliases
+
+### ClickEventHandler
+
+Ƭ **ClickEventHandler**: (`e`: `MouseEvent`) => {}
+
+#### Type declaration
+
+▸ (`e`): `Object`
+
+Declaration of CLickEvent.
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `e` | `MouseEvent` |
+
+##### Returns
+
+`Object`
+
+#### Defined in
+
+types/index.ts:28
+
+___
+
+### HTMLElementEvent
+
+Ƭ **HTMLElementEvent**<`T`\>: `Event` & { `target`: `T`  }
+
+Element click event.
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends `HTMLElement` |
+
+#### Defined in
+
+types/index.ts:21
+
+___
+
+### HostAppDataType
+
+Ƭ **HostAppDataType**: `Object`
+
+Declaration of Host Add Data item.
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `apdex` | `number` |
+| `contributors` | `string`[] |
+| `host` | `string`[] |
+| `name` | `string` |
+| `version` | `number` |
+
+#### Defined in
+
+types/index.ts:10
+
+___
+
+### HostGroupedType
+
+Ƭ **HostGroupedType**: `Object`
+
+Declaration of the final prepared hosts array.
+
+#### Index signature
+
+▪ [host: `string`]: [`HostGroupedTypeItem`](types.md#hostgroupedtypeitem)[]
+
+#### Defined in
+
+types/index.ts:43
+
+___
+
+### HostGroupedTypeItem
+
+Ƭ **HostGroupedTypeItem**: `Object`
+
+Declaration of Host Grouped Type Item.
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `apdex` | `number` |
+| `app_key` | `number` |
+| `name` | `string` |
+| `version` | `number` |
+
+#### Defined in
+
+types/index.ts:33

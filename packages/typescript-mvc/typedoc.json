@@ -1,0 +1,11 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": [
+    "./src",
+    "docs/01-introduction.md",
+    "docs/02-solution-description.md",
+    "docs/03-task.md"
+  ],
+  "out": "./docs/generated",
+  "entryPointStrategy": "expand"
+}

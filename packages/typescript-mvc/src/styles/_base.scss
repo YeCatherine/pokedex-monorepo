@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 0 $space-x;
+}
+
+h1 {
+  color: $font-color-black;
+  font-size: $font-size-h1;
+  font-family: $font-family-header;
+  margin: 0;
+  white-space: nowrap;
+}
+
+body {
+  background-color: $font-color-pinky-pickle;
+}

@@ -1,0 +1,46 @@
+.checkbox-rect input[type='checkbox'] {
+  display: none;
+}
+
+.checkbox-rect input[type='checkbox'] + label {
+  display: block;
+  position: relative;
+  padding-left: $space-m;
+  margin-bottom: 20px;
+  font-size: $font-size-checkbox-label;
+  font-family: $font-family;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-rect input[type='checkbox'] + label:last-child {
+  margin-bottom: 0;
+}
+
+.checkbox-rect input[type='checkbox'] + label::before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid $font-color-white;
+  border-radius: 5px;
+  box-shadow: 0 0 1px 1px $font-color-pinky-pickle;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.2s, background 0.2s ease-in-out;
+  background: $font-color-white;
+}
+
+@mixin hover-checkbox {
+  background: $font-color-apple-green;
+  box-shadow: 0 0 1px 1px #eee;
+}
+
+.checkbox-rect input[type='checkbox']:hover + label::before {
+  @include hover-checkbox();
+}
+
+.checkbox-rect input[type='checkbox']:checked + label::before {
+  @include hover-checkbox();
+}

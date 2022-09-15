@@ -1,0 +1,13 @@
+.app-list {
+  display: grid;
+  gap: $space-x;
+  grid-template-columns: 1fr 1fr;
+}
+
+.list-view {
+  grid-template-columns: 1fr;
+
+  .card {
+    width: 100%;
+  }
+}
