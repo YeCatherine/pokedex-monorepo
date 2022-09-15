@@ -5,16 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint:check": "node_modules/.bin/prettier --check .",
-    "lint:fix": "node_modules/.bin/prettier --write .",
-    "lint:script": "node_modules/.bin/eslint src/* --fix",
-    "format": "npm run lint:fix;",
-    "test:jest": "jest --coverage",
-    "test:cy": "node_modules/.bin/cypress run --browser chrome",
-    "test": "npm run test:jest; npm run test:cy",
-    "test:cy:open": "node_modules/.bin/cypress open",
-    "start": "node_modules/.bin/webpack serve --mode development",
-    "build": "node_modules/.bin/webpack --mode production"
+    "test:cy": "cypress open"
   },
   "devDependencies": {
     "@babel/core": "^7.19.1",

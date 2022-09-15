@@ -23,17 +23,16 @@ const useStyles = makeStyles((theme) => ({
 /**
  * Pokemon Cards List.
  *
- * @param pokedexData
- * @param fetchPokedexData
+ * @param listData
  * @returns {JSX.Element}
  * @constructor
  */
-export function PokemonCardsList({ pokedexData, fetchPokedexData }) {
+export function PokemonCardsList({ listData }) {
   const classes = useStyles();
 
-  return pokedexData.length > 0 ? (
+  return listData.length > 0 ? (
     <Grid container className={classes.root} spacing={4}>
-      {pokedexData.map((pokemon) => (
+      {listData.map((pokemon) => (
         <Grid key={pokemon.name} item xs={12} sm={12} md={6} lg={4}>
           <PokemonCard pokemon={pokemon}/>
         </Grid>

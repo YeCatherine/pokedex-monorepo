@@ -129,8 +129,8 @@ export function fetchPokemon({ pokemonType, isCaptured }) {
 
 // Update the Pokemon Captured Status
 const updatePokemonCapturedStatusOperationsDoc = (
-  pokemonId,
-  newIsCapturedValue
+  pokemonId: number,
+  newIsCapturedValue: boolean
 ) => `
   mutation updatePokemonCapturedStatus {
     updatePokemon(input: {filter: {id: {eq: ${pokemonId}}}, set: {captured: ${newIsCapturedValue}}}) {
@@ -145,7 +145,8 @@ const updatePokemonCapturedStatusOperationsDoc = (
   }
 `;
 
-export function updatePokemonCapturedStatus(pokemonId, newIsCapturedValue) {
+export function updatePokemonCapturedStatus(
+  pokemonId: number, newIsCapturedValue: boolean) {
   return fetchGraphQL(
     updatePokemonCapturedStatusOperationsDoc(pokemonId, newIsCapturedValue),
     'updatePokemonCapturedStatus',

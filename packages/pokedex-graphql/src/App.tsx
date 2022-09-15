@@ -48,8 +48,7 @@ export default function App() {
       loading={pokedexData}
     >
       <PokemonCardsList
-        pokedexData={pokedexData}
-        fetchPokedexData={fetchPokedexData}
+        listData={pokedexData}
       />
     </Layout>
   );

@@ -27,6 +27,14 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+type CardItem = {
+  id: number;
+  name: string;
+  imgUrl: string;
+  captured: boolean;
+  pokemonTypes: string[];
+}
+
 /**
  * Pokemon Card.
  *
@@ -36,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
  * @constructor
  */
 //export function PokemonCard({ pokemon, fetchPokedexData }) {
-export function PokemonCard({ pokemon }) {
+export function PokemonCard<CardItem>({ pokemon }) {
   const classes = useStyles();
 
   const handleCapturedChange = async () => {

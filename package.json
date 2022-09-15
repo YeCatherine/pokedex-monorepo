@@ -16,6 +16,8 @@
     "start:type:mvc": "lerna exec --scope @monorepo/form -- yarn start",
     "start:form:storybook": "lerna exec --scope @monorepo/form -- yarn storybook",
     "start:form:cyperss": "lerna exec --scope @monorepo/form -- yarn cy:test",
+    "start:cypress:open": "lerna exec --scope @monorepo/cypress -- yarn test:cy",
+
     "start:pokemon": "lerna exec --scope @monorepo/pokemonrest -- yarn start",
     "start:storybook": "lerna exec --scope @monorepo/storybook -- yarn storybook",
     "format": "lerna run format",
