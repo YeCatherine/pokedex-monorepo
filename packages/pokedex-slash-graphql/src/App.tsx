@@ -5,12 +5,12 @@ import Card from '@material-ui/core/Card'
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import CircularProgress from '@material-ui/core/CircularProgress'
-import { Filters } from './components/02-Molecules/Filters'
-import { PokemonCardsList } from './components/03-Organisms/PokemonCardsList'
-import pokemonLogo from './assets/pokemon-logo.png'
-import { fetchPokemon } from './services/graphQLUtils'
+import { Filters } from './components/02-Molecules/Filters';
+import { PokemonCardsList } from './components/03-Organisms/PokemonCardsList';
+import pokemonLogo from './assets/pokemon-logo.png';
+import { fetchPokemon } from './services/graphQLUtils';
 // import {DataLoading} from '@monorepo/components'
-import Layout from './components/04-Templates/Layout'
+import Layout from './components/04-Templates/Layout';
 
 export default function App() {
   const [pokedexData, setPokedexData] = React.useState(null)

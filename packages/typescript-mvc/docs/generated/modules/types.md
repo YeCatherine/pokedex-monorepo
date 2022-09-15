@@ -36,7 +36,7 @@ Declaration of CLickEvent.
 
 #### Defined in
 
-types/index.ts:28
+types/index.tsx:28
 
 ___
 
@@ -54,7 +54,7 @@ Element click event.
 
 #### Defined in
 
-types/index.ts:21
+types/index.tsx:21
 
 ___
 
@@ -76,7 +76,7 @@ Declaration of Host Add Data item.
 
 #### Defined in
 
-types/index.ts:10
+types/index.tsx:10
 
 ___
 
@@ -92,7 +92,7 @@ Declaration of the final prepared hosts array.
 
 #### Defined in
 
-types/index.ts:43
+types/index.tsx:43
 
 ___
 
@@ -113,4 +113,4 @@ Declaration of Host Grouped Type Item.
 
 #### Defined in
 
-types/index.ts:33
+types/index.tsx:33
