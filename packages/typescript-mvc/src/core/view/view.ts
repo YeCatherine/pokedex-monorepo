@@ -69,7 +69,7 @@ export default class View implements ViewInterface {
     }
     this.header = this.createElement('header');
     this.title = this.createElement('h1');
-    this.title.textContent = 'Apps by Host';
+    this.title.textContent = 'TypeScript MVC';
 
     const userLabel = this.createElement('span');
     userLabel.textContent = 'for user averylongmailaddress@companyname.com';

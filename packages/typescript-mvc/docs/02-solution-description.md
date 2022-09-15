@@ -4,7 +4,6 @@
 
 - [Introduction](./01-introduction.md)
 - [Solution Description (current)](./02-solution-description.md)
-- [Task](./03-task.md)
 
 ---
 

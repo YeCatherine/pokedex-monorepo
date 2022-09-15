@@ -9,7 +9,7 @@
   - [x] TypeScript : Typescript: move jsconfig to tsconfig
   - [x] Add modules aliases
   - [x] Documentation:
-    - [x] ADd documents folder
+    - [x] Add documents folder
     - [x] Doc - how to start
     - [x] Doc - how it works with architectural diagram
     - [x] add structure description readme

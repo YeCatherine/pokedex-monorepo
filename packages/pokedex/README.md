@@ -1,32 +1,64 @@
-# Getting Started with Pokédex App
+# How to Start
+---
 
-## To get the documentation please run `npm run docs`
+```
+nvm use
+yarn install
+yarn run start
+```
 
-## Available Scripts
+It will launch the app in the 3002 port, and a server in the 4002 port.
 
-In the project directory, you can run:
+---
 
-### `yarn start`
+Add git message template
+`git config commit.template ./gitmessage`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+to add default git commit message template in case if project has connection to
+Jira - it should have Jira ticket number inside commit to create jira cross
+reporting (should be also enabled on Jira side)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## to run cypress
 
-### `yarn test`
+- `yarn run cy:open` - in desktop mode
+- `yarn run cy` in terminal view
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## to run documentation
 
-### `yarn build`
+- `yarn documentation` it will generate the docs to docs/generated folder
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-Please note, that after merging to master and pushing to origin the code will be automatically deployed to the github pages. 
+## Technologies
+- [ ] General:
+    - [x] added to yarn
+    - [x] TypeScript : Typescript: move jsconfig to tsconfig
+    - [x] Add modules aliases
+    - [x] Documentation:
+        - [x] ADd documents folder
+        - [x] Doc - how to start
+        - [x] Doc - how it works with architectural diagram
+        - [x] add structure description readme
+        - [x] Added troubleshooting doc
+        - [x] Add TypeDoc
+- [x] Testing:
+    - [x] Storybook:
+    - [x] Cypress
+        - [x] lighthouse and a11y review
+        - [x] Visual Regression Testing
+        - [x] unit tests
+- [x] DevOps and EngExcellence:
+    - [x] DotFiles:
+        - [x] add .nvmrc with version
+        - [x] Add .npmrc
+    - [x] Linters:
+        - [x] Move linter configs to separate files
+        - [x] Add Eslint, Prettier
+        - [x] Add Husky
+    - [x] Git Commit template
+    - [x] Git PR template
+    - [x] Git auto PR deployment
+- [ ] Proposals and recommendations for future
+    - [ ] Add Progressive Web Application support (Workbox)
+    - [ ] Change JSON-SERVER to Mirage.js with content generator
+    - [ ] `yarn run exect`.Refactor start script . move to web pack (as
+      development standard)
+    - [ ] export vscode configs extensions and settings

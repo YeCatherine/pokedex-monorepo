@@ -4,24 +4,6 @@ import { Programs as ProgramsPage } from '@/pages';
 import { DEFAULT_SEARCH_PARAMS } from '@/constants';
 import { FormContext } from '@monorepo/components/src/context';
 
-import { createServer } from 'miragejs';
-
-createServer({
-  routes() {
-    this.namespace = 'api';
-
-    this.get('/programs', (schema, request) => {
-      console.log(schema, request);
-      return {
-        movies: [
-          { id: 1, name: 'Inception', year: 2010 },
-          { id: 2, name: 'Interstellar', year: 2014 },
-          { id: 3, name: 'Dunkirk', year: 2017 }
-        ]
-      };
-    });
-  }
-});
 /**
  * Main App.
  *
@@ -36,7 +18,7 @@ const App = () => {
     <ErrorBoundary>
       <FormContext.Provider value={{ formState, setFormState }}>
         <Layout>
-          <ProgramsPage/>
+          <ProgramsPage />
         </Layout>
       </FormContext.Provider>
     </ErrorBoundary>

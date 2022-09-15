@@ -2,7 +2,6 @@
 
 - [Introduction](./docs/01-introduction.md)
 - [Solution Description](./docs/02-solution-description.md)
-- [Task](./docs/03-task.md)
 
 ---
 
