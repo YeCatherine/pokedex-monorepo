@@ -43,15 +43,17 @@
     "workbox-streams": "^6.5.4"
   },
   "scripts": {
-    "start": "PORT=3001 react-scripts start",
+    "start": "PORT=3001 craco start",
     "build": "CI='' react-scripts build",
     "deploy": "gh-pages -b master -d build",
-    "test": "react-scripts test",
-    "test:coverage": "npm run test -- --coverage",
-    "test:cy": "cypress open",
+    "test:jest": "craco test --collect-coverage",
+    "test:cy": "cypress run --headless --browser chrome",
+    "test:cy:open": "cypress open",
+    "test": "npm run test:jest; npm run test:cy",
     "eject": "react-scripts eject",
     "docs": "typedoc"
   },
+  "cracoConfig": "craco.config.js",
   "eslintConfig": {
     "extends": [
       "react-app",

@@ -1,4 +1,7 @@
 {
-  "entryPoints": ["src"],
-  "out": "docs"
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": [
+    "./src/*"
+  ],
+  "out": "./docs/generated"
 }

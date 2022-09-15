@@ -107,8 +107,16 @@ module.exports = {
   // projects: undefined,
 
   // Use this configuration option to add custom reporters to Jest
-  // reporters: undefined,
-
+  // Reporter for Jest Project Report
+  reporters: [
+    'default',
+    [
+      './node_modules/jest-html-reporter',
+      {
+        pageTitle: 'Project Jest Report'
+      }
+    ]
+  ],
   // Automatically reset mock state before every test
   // resetMocks: false,
 
@@ -167,8 +175,8 @@ module.exports = {
   // testRegex: [],
 
   // This option allows the use of a custom results processor
-  // testResultsProcessor: undefined,
-
+  // Add report with the help of "jest-html-reporter"
+  testResultsProcessor: './node_modules/jest-html-reporter'
   // This option allows use of a custom test runner
   // testRunner: "jest-circus/runner",
 
