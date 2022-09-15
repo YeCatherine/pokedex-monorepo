@@ -10,11 +10,11 @@
 
 ## The task
 
-Code challenge We want to build a new page view that
-shows the list of applications running on every host. ● An application has a
-name, a list of contributors, a release version number, and a list of hosts that
-the app has been deployed at. ● Each application has an Apdex metric assigned.
-The Apdex score is a positive integer between 0 (Frustrated) and 100 (Satisfied)
+Code challenge We want to build a new page view that shows the list of
+applications running on every host. ● An application has a name, a list of
+contributors, a release version number, and a list of hosts that the app has
+been deployed at. ● Each application has an Apdex metric assigned. The Apdex
+score is a positive integer between 0 (Frustrated) and 100 (Satisfied)
 . Apdex is an industry-standard to measure users' satisfaction based on the
 response time of web applications and services. You are asked to build a new
 feature to display the most satisfying applications deployed on each host. You

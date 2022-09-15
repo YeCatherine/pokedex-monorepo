@@ -10,12 +10,13 @@
 
 ## BrowserList
 
-The config to share target browsers between different front-end tools.
-Set up to maintain latest 2 versions of browser.
+The config to share target browsers between different front-end tools. Set up to
+maintain latest 2 versions of browser.
 
 ## CI:CD
 
-- Prettier, Stylelint, Eslint and husky setup and synced to provide unified approached for code styling and implement them on each commit
+- Prettier, Stylelint, Eslint and husky setup and synced to provide unified
+  approached for code styling and implement them on each commit
 - .gitmessage file
 - github issues templates and workflows action "Build to github pages"
 
@@ -46,11 +47,13 @@ To use exact node version across devises.
 
 ## Webpack
 
-webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser.
-Maintain next features:
+webpack is a module bundler. Its main purpose is to bundle JavaScript files for
+usage in a browser. Maintain next features:
 
 - Alias - to have file aliases started from @/
 - Dev Server
 - SCSS support
-- Webpack Plugin that Visualize size of webpack output files with an interactive zoomable treemap.
-  ![Webpack Bundle](./assets/webpack-bundle-analyzer.png) . Analyzer (http://127.0.0.1:8888/)[http://127.0.0.1:8888/]
+- Webpack Plugin that Visualize size of webpack output files with an interactive
+  zoomable treemap.
+  ![Webpack Bundle](./assets/webpack-bundle-analyzer.png) .
+  Analyzer (http://127.0.0.1:8888/)[http://127.0.0.1:8888/]

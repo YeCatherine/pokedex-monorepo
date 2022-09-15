@@ -1,31 +1,31 @@
-import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import Card from '@material-ui/core/Card'
-import CardActions from '@material-ui/core/CardActions'
-import CardContent from '@material-ui/core/CardContent'
-import Typography from '@material-ui/core/Typography'
-import FormControlLabel from '@material-ui/core/FormControlLabel'
-import Switch from '@material-ui/core/Switch'
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Switch from '@material-ui/core/Switch';
 
-import { updatePokemonCapturedStatus } from '../../services/graphQLUtils'
+import { updatePokemonCapturedStatus } from '../../services/graphQLUtils';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    minWidth: 275,
+    minWidth: 275
   },
   pokemonIdNumber: {
     fontSize: 14,
-    marginBottom: theme.spacing(4),
+    marginBottom: theme.spacing(4)
   },
   avatar: {
     height: theme.spacing(16),
     borderRadius: 0,
-    marginBottom: theme.spacing(1),
+    marginBottom: theme.spacing(1)
   },
   cardActions: {
-    justifyContent: 'center',
-  },
-}))
+    justifyContent: 'center'
+  }
+}));
 
 /**
  * Pokemon Card.
@@ -37,24 +37,24 @@ const useStyles = makeStyles((theme) => ({
  */
 //export function PokemonCard({ pokemon, fetchPokedexData }) {
 export function PokemonCard({ pokemon }) {
-  const classes = useStyles()
+  const classes = useStyles();
 
   const handleCapturedChange = async () => {
     const { errors } = await updatePokemonCapturedStatus(
       pokemon.id,
       !pokemon.captured
-    )
+    );
 
     if (errors) {
-      console.error(errors)
+      console.error(errors);
     }
 
-    // Re-fetching all the data to make the top-level app aware of the data change.
-    // This was especially important in getting it to remove a Pokemon from the UI
-    // when the Captured filter was selected and then a previously captured Pokemon
-    // was toggled to no longer be captured.
+    // Re-fetching all the data to make the top-level app aware of the data
+    // change. This was especially important in getting it to remove a Pokemon
+    // from the UI when the Captured filter was selected and then a previously
+    // captured Pokemon was toggled to no longer be captured.
     // fetchPokedexData()
-  }
+  };
 
   return (
     <Card className={classes.root} variant="outlined">
@@ -92,5 +92,5 @@ export function PokemonCard({ pokemon }) {
         />
       </CardActions>
     </Card>
-  )
+  );
 }

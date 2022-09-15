@@ -1,4 +1,5 @@
-[new-relic-interview](../README.md) / [Exports](../modules.md) / [core/model/ModelBase](../modules/core_model_ModelBase.md) / default
+[new-relic-interview](../README.md) / [Exports](../modules.md)
+/ [core/model/ModelBase](../modules/core_model_ModelBase.md) / default
 
 # Class: default
 
@@ -49,7 +50,8 @@ General Model implementation. Contains reusable functions.
 
 #### Implementation of
 
-[default](../interfaces/core_model_iModel.default.md).[applications](../interfaces/core_model_iModel.default.md#applications)
+[default](../interfaces/core_model_iModel.default.md)
+.[applications](../interfaces/core_model_iModel.default.md#applications)
 
 #### Defined in
 
@@ -63,7 +65,8 @@ ___
 
 #### Implementation of
 
-[default](../interfaces/core_model_iModel.default.md).[data](../interfaces/core_model_iModel.default.md#data)
+[default](../interfaces/core_model_iModel.default.md)
+.[data](../interfaces/core_model_iModel.default.md#data)
 
 #### Defined in
 
@@ -109,11 +112,11 @@ ___
 
 ### groupByHostGeneral
 
-▸ `Static` **groupByHostGeneral**(`data`): [`HostGroupedType`](../modules/types.md#hostgroupedtype)
+▸ `Static` **
+groupByHostGeneral**(`data`): [`HostGroupedType`](../modules/types.md#hostgroupedtype)
 
-Group by General Host.
-The solution was implemented with the help of extra object to reduce the complexity.
-O(n^2) complexity.
+Group by General Host. The solution was implemented with the help of extra
+object to reduce the complexity. O(n^2) complexity.
 
 #### Parameters
 
@@ -133,12 +136,12 @@ ___
 
 ### prepareHostsGeneral
 
-▸ `Static` **prepareHostsGeneral**(`data`, `hosts`, `limit?`): [`HostGroupedType`](../modules/types.md#hostgroupedtype)
+▸ `Static` **prepareHostsGeneral**(`data`, `hosts`
+, `limit?`): [`HostGroupedType`](../modules/types.md#hostgroupedtype)
 
-Prepares the sorted amount of hosts for the cards.
-According to the task the number of hosts should be 25,
-but it conflicts with the UI (5 apps per card).
-O(n^2) complexity.
+Prepares the sorted amount of hosts for the cards. According to the task the
+number of hosts should be 25, but it conflicts with the UI (5 apps per card). O(
+n^2) complexity.
 
 #### Parameters
 

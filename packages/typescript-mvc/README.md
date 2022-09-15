@@ -17,19 +17,25 @@ yarn run start
 It will launch the app in the 3030 port
 
 ## Testing
+
 ```
 nvm use
 yarn test
 ```
-It will launch Jest Unit Testing with reporting and Cypress E2E testing with lighthouse checking and visual regression testing.
 
-`yarn run test:open` to run cypress in visual mode. Keep in mind that redita display will have issues with twice screenshot size.
+It will launch Jest Unit Testing with reporting and Cypress E2E testing with
+lighthouse checking and visual regression testing.
+
+`yarn run test:open` to run cypress in visual mode. Keep in mind that redita
+display will have issues with twice screenshot size.
 
 ## Documentation
+
 ```
 nvm use
 yarn docs
 ```
+
 It will add auto generated md files to "/docs/generated" folder
 
 ## Building the application
@@ -74,7 +80,7 @@ reporting (should be also enabled on Jira side)
 - [x] Cypress
 - [x] TypeScript
 - [x] Browsers list with browser support: latest 2 versions of Chrome, Firefox,
-      Safari, Edge, Opera.
+  Safari, Edge, Opera.
 - [x] MVC on JS classes
 
 ## Site Score:
@@ -86,13 +92,16 @@ reporting (should be also enabled on Jira side)
 ### MVC
 
 - Solution was Implemented based on Model View Controller (MVC) design pattern,
-- and specifies that an application consist of the data model, presentation of information,
+- and specifies that an application consist of the data model, presentation of
+  information,
 - and controller.
 
 ### TS
 
-- Solution was implemented using TypeScript that is an enterprise standard for corporate development
-- and allows to identify any typecast-related errors as well as improves general performance
+- Solution was implemented using TypeScript that is an enterprise standard for
+  corporate development
+- and allows to identify any typecast-related errors as well as improves general
+  performance
 - in code with fairly complex types.
 
 ### Webpack as bundler
@@ -107,7 +116,8 @@ reporting (should be also enabled on Jira side)
 - Aliases to improve the code usability
 - SCSS support
 - Tests (like src/core/model/ModelBase.test.ts), Cypress
-- Eslint, Stylelint, Prettier, Husky precommit to have the code of better quality
+- Eslint, Stylelint, Prettier, Husky precommit to have the code of better
+  quality
 - simple CI-CD (GitHub action and Husky fixer)
 - tsdoc
 
@@ -115,17 +125,21 @@ reporting (should be also enabled on Jira side)
 
 - Model consists of the next pillars: interface, base abstract class,
 - and implementation that supports the JSON file.
-- Model Base class with key functionality covered by Jest tests with coverage report
+- Model Base class with key functionality covered by Jest tests with coverage
+  report
 - Model contains implementation of "addAppToHosts" and "removeAppFromHosts"
-- View - responsible for preparation of the application to display content. Generate structure with 2 ways:
+- View - responsible for preparation of the application to display content.
+  Generate structure with 2 ways:
 - helper function that generate Dom elements
 - simple template engines.
-- Controller - contains main logic that unite Model and view and bind event listeners to event binders.
+- Controller - contains main logic that unite Model and view and bind event
+  listeners to event binders.
 
 ## To be determined
 
 - What is the source of truth -- UI mockups or business requirements?
   - According to the task the number of hosts should be 25,
   - but it conflicts with the UI (5 apps per card that has more UI/UX sense).
-- Opacity 62% for apdex rating in the cards conflicts with the accessibility requirements and reduces
+- Opacity 62% for apdex rating in the cards conflicts with the accessibility
+  requirements and reduces
 - the accessibility score

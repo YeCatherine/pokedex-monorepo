@@ -28,8 +28,8 @@ export default abstract class ModelBase implements iModel {
 
   /**
    * Group by General Host.
-   * The solution was implemented with the help of extra object to reduce the complexity.
-   * O(n^2) complexity.
+   * The solution was implemented with the help of extra object to reduce the
+   * complexity. O(n^2) complexity.
    * @param data
    */
   public static groupByHostGeneral(data: HostAppDataType[]): HostGroupedType {
@@ -44,7 +44,7 @@ export default abstract class ModelBase implements iModel {
 
         hosts[host][key] = {
           app_key: key,
-          apdex: value.apdex,
+          apdex: value.apdex
         };
       });
     });

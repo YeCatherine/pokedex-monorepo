@@ -7,7 +7,7 @@ describe('Find element by text', () => {
     render(
       <Sidebar>
         <h1>Hello World</h1>
-      </Sidebar>,
+      </Sidebar>
     );
     const linkElement = screen.getByText(/Hello World/i);
     expect(linkElement).toBeInTheDocument();

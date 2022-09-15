@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { SearchBox, useLocalStorage } from '@monorepo/components';
+// eslint-disable-next-line import/extensions
 import { pokemonListService } from '@/services';
 import IPokemonData from '@/types/IPokemonData';
 import Grid from '@mui/material/Grid';
@@ -10,7 +11,6 @@ import PokemonCard from '../../02-Organisms/PokemonCard/PokemonCard';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Filters from '@/components/02-Organisms/Filters/Filters';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -164,7 +164,7 @@ export const PokemonList: React.FC = (props) => {
     <>
       {/* <LanguageSwitcher/> */}
       <Grid container>
-        <Filters/>
+        {/*<Filters/>*/}
         <SearchBox placeholder="Pokemon name" handleSearch={handleSearch}/>
         <select onChange={handleSortChange}>
           <option key={SortDirection.SortIDAsc} value={SortDirection.SortIDAsc}>

@@ -28,6 +28,7 @@
     "@monorepo/components": "*"
   },
   "devDependencies": {
+    "miragejs": "0.1.45",
     "@cypress/code-coverage": "3.10.0",
     "@storybook/addon-a11y": "6.5.12",
     "@storybook/addon-actions": "6.5.12",

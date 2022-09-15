@@ -29,6 +29,7 @@
 import '@cypress-audit/lighthouse/commands';
 import '@cypress-audit/pa11y/commands';
 
-const compareSnapshotCommand = require('cypress-visual-regression/dist/command');
+const compareSnapshotCommand = require(
+  'cypress-visual-regression/dist/command');
 
 compareSnapshotCommand();

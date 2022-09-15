@@ -94,9 +94,9 @@ function useFetch<T = unknown>(url?: string, options?: RequestInit): State<T> {
       cancelRequest.current = true;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [url])
+  }, [url]);
 
-  return state
+  return state;
 }
 
-export default useFetch
+export default useFetch;

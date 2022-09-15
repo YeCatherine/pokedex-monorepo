@@ -18,15 +18,15 @@ export const parameters = {
           // specific elements and keep reporting violations on other elements
           // of this rule.
           id: 'autocomplete-valid',
-          selector: '*:not([autocomplete="nope"])',
+          selector: '*:not([autocomplete="nope"])'
         },
         {
           // To disable a rule across all stories, set `enabled` to `false`.
           // Use with caution: all violations of this rule will be ignored!
           id: 'autocomplete-valid',
-          enabled: false,
-        },
-      ],
-    },
-  },
-};
+          enabled: false
+        }
+      ]
+    }
+  }
+}

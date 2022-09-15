@@ -1,4 +1,6 @@
-[new-relic-interview](../README.md) / [Exports](../modules.md) / [core/controller/controller](../modules/core_controller_controller.md) / default
+[new-relic-interview](../README.md) / [Exports](../modules.md)
+/ [core/controller/controller](../modules/core_controller_controller.md) /
+default
 
 # Class: default
 
@@ -58,7 +60,8 @@ ___
 
 ### view
 
-• `Private` **view**: [`ViewInterface`](../interfaces/core_view_view.ViewInterface.md)
+• `Private` **
+view**: [`ViewInterface`](../interfaces/core_view_view.ViewInterface.md)
 
 #### Defined in
 
@@ -108,9 +111,8 @@ ___
 
 ▸ **setupView**(): `Promise`<`void`\>
 
-Setup the final project view.
-The implementation follows the task "Models the described problem
-with a suitable class hierarchy".
+Setup the final project view. The implementation follows the task "Models the
+described problem with a suitable class hierarchy".
 
 #### Returns
 

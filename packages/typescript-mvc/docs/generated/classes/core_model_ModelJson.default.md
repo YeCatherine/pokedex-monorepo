@@ -1,4 +1,5 @@
-[new-relic-interview](../README.md) / [Exports](../modules.md) / [core/model/ModelJson](../modules/core_model_ModelJson.md) / default
+[new-relic-interview](../README.md) / [Exports](../modules.md)
+/ [core/model/ModelJson](../modules/core_model_ModelJson.md) / default
 
 # Class: default
 
@@ -44,7 +45,8 @@ Json Model Implementation.
 
 #### Inherited from
 
-[default](core_model_ModelBase.default.md).[constructor](core_model_ModelBase.default.md#constructor)
+[default](core_model_ModelBase.default.md)
+.[constructor](core_model_ModelBase.default.md#constructor)
 
 ## Properties
 
@@ -54,7 +56,8 @@ Json Model Implementation.
 
 #### Overrides
 
-[default](core_model_ModelBase.default.md).[applications](core_model_ModelBase.default.md#applications)
+[default](core_model_ModelBase.default.md)
+.[applications](core_model_ModelBase.default.md#applications)
 
 #### Defined in
 
@@ -68,7 +71,8 @@ ___
 
 #### Overrides
 
-[default](core_model_ModelBase.default.md).[data](core_model_ModelBase.default.md#data)
+[default](core_model_ModelBase.default.md)
+.[data](core_model_ModelBase.default.md#data)
 
 #### Defined in
 
@@ -131,9 +135,8 @@ ___
 
 ▸ **getTopAppsByHost**(`limit?`): `Promise`<`void`\>
 
-According to the task the number of hosts should be 25,
-but it conflicts with the UI (5 apps per card).
-Extract data from json.
+According to the task the number of hosts should be 25, but it conflicts with
+the UI (5 apps per card). Extract data from json.
 
 #### Parameters
 
@@ -147,7 +150,8 @@ Extract data from json.
 
 #### Overrides
 
-[default](core_model_ModelBase.default.md).[getTopAppsByHost](core_model_ModelBase.default.md#gettopappsbyhost)
+[default](core_model_ModelBase.default.md)
+.[getTopAppsByHost](core_model_ModelBase.default.md#gettopappsbyhost)
 
 #### Defined in
 
@@ -159,9 +163,9 @@ ___
 
 ▸ **groupByHost**(): [`HostGroupedType`](../modules/types.md#hostgroupedtype)
 
-Group data by host. The usage of extra counting object allows
-to reduce the complexity by not adding one more cycle in this case and
-ends with O(n^2) complexity.
+Group data by host. The usage of extra counting object allows to reduce the
+complexity by not adding one more cycle in this case and ends with O(n^2)
+complexity.
 
 #### Returns
 
@@ -185,7 +189,8 @@ The initial method to fetch the data.
 
 #### Overrides
 
-[default](core_model_ModelBase.default.md).[init](core_model_ModelBase.default.md#init)
+[default](core_model_ModelBase.default.md)
+.[init](core_model_ModelBase.default.md#init)
 
 #### Defined in
 
@@ -195,7 +200,8 @@ ___
 
 ### prepareHosts
 
-▸ **prepareHosts**(`hosts`, `limit`): [`HostGroupedType`](../modules/types.md#hostgroupedtype)
+▸ **prepareHosts**(`hosts`
+, `limit`): [`HostGroupedType`](../modules/types.md#hostgroupedtype)
 
 Prepare Hosts for cards in the UI by sorting by Apdex and limit. O(n^2)
 
@@ -222,8 +228,8 @@ ___
 
 ▸ `Private` **removeAppFromHosts**(`appName`): `void`
 
-Filter array data. This method is not used anywhere for now
-and was added according to the task.
+Filter array data. This method is not used anywhere for now and was added
+according to the task.
 
 #### Parameters
 
@@ -243,11 +249,11 @@ ___
 
 ### groupByHostGeneral
 
-▸ `Static` **groupByHostGeneral**(`data`): [`HostGroupedType`](../modules/types.md#hostgroupedtype)
+▸ `Static` **
+groupByHostGeneral**(`data`): [`HostGroupedType`](../modules/types.md#hostgroupedtype)
 
-Group by General Host.
-The solution was implemented with the help of extra object to reduce the complexity.
-O(n^2) complexity.
+Group by General Host. The solution was implemented with the help of extra
+object to reduce the complexity. O(n^2) complexity.
 
 #### Parameters
 
@@ -261,7 +267,8 @@ O(n^2) complexity.
 
 #### Inherited from
 
-[default](core_model_ModelBase.default.md).[groupByHostGeneral](core_model_ModelBase.default.md#groupbyhostgeneral)
+[default](core_model_ModelBase.default.md)
+.[groupByHostGeneral](core_model_ModelBase.default.md#groupbyhostgeneral)
 
 #### Defined in
 
@@ -271,12 +278,12 @@ ___
 
 ### prepareHostsGeneral
 
-▸ `Static` **prepareHostsGeneral**(`data`, `hosts`, `limit?`): [`HostGroupedType`](../modules/types.md#hostgroupedtype)
+▸ `Static` **prepareHostsGeneral**(`data`, `hosts`
+, `limit?`): [`HostGroupedType`](../modules/types.md#hostgroupedtype)
 
-Prepares the sorted amount of hosts for the cards.
-According to the task the number of hosts should be 25,
-but it conflicts with the UI (5 apps per card).
-O(n^2) complexity.
+Prepares the sorted amount of hosts for the cards. According to the task the
+number of hosts should be 25, but it conflicts with the UI (5 apps per card). O(
+n^2) complexity.
 
 #### Parameters
 
@@ -292,7 +299,8 @@ O(n^2) complexity.
 
 #### Inherited from
 
-[default](core_model_ModelBase.default.md).[prepareHostsGeneral](core_model_ModelBase.default.md#preparehostsgeneral)
+[default](core_model_ModelBase.default.md)
+.[prepareHostsGeneral](core_model_ModelBase.default.md#preparehostsgeneral)
 
 #### Defined in
 
@@ -319,7 +327,8 @@ Simple sorting algorithm was moved to the function to test later.
 
 #### Inherited from
 
-[default](core_model_ModelBase.default.md).[sortHosts](core_model_ModelBase.default.md#sorthosts)
+[default](core_model_ModelBase.default.md)
+.[sortHosts](core_model_ModelBase.default.md#sorthosts)
 
 #### Defined in
 

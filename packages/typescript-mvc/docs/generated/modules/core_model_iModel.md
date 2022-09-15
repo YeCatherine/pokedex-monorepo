@@ -1,4 +1,5 @@
-[new-relic-interview](../README.md) / [Exports](../modules.md) / core/model/iModel
+[new-relic-interview](../README.md) / [Exports](../modules.md) /
+core/model/iModel
 
 # Module: core/model/iModel
 

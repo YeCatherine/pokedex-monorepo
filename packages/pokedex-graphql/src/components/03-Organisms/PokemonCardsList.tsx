@@ -1,24 +1,24 @@
-import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import Grid from '@material-ui/core/Grid'
-import Typography from '@material-ui/core/Typography'
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
-import { PokemonCard } from '../02-Molecules/PokemonCard'
+import { PokemonCard } from '../02-Molecules/PokemonCard';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+    flexGrow: 1
   },
   noResultsContainer: {
-    textAlign: 'center',
+    textAlign: 'center'
   },
   noResults: {
     color: '#FFF',
     fontSize: 24,
     textTransform: 'uppercase',
-    marginTop: theme.spacing(6),
-  },
-}))
+    marginTop: theme.spacing(6)
+  }
+}));
 
 /**
  * Pokemon Cards List.
@@ -29,13 +29,13 @@ const useStyles = makeStyles((theme) => ({
  * @constructor
  */
 export function PokemonCardsList({ pokedexData, fetchPokedexData }) {
-  const classes = useStyles()
+  const classes = useStyles();
 
   return pokedexData.length > 0 ? (
     <Grid container className={classes.root} spacing={4}>
       {pokedexData.map((pokemon) => (
         <Grid key={pokemon.name} item xs={12} sm={12} md={6} lg={4}>
-          <PokemonCard pokemon={pokemon} />
+          <PokemonCard pokemon={pokemon}/>
         </Grid>
       ))}
     </Grid>
@@ -45,5 +45,5 @@ export function PokemonCardsList({ pokedexData, fetchPokedexData }) {
         No results. Please try a different filter value.
       </Typography>
     </div>
-  )
+  );
 }

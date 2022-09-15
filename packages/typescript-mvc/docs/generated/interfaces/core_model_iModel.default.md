@@ -1,4 +1,5 @@
-[new-relic-interview](../README.md) / [Exports](../modules.md) / [core/model/iModel](../modules/core_model_iModel.md) / default
+[new-relic-interview](../README.md) / [Exports](../modules.md)
+/ [core/model/iModel](../modules/core_model_iModel.md) / default
 
 # Interface: default
 

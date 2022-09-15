@@ -78,7 +78,7 @@ const Layout: React.FC<Props> = (
     children,
     sidebar,
     top,
-    loading=true,
+    loading = true,
     logo,
     title
   }) => {
@@ -109,8 +109,8 @@ const Layout: React.FC<Props> = (
                 item
                 xs={12}
                 sm={12}
-                md={12-columnSize}
-                lg={12-columnSize}
+                md={12 - columnSize}
+                lg={12 - columnSize}
               >
                 {children}
               </Grid>

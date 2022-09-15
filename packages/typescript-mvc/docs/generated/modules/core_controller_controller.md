@@ -1,4 +1,5 @@
-[new-relic-interview](../README.md) / [Exports](../modules.md) / core/controller/controller
+[new-relic-interview](../README.md) / [Exports](../modules.md) /
+core/controller/controller
 
 # Module: core/controller/controller
 

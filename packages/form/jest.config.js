@@ -88,7 +88,7 @@ module.exports = {
   // names that allow to stub out resources with a single module
   // moduleNameMapper: {},
   moduleNameMapper: {
-    '^@/(.+)': '<rootDir>/src/$1',
+    '^@/(.+)': '<rootDir>/src/$1'
   },
   // An array of regexp pattern strings, matched against all module paths
   // before considered 'visible' to the module loader modulePathIgnorePatterns:
@@ -113,9 +113,9 @@ module.exports = {
     [
       './node_modules/jest-html-reporter',
       {
-        pageTitle: 'Project Jest Report',
-      },
-    ],
+        pageTitle: 'Project Jest Report'
+      }
+    ]
   ],
   // Automatically reset mock state before every test
   // resetMocks: false,
@@ -176,7 +176,7 @@ module.exports = {
 
   // This option allows the use of a custom results processor
   // Add report with the help of "jest-html-reporter"
-  testResultsProcessor: './node_modules/jest-html-reporter',
+  testResultsProcessor: './node_modules/jest-html-reporter'
   // This option allows use of a custom test runner
   // testRunner: "jest-circus/runner",
 
@@ -199,4 +199,4 @@ module.exports = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
-};
+}

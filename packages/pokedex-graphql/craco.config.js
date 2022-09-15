@@ -7,7 +7,7 @@ packages.push(path.join(__dirname, '../components'))
 module.exports = {
   webpack: {
     alias: {
-      '@': path.resolve(__dirname, 'src'),
+      '@': path.resolve(__dirname, 'src')
     },
     configure: (webpackConfig, arg) => {
       const { isFound, match } = getLoader(
@@ -22,6 +22,6 @@ module.exports = {
         match.loader.include = include.concat(packages)
       }
       return webpackConfig
-    },
-  },
+    }
+  }
 }

@@ -1,4 +1,5 @@
-[new-relic-interview](../README.md) / [Exports](../modules.md) / [core/view/view](../modules/core_view_view.md) / default
+[new-relic-interview](../README.md) / [Exports](../modules.md)
+/ [core/view/view](../modules/core_view_view.md) / default
 
 # Class: default
 
@@ -54,7 +55,8 @@ App Wrapper.
 
 #### Implementation of
 
-[ViewInterface](../interfaces/core_view_view.ViewInterface.md).[app](../interfaces/core_view_view.ViewInterface.md#app)
+[ViewInterface](../interfaces/core_view_view.ViewInterface.md)
+.[app](../interfaces/core_view_view.ViewInterface.md#app)
 
 #### Defined in
 
@@ -70,7 +72,8 @@ Application List.
 
 #### Implementation of
 
-[ViewInterface](../interfaces/core_view_view.ViewInterface.md).[applicationList](../interfaces/core_view_view.ViewInterface.md#applicationlist)
+[ViewInterface](../interfaces/core_view_view.ViewInterface.md)
+.[applicationList](../interfaces/core_view_view.ViewInterface.md#applicationlist)
 
 #### Defined in
 
@@ -86,7 +89,8 @@ Checkbox Label Wrapper.
 
 #### Implementation of
 
-[ViewInterface](../interfaces/core_view_view.ViewInterface.md).[checkboxLabel](../interfaces/core_view_view.ViewInterface.md#checkboxlabel)
+[ViewInterface](../interfaces/core_view_view.ViewInterface.md)
+.[checkboxLabel](../interfaces/core_view_view.ViewInterface.md#checkboxlabel)
 
 #### Defined in
 
@@ -102,7 +106,8 @@ Checkbox Wrapper.
 
 #### Implementation of
 
-[ViewInterface](../interfaces/core_view_view.ViewInterface.md).[checkboxWrapper](../interfaces/core_view_view.ViewInterface.md#checkboxwrapper)
+[ViewInterface](../interfaces/core_view_view.ViewInterface.md)
+.[checkboxWrapper](../interfaces/core_view_view.ViewInterface.md#checkboxwrapper)
 
 #### Defined in
 
@@ -118,7 +123,8 @@ Header Element.
 
 #### Implementation of
 
-[ViewInterface](../interfaces/core_view_view.ViewInterface.md).[header](../interfaces/core_view_view.ViewInterface.md#header)
+[ViewInterface](../interfaces/core_view_view.ViewInterface.md)
+.[header](../interfaces/core_view_view.ViewInterface.md#header)
 
 #### Defined in
 
@@ -132,7 +138,8 @@ ___
 
 #### Implementation of
 
-[ViewInterface](../interfaces/core_view_view.ViewInterface.md).[labelTextGrid](../interfaces/core_view_view.ViewInterface.md#labeltextgrid)
+[ViewInterface](../interfaces/core_view_view.ViewInterface.md)
+.[labelTextGrid](../interfaces/core_view_view.ViewInterface.md#labeltextgrid)
 
 #### Defined in
 
@@ -146,7 +153,8 @@ ___
 
 #### Implementation of
 
-[ViewInterface](../interfaces/core_view_view.ViewInterface.md).[labelTextList](../interfaces/core_view_view.ViewInterface.md#labeltextlist)
+[ViewInterface](../interfaces/core_view_view.ViewInterface.md)
+.[labelTextList](../interfaces/core_view_view.ViewInterface.md#labeltextlist)
 
 #### Defined in
 
@@ -162,7 +170,8 @@ Title Element.
 
 #### Implementation of
 
-[ViewInterface](../interfaces/core_view_view.ViewInterface.md).[title](../interfaces/core_view_view.ViewInterface.md#title)
+[ViewInterface](../interfaces/core_view_view.ViewInterface.md)
+.[title](../interfaces/core_view_view.ViewInterface.md#title)
 
 #### Defined in
 

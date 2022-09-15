@@ -1,11 +1,11 @@
-import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import Paper from '@material-ui/core/Paper'
-import InputLabel from '@material-ui/core/InputLabel'
-import MenuItem from '@material-ui/core/MenuItem'
-import FormControl from '@material-ui/core/FormControl'
-import Select from '@material-ui/core/Select'
-import { TextField } from '@mui/material'
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import { TextField } from '@mui/material';
 
 const pokemonTypes = [
   'Bug',
@@ -25,39 +25,39 @@ const pokemonTypes = [
   'Psychic',
   'Rock',
   'Steel',
-  'Water',
-]
+  'Water'
+];
 
 const useStyles = makeStyles((theme) => ({
   optionsContainer: {
     background: '#FFF',
     padding: `${theme.spacing(1)}px ${theme.spacing(2)}px`,
     borderRadius: 4,
-    marginBottom: theme.spacing(2),
+    marginBottom: theme.spacing(2)
   },
   formControl: {
     margin: theme.spacing(1),
     width: 300,
     maxWidth: '100%',
-    background: '#FFF',
-  },
-}))
+    background: '#FFF'
+  }
+}));
 
 export function Filters({
   pokemonTypeFilter,
   setPokemonTypeFilter,
   capturedFilter,
-  setCapturedFilter,
+  setCapturedFilter
 }) {
-  const classes = useStyles()
+  const classes = useStyles();
 
   const handlePokemonTypeChange = (event) => {
-    setPokemonTypeFilter(event.target.value)
-  }
+    setPokemonTypeFilter(event.target.value);
+  };
 
   const handleCapturedChange = (event) => {
-    setCapturedFilter(event.target.value)
-  }
+    setCapturedFilter(event.target.value);
+  };
 
   return (
     <Paper variant="outlined" className={classes.optionsContainer}>
@@ -70,7 +70,7 @@ export function Filters({
           name="name"
           value={''}
           onChange={(e) => {
-            console.log(e.target.value)
+            console.log(e.target.value);
           }}
         />
       </FormControl>
@@ -102,5 +102,5 @@ export function Filters({
         </Select>
       </FormControl>
     </Paper>
-  )
+  );
 }

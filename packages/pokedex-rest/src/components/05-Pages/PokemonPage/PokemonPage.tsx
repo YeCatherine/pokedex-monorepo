@@ -38,7 +38,7 @@ export const PokemonPage: React.FC = (props) => {
       .then((response: any) => {
         setPokemonSpecies(response.data);
         const translatedName = response.data.names.filter(
-          (lang) => lang.language.name === language,
+          (lang) => lang.language.name === language
         );
         setName(translatedName[0].name ? translatedName[0].name : params.name);
       })
@@ -50,7 +50,7 @@ export const PokemonPage: React.FC = (props) => {
   if (typeof pokemon === 'undefined' || typeof pokemonSpecies === 'undefined') {
     return (
       <h1>
-        <Spinner />
+        <Spinner/>
         Loading...
       </h1>
     );
@@ -61,7 +61,7 @@ export const PokemonPage: React.FC = (props) => {
       <Box className="row">
         <Box className="pokemon">
           <h1>{`My name is "${pokemon.name}"`}</h1>
-          <PokemonCard pokemon={pokemon} />
+          <PokemonCard pokemon={pokemon}/>
         </Box>
         <Box className="card card-header text-dark text-center">
           <h3>Base stats</h3>
@@ -72,33 +72,33 @@ export const PokemonPage: React.FC = (props) => {
               </Li>
             ))}
           </Ul>
-          <hr />
+          <hr/>
           <h3>Abilities</h3>
           <Ul className="pokemon-abilities flex-wrap">
             {pokemon.abilities.map((ability) => (
               <Li key={ability.ability.name}>{ability.ability.name}</Li>
             ))}
           </Ul>
-          <hr />
+          <hr/>
           <h3>Properties</h3>
           <Ul className="pokemon-properties flex-wrap">
             <Li>{`weight - ${pokemon.weight}`}</Li>
             <Li>{`height - ${pokemon.height}`}</Li>
             <Li>{`order - ${pokemon.order}`}</Li>
           </Ul>
-          <hr />
+          <hr/>
           <h3>Types</h3>
           <Ul className="pokemon-types flex-wrap">
             {pokemon.types.map((typ) => (
               <Li key={typ.type.name}>{typ.type.name}</Li>
             ))}
           </Ul>
-          <hr />
+          <hr/>
         </Box>
       </Box>
       <Box className="row">
         <Box>
-          <EvolutionChain pokemon={pokemon} pokemonSpecies={pokemonSpecies} />
+          <EvolutionChain pokemon={pokemon} pokemonSpecies={pokemonSpecies}/>
         </Box>
       </Box>
       <Box className="row">

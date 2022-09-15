@@ -1,4 +1,5 @@
-[new-relic-interview](../README.md) / [Exports](../modules.md) / [core/view/view](../modules/core_view_view.md) / ViewInterface
+[new-relic-interview](../README.md) / [Exports](../modules.md)
+/ [core/view/view](../modules/core_view_view.md) / ViewInterface
 
 # Interface: ViewInterface
 
@@ -119,7 +120,9 @@ ___
 
 ### displayList
 
-• **displayList**: (`key`: [`HostGroupedType`](../modules/types.md#hostgroupedtype)) => `void`
+• **
+displayList**: (`key`: [`HostGroupedType`](../modules/types.md#hostgroupedtype))
+=> `void`
 
 #### Type declaration
 

@@ -1,5 +1,8 @@
 import { Helmet } from 'react-helmet';
 
+type Props = {
+  title: string,
+};
 const Meta = ({ title }) => {
   return (
     <Helmet>

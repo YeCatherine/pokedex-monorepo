@@ -26,5 +26,5 @@
 // Chainable<Element> visit(originalFn: CommandOriginalFn, url: string,
 // options: Partial<VisitOptions>): Chainable<Element> } } }
 
-const compareSnapshotCommand = require('cypress-image-diff-js/dist/command');
-compareSnapshotCommand();
+const compareSnapshotCommand = require('cypress-image-diff-js/dist/command')
+compareSnapshotCommand()

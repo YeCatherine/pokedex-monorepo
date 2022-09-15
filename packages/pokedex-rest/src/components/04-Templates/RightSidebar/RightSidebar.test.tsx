@@ -4,7 +4,7 @@ import RightSidebar from './RightSidebar';
 
 describe('Find element by text', () => {
   it('Check for component "Captured"', () => {
-    render(<RightSidebar />);
+    render(<RightSidebar/>);
     const linkElement = screen.getByText(/Captured/i);
     expect(linkElement).toBeInTheDocument();
   });

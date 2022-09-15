@@ -23,8 +23,10 @@ import { getIdFromURL } from '@/services/Common';
  */
 export const PokemonTable = () => {
   const [preparedData, serPreparedData] = useState({});
-  // const [pokemons, setPokemons] = useLocalStorage<Array<IPokemonData>>('capturedPokemonList', []);
-  const [pokemons, setPokemons] = useLocalStorage<Array<IPokemonData>>('pokemonsList', []);
+  // const [pokemons, setPokemons] =
+  // useLocalStorage<Array<IPokemonData>>('capturedPokemonList', []);
+  const [pokemons, setPokemons] = useLocalStorage<Array<IPokemonData>>(
+    'pokemonsList', []);
   /**
    * Retrieves all pokemons and extract ids.
    */
@@ -47,8 +49,7 @@ export const PokemonTable = () => {
       });
   }, []);
 
-
-  const WrapProgramsTable = (pokemons) => <DataTable preparedData={pokemons} />;
+  const WrapProgramsTable = (pokemons) => <DataTable preparedData={pokemons}/>;
   return (
     <>
       {/* <WrapProgramsTable pokemons={pokemons}/> */}

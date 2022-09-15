@@ -8,11 +8,12 @@ import LanguageSwitcher from './LanguageSwitcher';
 
 export default {
   title: 'Pokedex/Atoms',
-  component: LanguageSwitcher,
+  component: LanguageSwitcher
 } as ComponentMeta<typeof LanguageSwitcher>;
 
 // More on component templates:
 // https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof LanguageSwitcher> = () => <LanguageSwitcher />;
+const Template: ComponentStory<typeof LanguageSwitcher> = () =>
+  <LanguageSwitcher/>;
 
 export const Default = Template.bind({});
