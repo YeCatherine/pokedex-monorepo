@@ -79,13 +79,15 @@
     "start:prod": "concurrently --kill-others \"npm run server\" \"npx serve build -l 3005\"",
     "start:all": "npm run seed-db && concurrently \"npm run server\" \"PORT=3005 craco start\" \"npm run cy:open\" \"npm run storybook\"",
     "build": "craco build",
-    "test": "craco test --collect-coverage",
-    "cy:run": "cypress run",
-    "test:cy": "npm run cy:run",
-    "cy:open": "cypress open",
+    "test:jest": "craco test --collect-coverage",
+    "test:cy": "cypress run --headless --browser chrome",
+    "test:cy:open": "cypress open",
+    "test": "npm run test:jest; npm run test:cy",
+
+
     "cy:run:all": "concurrently --kill-others \"npm run webpack:server\" \"npm run cy:run\"",
-    "e2e:audit:headless": "cypress run --headless --browser chrome",
     "cy:open:all": "concurrently --kill-others \"npm run webpack:server\" \"npm run cy:open\"",
+
     "eject": "craco eject",
     "postinstall": "npm run seed-db",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",

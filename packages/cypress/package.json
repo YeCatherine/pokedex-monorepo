@@ -7,6 +7,11 @@
   "scripts": {
     "test:cy": "cypress open"
   },
+  "dependencies": {
+    "@monorepo/form": "*",
+    "@monorepo/pokemon-app": "*",
+    "@monorepo/typescript-mvc": "*"
+  },
   "devDependencies": {
     "@babel/core": "^7.19.1",
     "@babel/preset-env": "^7.19.1",
