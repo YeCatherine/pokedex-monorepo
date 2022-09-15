@@ -10,32 +10,9 @@ import { PokemonCardsList } from './components/03-Organisms/PokemonCardsList'
 import pokemonLogo from './assets/pokemon-logo.png'
 import { fetchPokemon } from './services/graphQLUtils'
 // import {DataLoading} from '@monorepo/components'
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    textAlign: 'center',
-  },
-  pokemonLogo: {
-    maxWidth: '90%',
-    width: 400,
-  },
-  loadingContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    color: '#FFF',
-    fontSize: 24,
-    textTransform: 'uppercase',
-  },
-  loadingText: {
-    marginTop: theme.spacing(2),
-  },
-}))
+import Layout from './components/04-Templates/Layout'
 
 export default function App() {
-  const classes = useStyles()
-
   const [pokedexData, setPokedexData] = React.useState(null)
   const [pokemonTypeFilter, setPokemonTypeFilter] = React.useState('Any')
   const [capturedFilter, setCapturedFilter] = React.useState('Any')
@@ -62,41 +39,24 @@ export default function App() {
   }, [fetchPokedexData])
 
   return (
-    <main className={classes.root}>
-      <Container>
-        <img src={pokemonLogo} alt="" className={classes.pokemonLogo} />
-        <Typography variant="srOnly">
-          <h1>Pokémon Pokédex</h1>
-        </Typography>
-        {pokedexData ? (
-          <>
-            <Filters
-              pokemonTypeFilter={pokemonTypeFilter}
-              setPokemonTypeFilter={setPokemonTypeFilter}
-              capturedFilter={capturedFilter}
-              setCapturedFilter={setCapturedFilter}
-            />
-            <Grid container className={classes.root} spacing={4}>
-              <Grid item xs={12} sm={12} md={3} lg={3}> 
-                <Card  variant="outlined">
-                  <h2>Section under construction.</h2>
-                </Card>
-              </Grid>
-              <Grid item xs={12} sm={12} md={9} lg={9}>
-                <PokemonCardsList
-                  pokedexData={pokedexData}
-                  fetchPokedexData={fetchPokedexData}
-                />
-              </Grid>
-            </Grid>
-          </>
-        ) : (
-          <div className={classes.loadingContainer}>
-            <CircularProgress color="inherit" size={60} />
-            <Typography className={classes.loadingText}>Loading</Typography>
-          </div>
-        )}
-      </Container>
-    </main>
+    <Layout
+      title={'Pokémon Pokédex'}
+      top={
+        <Filters
+          pokemonTypeFilter={pokemonTypeFilter}
+          setPokemonTypeFilter={setPokemonTypeFilter}
+          capturedFilter={capturedFilter}
+          setCapturedFilter={setCapturedFilter}
+        />
+      }
+      sidebar={<h2>Section under construction.</h2>}
+      logo={pokemonLogo}
+      loading={pokedexData}
+    >
+      <PokemonCardsList
+        pokedexData={pokedexData}
+        fetchPokedexData={fetchPokedexData}
+      />
+    </Layout>
   )
 }

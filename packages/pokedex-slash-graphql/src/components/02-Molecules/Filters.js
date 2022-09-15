@@ -25,7 +25,7 @@ const pokemonTypes = [
   'Psychic',
   'Rock',
   'Steel',
-  'Water'
+  'Water',
 ]
 
 const useStyles = makeStyles((theme) => ({
@@ -33,21 +33,21 @@ const useStyles = makeStyles((theme) => ({
     background: '#FFF',
     padding: `${theme.spacing(1)}px ${theme.spacing(2)}px`,
     borderRadius: 4,
-    marginBottom: theme.spacing(2)
+    marginBottom: theme.spacing(2),
   },
   formControl: {
     margin: theme.spacing(1),
     width: 300,
     maxWidth: '100%',
-    background: '#FFF'
-  }
+    background: '#FFF',
+  },
 }))
 
 export function Filters({
   pokemonTypeFilter,
   setPokemonTypeFilter,
   capturedFilter,
-  setCapturedFilter
+  setCapturedFilter,
 }) {
   const classes = useStyles()
 
@@ -69,7 +69,9 @@ export function Filters({
           variant="outlined"
           name="name"
           value={''}
-          onChange={(e) => {console.log(e.target.value)}}
+          onChange={(e) => {
+            console.log(e.target.value)
+          }}
         />
       </FormControl>
       <FormControl variant="outlined" className={classes.formControl}>
