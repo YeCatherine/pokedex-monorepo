@@ -2,17 +2,51 @@ import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
+import { useRoutes } from 'react-router-dom';
+import { Layout } from '@monorepo/components';
+// import Layout from '@/Layout';
+
+//import { ErrorBoundary } from
+// '@monorepo/components/src/components/05-Pages/ErrorBoundary/ErrorBoundary';
 
 function App() {
+  let element = useRoutes([
+    {
+      path: '/',
+      element: <Dashboard/>,
+      children: [
+        {
+          path: 'messages',
+          element: <DashboardMessages/>
+        },
+        { path: 'tasks', element: <DashboardTasks/> }
+      ]
+    },
+    { path: 'team', element: <AboutPage/> }
+  ]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
+    <Layout
+      header={<><h1>Header</h1></>}
+    >
+      {element}
+    </Layout>);
+}
+
+const DashboardMessages = () => (<h1>DashboardMessages</h1>);
+const DashboardTasks = () => (<h1>DashboardTasks</h1>);
+const AboutPage = () => (<h1>About</h1>);
+// const Dashboard = () => (<h1>Dashboard</h1>);
+
+const Dashboard = () => (
+  <div className="App">
+    <header className="App-header">
+      <img src={logo} className="App-logo" alt="logo"/>
+      <Counter/>
+      <p>
+        Edit <code>src/App.tsx</code> and save to reload.
+      </p>
+      <span>
           <span>Learn </span>
           <a
             className="App-link"
@@ -50,9 +84,8 @@ function App() {
             React Redux
           </a>
         </span>
-      </header>
-    </div>
-  );
-}
+    </header>
+  </div>
+);
 
 export default App;
