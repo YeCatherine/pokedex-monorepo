@@ -47,20 +47,18 @@ const RandomPokemon: React.FC = (props) => {
       return x;
     });
 
-    setRandomPokemon(
-      freePokemons[Math.floor(Math.random() * freePokemons.length)]);
+    setRandomPokemon(freePokemons[Math.floor(Math.random() * freePokemons.length)]);
   }, [capturedPokemons, pokemons]);
 
   if (!randomPokemon) {
-    return <Spinner/>;
+    return <Spinner />;
   }
 
   return (
     <>
       <h4>See also</h4>
-      <div
-        className="list-group d-flex flex-wrap flex-row justify-content-center">
-        <PokemonCard pokemon={randomPokemon}/>
+      <div className="list-group d-flex flex-wrap flex-row justify-content-center">
+        <PokemonCard pokemon={randomPokemon} />
       </div>
     </>
   );

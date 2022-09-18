@@ -79,7 +79,7 @@ reporting (should be also enabled on Jira side)
 - [x] Cypress
 - [x] TypeScript
 - [x] Browsers list with browser support: latest 2 versions of Chrome, Firefox,
-  Safari, Edge, Opera.
+      Safari, Edge, Opera.
 - [x] MVC on JS classes
 
 ## Site Score:

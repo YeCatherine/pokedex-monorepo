@@ -57,7 +57,7 @@ General Model implementation. Contains reusable functions.
 
 core/model/ModelBase.ts:14
 
-___
+---
 
 ### data
 
@@ -90,7 +90,7 @@ iModel.getTopAppsByHost
 
 core/model/ModelBase.ts:93
 
-___
+---
 
 ### init
 
@@ -108,7 +108,7 @@ iModel.init
 
 core/model/ModelBase.ts:90
 
-___
+---
 
 ### groupByHostGeneral
 
@@ -120,8 +120,8 @@ object to reduce the complexity. O(n^2) complexity.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type                                                       |
+| :----- | :--------------------------------------------------------- |
 | `data` | [`HostAppDataType`](../modules/types.md#hostappdatatype)[] |
 
 #### Returns
@@ -132,7 +132,7 @@ object to reduce the complexity. O(n^2) complexity.
 
 core/model/ModelBase.ts:35
 
-___
+---
 
 ### prepareHostsGeneral
 
@@ -145,11 +145,11 @@ n^2) complexity.
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `data` | [`HostAppDataType`](../modules/types.md#hostappdatatype)[] | `undefined` |
-| `hosts` | [`HostGroupedType`](../modules/types.md#hostgroupedtype) | `undefined` |
-| `limit` | `number` | `5` |
+| Name    | Type                                                       | Default value |
+| :------ | :--------------------------------------------------------- | :------------ |
+| `data`  | [`HostAppDataType`](../modules/types.md#hostappdatatype)[] | `undefined`   |
+| `hosts` | [`HostGroupedType`](../modules/types.md#hostgroupedtype)   | `undefined`   |
+| `limit` | `number`                                                   | `5`           |
 
 #### Returns
 
@@ -159,7 +159,7 @@ n^2) complexity.
 
 core/model/ModelBase.ts:63
 
-___
+---
 
 ### sortHosts
 
@@ -169,10 +169,10 @@ Simple sorting algorithm was moved to the function to test later.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `a` | [`HostGroupedTypeItem`](../modules/types.md#hostgroupedtypeitem) | HostGroupedTypeItem |
-| `b` | [`HostGroupedTypeItem`](../modules/types.md#hostgroupedtypeitem) | HostGroupedTypeItem |
+| Name | Type                                                             | Description         |
+| :--- | :--------------------------------------------------------------- | :------------------ |
+| `a`  | [`HostGroupedTypeItem`](../modules/types.md#hostgroupedtypeitem) | HostGroupedTypeItem |
+| `b`  | [`HostGroupedTypeItem`](../modules/types.md#hostgroupedtypeitem) | HostGroupedTypeItem |
 
 #### Returns
 

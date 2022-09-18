@@ -63,7 +63,7 @@ Json Model Implementation.
 
 core/model/ModelJson.ts:11
 
-___
+---
 
 ### data
 
@@ -89,8 +89,8 @@ according to the task.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name        | Type                                                     | Description           |
+| :---------- | :------------------------------------------------------- | :-------------------- |
 | `insertApp` | [`HostAppDataType`](../modules/types.md#hostappdatatype) | Object with app data. |
 
 #### Returns
@@ -101,7 +101,7 @@ according to the task.
 
 core/model/ModelJson.ts:72
 
-___
+---
 
 ### fetchData
 
@@ -112,14 +112,14 @@ The universal method for fetching data.
 #### Type parameters
 
 | Name |
-| :------ |
-| `T` |
+| :--- |
+| `T`  |
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `resourceUrl` | `string` | the url |
+| Name          | Type     | Description |
+| :------------ | :------- | :---------- |
+| `resourceUrl` | `string` | the url     |
 
 #### Returns
 
@@ -129,7 +129,7 @@ The universal method for fetching data.
 
 core/model/ModelJson.ts:29
 
-___
+---
 
 ### getTopAppsByHost
 
@@ -140,9 +140,9 @@ the UI (5 apps per card). Extract data from json.
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `limit` | `number` | `5` |
+| Name    | Type     | Default value |
+| :------ | :------- | :------------ |
+| `limit` | `number` | `5`           |
 
 #### Returns
 
@@ -157,7 +157,7 @@ the UI (5 apps per card). Extract data from json.
 
 core/model/ModelJson.ts:40
 
-___
+---
 
 ### groupByHost
 
@@ -175,7 +175,7 @@ complexity.
 
 core/model/ModelJson.ts:51
 
-___
+---
 
 ### init
 
@@ -196,7 +196,7 @@ The initial method to fetch the data.
 
 core/model/ModelJson.ts:19
 
-___
+---
 
 ### prepareHosts
 
@@ -207,10 +207,10 @@ Prepare Hosts for cards in the UI by sorting by Apdex and limit. O(n^2)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type                                                     |
+| :------ | :------------------------------------------------------- |
 | `hosts` | [`HostGroupedType`](../modules/types.md#hostgroupedtype) |
-| `limit` | `number` |
+| `limit` | `number`                                                 |
 
 #### Returns
 
@@ -222,7 +222,7 @@ the 5 sorted hosts
 
 core/model/ModelJson.ts:63
 
-___
+---
 
 ### removeAppFromHosts
 
@@ -233,8 +233,8 @@ according to the task.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type     |
+| :-------- | :------- |
 | `appName` | `string` |
 
 #### Returns
@@ -245,7 +245,7 @@ according to the task.
 
 core/model/ModelJson.ts:82
 
-___
+---
 
 ### groupByHostGeneral
 
@@ -257,8 +257,8 @@ object to reduce the complexity. O(n^2) complexity.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type                                                       |
+| :----- | :--------------------------------------------------------- |
 | `data` | [`HostAppDataType`](../modules/types.md#hostappdatatype)[] |
 
 #### Returns
@@ -274,7 +274,7 @@ object to reduce the complexity. O(n^2) complexity.
 
 core/model/ModelBase.ts:35
 
-___
+---
 
 ### prepareHostsGeneral
 
@@ -287,11 +287,11 @@ n^2) complexity.
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `data` | [`HostAppDataType`](../modules/types.md#hostappdatatype)[] | `undefined` |
-| `hosts` | [`HostGroupedType`](../modules/types.md#hostgroupedtype) | `undefined` |
-| `limit` | `number` | `5` |
+| Name    | Type                                                       | Default value |
+| :------ | :--------------------------------------------------------- | :------------ |
+| `data`  | [`HostAppDataType`](../modules/types.md#hostappdatatype)[] | `undefined`   |
+| `hosts` | [`HostGroupedType`](../modules/types.md#hostgroupedtype)   | `undefined`   |
+| `limit` | `number`                                                   | `5`           |
 
 #### Returns
 
@@ -306,7 +306,7 @@ n^2) complexity.
 
 core/model/ModelBase.ts:63
 
-___
+---
 
 ### sortHosts
 
@@ -316,10 +316,10 @@ Simple sorting algorithm was moved to the function to test later.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `a` | [`HostGroupedTypeItem`](../modules/types.md#hostgroupedtypeitem) | HostGroupedTypeItem |
-| `b` | [`HostGroupedTypeItem`](../modules/types.md#hostgroupedtypeitem) | HostGroupedTypeItem |
+| Name | Type                                                             | Description         |
+| :--- | :--------------------------------------------------------------- | :------------------ |
+| `a`  | [`HostGroupedTypeItem`](../modules/types.md#hostgroupedtypeitem) | HostGroupedTypeItem |
+| `b`  | [`HostGroupedTypeItem`](../modules/types.md#hostgroupedtypeitem) | HostGroupedTypeItem |
 
 #### Returns
 

@@ -30,7 +30,7 @@ Interface for Model Class group
 
 core/model/iModel.ts:8
 
-___
+---
 
 ### data
 
@@ -40,7 +40,7 @@ ___
 
 core/model/iModel.ts:7
 
-___
+---
 
 ### getTopAppsByHost
 
@@ -58,7 +58,7 @@ ___
 
 core/model/iModel.ts:10
 
-___
+---
 
 ### init
 

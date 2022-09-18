@@ -62,7 +62,7 @@ App Wrapper.
 
 core/view/view.ts:38
 
-___
+---
 
 ### applicationList
 
@@ -79,7 +79,7 @@ Application List.
 
 core/view/view.ts:63
 
-___
+---
 
 ### checkboxLabel
 
@@ -96,7 +96,7 @@ Checkbox Label Wrapper.
 
 core/view/view.ts:58
 
-___
+---
 
 ### checkboxWrapper
 
@@ -113,7 +113,7 @@ Checkbox Wrapper.
 
 core/view/view.ts:53
 
-___
+---
 
 ### header
 
@@ -130,7 +130,7 @@ Header Element.
 
 core/view/view.ts:43
 
-___
+---
 
 ### labelTextGrid
 
@@ -145,7 +145,7 @@ ___
 
 core/view/view.ts:31
 
-___
+---
 
 ### labelTextList
 
@@ -160,7 +160,7 @@ ___
 
 core/view/view.ts:33
 
-___
+---
 
 ### title
 
@@ -185,8 +185,8 @@ core/view/view.ts:48
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type                                                         |
+| :-------- | :----------------------------------------------------------- |
 | `handler` | [`ClickEventHandler`](../modules/types.md#clickeventhandler) |
 
 #### Returns
@@ -201,7 +201,7 @@ ViewInterface.bindProgramClick
 
 core/view/view.ts:167
 
-___
+---
 
 ### bindViewChange
 
@@ -209,8 +209,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type                                                         |
+| :-------- | :----------------------------------------------------------- |
 | `handler` | [`ClickEventHandler`](../modules/types.md#clickeventhandler) |
 
 #### Returns
@@ -225,7 +225,7 @@ ViewInterface.bindViewChange
 
 core/view/view.ts:160
 
-___
+---
 
 ### cardTemplate
 
@@ -235,9 +235,9 @@ Card template
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `host` | `string` |
+| Name   | Type                                                               |
+| :----- | :----------------------------------------------------------------- |
+| `host` | `string`                                                           |
 | `item` | [`HostGroupedTypeItem`](../modules/types.md#hostgroupedtypeitem)[] |
 
 #### Returns
@@ -248,7 +248,7 @@ Card template
 
 core/view/view.ts:136
 
-___
+---
 
 ### createElement
 
@@ -258,10 +258,10 @@ Create Dom element
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `tag` | `string` | `undefined` |
-| `className` | `string` | `''` |
+| Name        | Type     | Default value |
+| :---------- | :------- | :------------ |
+| `tag`       | `string` | `undefined`   |
+| `className` | `string` | `''`          |
 
 #### Returns
 
@@ -271,7 +271,7 @@ Create Dom element
 
 core/view/view.ts:102
 
-___
+---
 
 ### displayList
 
@@ -281,8 +281,8 @@ Display list.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type                                                     |
+| :------ | :------------------------------------------------------- |
 | `items` | [`HostGroupedType`](../modules/types.md#hostgroupedtype) |
 
 #### Returns
@@ -297,7 +297,7 @@ ViewInterface.displayList
 
 core/view/view.ts:150
 
-___
+---
 
 ### listTemplate
 
@@ -307,8 +307,8 @@ List template
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type                                                               | Description   |
+| :------ | :----------------------------------------------------------------- | :------------ |
 | `links` | [`HostGroupedTypeItem`](../modules/types.md#hostgroupedtypeitem)[] | list of apps. |
 
 #### Returns

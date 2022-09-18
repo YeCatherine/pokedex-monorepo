@@ -38,7 +38,7 @@ used.
 
 core/view/view.ts:11
 
-___
+---
 
 ### applicationList
 
@@ -48,7 +48,7 @@ ___
 
 core/view/view.ts:16
 
-___
+---
 
 ### bindProgramClick
 
@@ -60,8 +60,8 @@ ___
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name  | Type  |
+| :---- | :---- |
 | `key` | `any` |
 
 ##### Returns
@@ -72,7 +72,7 @@ ___
 
 core/view/view.ts:18
 
-___
+---
 
 ### bindViewChange
 
@@ -84,8 +84,8 @@ ___
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name  | Type  |
+| :---- | :---- |
 | `key` | `any` |
 
 ##### Returns
@@ -96,7 +96,7 @@ ___
 
 core/view/view.ts:20
 
-___
+---
 
 ### checkboxLabel
 
@@ -106,7 +106,7 @@ ___
 
 core/view/view.ts:15
 
-___
+---
 
 ### checkboxWrapper
 
@@ -116,7 +116,7 @@ ___
 
 core/view/view.ts:14
 
-___
+---
 
 ### displayList
 
@@ -130,8 +130,8 @@ displayList**: (`key`: [`HostGroupedType`](../modules/types.md#hostgroupedtype))
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name  | Type                                                     |
+| :---- | :------------------------------------------------------- |
 | `key` | [`HostGroupedType`](../modules/types.md#hostgroupedtype) |
 
 ##### Returns
@@ -142,7 +142,7 @@ displayList**: (`key`: [`HostGroupedType`](../modules/types.md#hostgroupedtype))
 
 core/view/view.ts:22
 
-___
+---
 
 ### header
 
@@ -152,7 +152,7 @@ ___
 
 core/view/view.ts:12
 
-___
+---
 
 ### labelTextGrid
 
@@ -162,7 +162,7 @@ ___
 
 core/view/view.ts:9
 
-___
+---
 
 ### labelTextList
 
@@ -172,7 +172,7 @@ ___
 
 core/view/view.ts:10
 
-___
+---
 
 ### title
 

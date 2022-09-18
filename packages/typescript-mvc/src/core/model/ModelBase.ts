@@ -44,7 +44,7 @@ export default abstract class ModelBase implements iModel {
 
         hosts[host][key] = {
           app_key: key,
-          apdex: value.apdex
+          apdex: value.apdex,
         };
       });
     });

@@ -14,7 +14,7 @@ export const DEFAULT_LANGUAGE = 'en';
  */
 export const MyGlobalContext = createContext<GlobalContent>({
   language: DEFAULT_LANGUAGE,
-  setLanguage: () => {}
+  setLanguage: () => {},
 });
 
 export const useGlobalContext = () => useContext(MyGlobalContext);

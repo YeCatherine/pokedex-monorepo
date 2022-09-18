@@ -5,7 +5,7 @@ describe('Helpers | to title case ', () => {
     const cases = {
       'my long text.': 'My Long Text.',
       'mylongtext.text': 'Mylongtext.text',
-      'mylongtext-text': 'Mylongtext-text'
+      'mylongtext-text': 'Mylongtext-text',
     };
 
     for (const [key, value] of Object.entries(cases)) {

@@ -7,8 +7,8 @@ export const container: BoxProps = {
     p: 2,
     bgcolor: 'background.paper',
     borderRight: 1,
-    borderColor: 'grey.300'
-  }
+    borderColor: 'grey.300',
+  },
 };
 
 type Props = BoxProps | { children: JSX.Element | JSX.Element[] };

@@ -17,8 +17,7 @@ import { FormEvent } from '@/constants';
  * Work with HOC "withContext"
  */
 export const ProgramSearch = ({ formState, setFormState }) => {
-  const [formStateInternal, dispatch] = useReducer(formSearchReducer,
-    formState);
+  const [formStateInternal, dispatch] = useReducer(formSearchReducer, formState);
 
   useEffect(() => {
     // Set only when different.
@@ -28,17 +27,16 @@ export const ProgramSearch = ({ formState, setFormState }) => {
   }, [formStateInternal]);
 
   return (
-    <FormControl sx={{ m: 3 }} component="fieldset" variant="standard"
-                 style={{ width: '100%' }}>
+    <FormControl sx={{ m: 3 }} component="fieldset" variant="standard" style={{ width: '100%' }}>
       <FormGroup row>
         <Box
           sx={{
             flex: 1,
             display: 'flex',
-            alignContent: 'center'
+            alignContent: 'center',
           }}
         >
-          <ClearButton onClick={handleFormEvent(FormEvent.RESET, dispatch)}/>
+          <ClearButton onClick={handleFormEvent(FormEvent.RESET, dispatch)} />
           <TextField
             id="outlined-basic"
             label="Search By Name"

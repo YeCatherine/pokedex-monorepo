@@ -16,13 +16,13 @@
 
 Renames and re-exports [default](../classes/core_model_ModelJson.default.md)
 
-___
+---
 
 ### default
 
 Re-exports [default](../classes/core_model_ModelJson.default.md)
 
-___
+---
 
 ### iModel
 

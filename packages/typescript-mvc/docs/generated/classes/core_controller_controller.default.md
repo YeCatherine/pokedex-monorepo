@@ -37,10 +37,10 @@ Class repsenting Controller part of MVC.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `model` | [`default`](../interfaces/core_model_iModel.default.md) |
-| `view` | [`ViewInterface`](../interfaces/core_view_view.ViewInterface.md) |
+| Name    | Type                                                             |
+| :------ | :--------------------------------------------------------------- |
+| `model` | [`default`](../interfaces/core_model_iModel.default.md)          |
+| `view`  | [`ViewInterface`](../interfaces/core_view_view.ViewInterface.md) |
 
 #### Defined in
 
@@ -56,7 +56,7 @@ core/controller/controller.ts:19
 
 core/controller/controller.ts:15
 
-___
+---
 
 ### view
 
@@ -77,9 +77,9 @@ Click handler for Program link.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `e` | [`HTMLElementEvent`](../modules/types.md#htmlelementevent)<`HTMLButtonElement`\> |
+| Name | Type                                                                             |
+| :--- | :------------------------------------------------------------------------------- |
+| `e`  | [`HTMLElementEvent`](../modules/types.md#htmlelementevent)<`HTMLButtonElement`\> |
 
 #### Returns
 
@@ -89,7 +89,7 @@ Click handler for Program link.
 
 core/controller/controller.ts:76
 
-___
+---
 
 ### handleViewChange
 
@@ -105,7 +105,7 @@ Handler for the view change checkbox that changes the Checkbox text.
 
 core/controller/controller.ts:60
 
-___
+---
 
 ### setupView
 

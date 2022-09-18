@@ -28,11 +28,11 @@ type Props = GridProps & {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    textAlign: 'center'
+    textAlign: 'center',
   },
   pokemonLogo: {
     maxWidth: '90%',
-    width: 400
+    width: 400,
   },
   loadingContainer: {
     display: 'flex',
@@ -41,11 +41,11 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     color: '#5db9ff',
     fontSize: 24,
-    textTransform: 'uppercase'
+    textTransform: 'uppercase',
   },
   loadingText: {
-    marginTop: theme.spacing(2)
-  }
+    marginTop: theme.spacing(2),
+  },
 }));
 
 /**
@@ -71,18 +71,16 @@ const SidebarWrapper = ({ sidebar }: { sidebar: SideBarType }) => {
  *
  * @constructor
  */
-const Layout: React.FC<Props> = (
-  {
-    className = 'layout',
-    headerProps,
-    children,
-    sidebar,
-    top,
-    loading = true,
-    logo,
-    title
-  }) => {
-
+const Layout: React.FC<Props> = ({
+  className = 'layout',
+  headerProps,
+  children,
+  sidebar,
+  top,
+  loading = true,
+  logo,
+  title,
+}) => {
   const classes = useStyles();
   let columnSize = 0;
 
@@ -94,10 +92,12 @@ const Layout: React.FC<Props> = (
   return (
     <main className={classes.root}>
       <Container>
-        {logo && <img src={logo} alt="" className={classes.pokemonLogo}/>}
-        {title && <Typography variant="srOnly">
-          <h1>{title}</h1>
-        </Typography>}
+        {logo && <img src={logo} alt="" className={classes.pokemonLogo} />}
+        {title && (
+          <Typography variant="srOnly">
+            <h1>{title}</h1>
+          </Typography>
+        )}
         {loading ? (
           <>
             {top && <Card variant="outlined">{top}</Card>}
@@ -105,20 +105,14 @@ const Layout: React.FC<Props> = (
               <Grid item xs={12} sm={12} md={columnSize} lg={columnSize}>
                 <Card variant="outlined">{sidebar}</Card>
               </Grid>
-              <Grid
-                item
-                xs={12}
-                sm={12}
-                md={12 - columnSize}
-                lg={12 - columnSize}
-              >
+              <Grid item xs={12} sm={12} md={12 - columnSize} lg={12 - columnSize}>
                 {children}
               </Grid>
             </Grid>
           </>
         ) : (
           <div className={classes.loadingContainer}>
-            <CircularProgress color="inherit" size={60}/>
+            <CircularProgress color="inherit" size={60} />
             <Typography className={classes.loadingText}>Loading</Typography>
           </div>
         )}

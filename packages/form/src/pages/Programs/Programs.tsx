@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  DataTable,
-  serverResouce,
-  withContent,
-  withContext
-} from '@monorepo/components';
+import { DataTable, serverResouce, withContent, withContext } from '@monorepo/components';
 
 import { ProgramSearch } from '@/components';
 
@@ -25,8 +20,8 @@ const WrapProgramsTable = withContext(withContent(DataTable, serverResouce));
 export const Programs = () => {
   return (
     <>
-      <WrapProgramSearch/>
-      <WrapProgramsTable/>
+      <WrapProgramSearch />
+      <WrapProgramsTable />
     </>
   );
 };

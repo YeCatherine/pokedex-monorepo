@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet';
 
 type Props = {
-  title: string,
+  title: string;
 };
 const Meta = ({ title }) => {
   return (

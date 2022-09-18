@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useLocalStorage } from '@monorepo/components/src/hooks/useLocalStorage/useLocalStorage';
 import { DataTable } from '@monorepo/components';
+import { getIdFromURL } from '@/services/Common';
 import IPokemonData from '../../../types/IPokemonData';
 import { pokemonListService } from '../../../services/pokemonListService';
-import { getIdFromURL } from '@/services/Common';
 // import usePokemonCapture from '@/hooks/usePokemonCapture';
 // const { capturedPokemons } = usePokemonCapture();
 
@@ -25,8 +25,7 @@ export const PokemonTable = () => {
   const [preparedData, serPreparedData] = useState({});
   // const [pokemons, setPokemons] =
   // useLocalStorage<Array<IPokemonData>>('capturedPokemonList', []);
-  const [pokemons, setPokemons] = useLocalStorage<Array<IPokemonData>>(
-    'pokemonsList', []);
+  const [pokemons, setPokemons] = useLocalStorage<Array<IPokemonData>>('pokemonsList', []);
   /**
    * Retrieves all pokemons and extract ids.
    */
@@ -49,12 +48,8 @@ export const PokemonTable = () => {
       });
   }, []);
 
-  const WrapProgramsTable = (pokemons) => <DataTable preparedData={pokemons}/>;
-  return (
-    <>
-      {/* <WrapProgramsTable pokemons={pokemons}/> */}
-    </>
-  );
+  const WrapProgramsTable = (pokemons) => <DataTable preparedData={pokemons} />;
+  return <>{/* <WrapProgramsTable pokemons={pokemons}/> */}</>;
 };
 
 export default PokemonTable;

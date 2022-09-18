@@ -11,23 +11,23 @@ const data = [
       'Ofelia Dickens',
       'Hilbert Cole',
       'Helen Kuphal',
-      'Maurine McDermott Sr.'
+      'Maurine McDermott Sr.',
     ],
     version: 7,
     apdex: 68,
     host: [
       '7e6272f7-098e.dakota.biz',
       '9a450527-cdd9.kareem.info',
-      'e7bf58af-f0be.dallas.biz'
-    ]
+      'e7bf58af-f0be.dallas.biz',
+    ],
   },
   {
     name: 'test2',
     contributors: ['Edwin Reinger'],
     version: 10,
     apdex: 100,
-    host: ['7e6272f7-098e.dakota.biz']
-  }
+    host: ['7e6272f7-098e.dakota.biz'],
+  },
 ] as HostAppDataType[];
 
 describe('Model tests', () => {
@@ -38,7 +38,7 @@ describe('Model tests', () => {
     expect(Object.keys(hosts)).toEqual([
       '7e6272f7-098e.dakota.biz',
       '9a450527-cdd9.kareem.info',
-      'e7bf58af-f0be.dallas.biz'
+      'e7bf58af-f0be.dallas.biz',
     ]);
   });
 
@@ -56,21 +56,21 @@ describe('Model tests', () => {
       name: 'test A',
       version: 1,
       app_key: 1,
-      apdex: 10
+      apdex: 10,
     } as HostGroupedTypeItem;
 
     const testDataB = {
       name: 'test B',
       version: 2,
       app_key: 2,
-      apdex: 20
+      apdex: 20,
     } as HostGroupedTypeItem;
 
     const testDataC = {
       name: 'test C',
       version: 3,
       app_key: 3,
-      apdex: 10
+      apdex: 10,
     } as HostGroupedTypeItem;
 
     expect(ModelBase.sortHosts(testDataA, testDataB)).toBeGreaterThan(0);

@@ -13,7 +13,7 @@ interface CapturedPokemonType {
 export default function usePokemonCapture(): CapturedPokemonType {
   const [capturedPokemons, setCapturedPokemonList] = useLocalStorage<Array<IPokemonData>>(
     'capturedPokemonList',
-    []
+    [],
   );
 
   /**
@@ -21,8 +21,7 @@ export default function usePokemonCapture(): CapturedPokemonType {
    * @param {IPokemonData} pokemon The pokemon.
    */
   const checkCapturedPokemon = (pokemon: IPokemonData): boolean => {
-    const finding = capturedPokemons.find(
-      (currentPokemon) => currentPokemon.name === pokemon.name);
+    const finding = capturedPokemons.find((currentPokemon) => currentPokemon.name === pokemon.name);
     return typeof finding === 'object';
   };
 
@@ -33,11 +32,9 @@ export default function usePokemonCapture(): CapturedPokemonType {
   const setCapturedPokemons = (pokemon: IPokemonData): void => {
     if (checkCapturedPokemon(pokemon)) {
       setCapturedPokemonList(
-        capturedPokemons.filter(
-          (currentPokemon) => currentPokemon.name !== pokemon.name)
+        capturedPokemons.filter((currentPokemon) => currentPokemon.name !== pokemon.name),
       );
-    }
-    else {
+    } else {
       setCapturedPokemonList([...capturedPokemons, pokemon]);
     }
   };

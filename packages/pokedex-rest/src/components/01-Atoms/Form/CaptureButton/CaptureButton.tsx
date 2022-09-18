@@ -24,9 +24,8 @@ export const CaptureButton: React.FC<IPokemonSimpleComponent> = (props) => {
   const { pokemon } = props;
 
   return (
-    <Button className="capture-free-button"
-            onClick={() => setCapturedPokemons(pokemon)}>
-      <CaptureToggler pokemon={pokemon}/>
+    <Button className="capture-free-button" onClick={() => setCapturedPokemons(pokemon)}>
+      <CaptureToggler pokemon={pokemon} />
     </Button>
   );
 };

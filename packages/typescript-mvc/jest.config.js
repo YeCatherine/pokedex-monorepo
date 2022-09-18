@@ -88,7 +88,7 @@ module.exports = {
   // names that allow to stub out resources with a single module
   // moduleNameMapper: {},
   moduleNameMapper: {
-    '^@/(.+)': '<rootDir>/src/$1'
+    '^@/(.+)': '<rootDir>/src/$1',
   },
   // An array of regexp pattern strings, matched against all module paths
   // before considered 'visible' to the module loader modulePathIgnorePatterns:
@@ -191,4 +191,4 @@ module.exports = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
-}
+};

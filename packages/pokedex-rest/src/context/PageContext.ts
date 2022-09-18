@@ -15,7 +15,7 @@ export type Context = {
  */
 const defaultContent: Context = {
   formState: DEFAULT_SEARCH_PARAMS,
-  setFormState: () => {}
+  setFormState: () => {},
 };
 
 export const PageContext = createContext<Context>(defaultContent);

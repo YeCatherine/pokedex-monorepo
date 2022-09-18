@@ -25,7 +25,7 @@ const pokemonTypes = [
   'Psychic',
   'Rock',
   'Steel',
-  'Water'
+  'Water',
 ];
 
 const useStyles = makeStyles((theme) => ({
@@ -33,21 +33,21 @@ const useStyles = makeStyles((theme) => ({
     background: '#FFF',
     padding: `${theme.spacing(1)}px ${theme.spacing(2)}px`,
     borderRadius: 4,
-    marginBottom: theme.spacing(2)
+    marginBottom: theme.spacing(2),
   },
   formControl: {
     margin: theme.spacing(1),
     width: 300,
     maxWidth: '100%',
-    background: '#FFF'
-  }
+    background: '#FFF',
+  },
 }));
 
 export function Filters({
   pokemonTypeFilter,
   setPokemonTypeFilter,
   capturedFilter,
-  setCapturedFilter
+  setCapturedFilter,
 }) {
   const classes = useStyles();
 
@@ -68,7 +68,7 @@ export function Filters({
           label="Search By Name"
           variant="outlined"
           name="name"
-          value={''}
+          value=""
           onChange={(e) => {
             console.log(e.target.value);
           }}
@@ -76,11 +76,7 @@ export function Filters({
       </FormControl>
       <FormControl variant="outlined" className={classes.formControl}>
         <InputLabel>Type</InputLabel>
-        <Select
-          value={pokemonTypeFilter}
-          onChange={handlePokemonTypeChange}
-          label="Type"
-        >
+        <Select value={pokemonTypeFilter} onChange={handlePokemonTypeChange} label="Type">
           <MenuItem value="Any">Any</MenuItem>
           {pokemonTypes.map((type) => (
             <MenuItem value={type} key={type}>
@@ -91,11 +87,7 @@ export function Filters({
       </FormControl>
       <FormControl variant="outlined" className={classes.formControl}>
         <InputLabel>Captured</InputLabel>
-        <Select
-          value={capturedFilter}
-          onChange={handleCapturedChange}
-          label="Captured"
-        >
+        <Select value={capturedFilter} onChange={handleCapturedChange} label="Captured">
           <MenuItem value="Any">Any</MenuItem>
           <MenuItem value="Captured">Captured</MenuItem>
           <MenuItem value="Not Captured">Not Captured</MenuItem>

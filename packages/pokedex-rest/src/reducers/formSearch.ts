@@ -28,16 +28,16 @@ export const formSearchReducer = (state, action) => {
         name: state.name,
         statuses: {
           ...state.statuses,
-          [componentName]: event.target.checked
+          [componentName]: event.target.checked,
         },
-        isFetching: true
+        isFetching: true,
       };
 
     case FormEvent.TEXT:
       return {
         name: event.target.value,
         statuses: state.statuses,
-        isFetching: true
+        isFetching: true,
       };
 
     case FormEvent.RESET:
@@ -61,5 +61,5 @@ export const handleFormEvent =
   (type: FormEvent, dispatch) => (event: React.ChangeEvent<HTMLInputElement>) =>
     dispatch({
       type,
-      event
+      event,
     });

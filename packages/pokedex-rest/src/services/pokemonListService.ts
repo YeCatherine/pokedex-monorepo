@@ -57,7 +57,7 @@ export const pokemonListService = {
   getSpecies,
   getLanguages,
   getMove,
-  getEvolutionChain
+  getEvolutionChain,
 };
 
 export default pokemonListService;

@@ -63,8 +63,7 @@ export default class Controller {
     // Change the Checkbox text.
     if (this.view.checkboxLabel.textContent === this.view.labelTextList) {
       this.view.checkboxLabel.textContent = this.view.labelTextGrid;
-    }
-    else {
+    } else {
       this.view.checkboxLabel.textContent = this.view.labelTextList;
     }
   };
@@ -73,15 +72,14 @@ export default class Controller {
    * Click handler for Program link.
    * @param {*} e
    */
-    // eslint-disable-next-line class-methods-use-this
+  // eslint-disable-next-line class-methods-use-this
   handleProgramClick = (e: HTMLElementEvent<HTMLButtonElement>) => {
     if (
       e.target.dataset !== undefined &&
       e.target.dataset.version !== undefined
     ) {
       alert(`version: ${e.target.dataset.version}`);
-    }
-    else {
+    } else {
       console.warn('no version provided');
     }
   };

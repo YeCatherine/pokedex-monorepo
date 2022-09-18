@@ -26,9 +26,9 @@ Declaration of CLickEvent.
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `e` | `MouseEvent` |
+| Name | Type         |
+| :--- | :----------- |
+| `e`  | `MouseEvent` |
 
 ##### Returns
 
@@ -38,25 +38,25 @@ Declaration of CLickEvent.
 
 types/index.tsx:28
 
-___
+---
 
 ### HTMLElementEvent
 
-Ƭ **HTMLElementEvent**<`T`\>: `Event` & { `target`: `T`  }
+Ƭ **HTMLElementEvent**<`T`\>: `Event` & { `target`: `T` }
 
 Element click event.
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `HTMLElement` |
+| Name | Type                  |
+| :--- | :-------------------- |
+| `T`  | extends `HTMLElement` |
 
 #### Defined in
 
 types/index.tsx:21
 
-___
+---
 
 ### HostAppDataType
 
@@ -66,19 +66,19 @@ Declaration of Host Add Data item.
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `apdex` | `number` |
+| Name           | Type       |
+| :------------- | :--------- |
+| `apdex`        | `number`   |
 | `contributors` | `string`[] |
-| `host` | `string`[] |
-| `name` | `string` |
-| `version` | `number` |
+| `host`         | `string`[] |
+| `name`         | `string`   |
+| `version`      | `number`   |
 
 #### Defined in
 
 types/index.tsx:10
 
-___
+---
 
 ### HostGroupedType
 
@@ -94,7 +94,7 @@ Declaration of the final prepared hosts array.
 
 types/index.tsx:43
 
-___
+---
 
 ### HostGroupedTypeItem
 
@@ -104,11 +104,11 @@ Declaration of Host Grouped Type Item.
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `apdex` | `number` |
+| Name      | Type     |
+| :-------- | :------- |
+| `apdex`   | `number` |
 | `app_key` | `number` |
-| `name` | `string` |
+| `name`    | `string` |
 | `version` | `number` |
 
 #### Defined in

@@ -81,7 +81,7 @@ const EvolutionChain: React.FC<IEvolutionComponent> = (props) => {
         {evolution.map((currentPokemon, index) => {
           return (
             <ListItemText>
-              <PokemonCard key={index} pokemon={currentPokemon}/>
+              <PokemonCard key={index} pokemon={currentPokemon} />
             </ListItemText>
           );
         })}
