@@ -1,40 +1,42 @@
 {
   "name": "@monorepo/root",
   "private": true,
-  "devDependencies": {
-    "craco": "^0.0.3",
-    "lerna": "^5.5.1"
-  },
-  "scripts": {
-    "start0": "concurrently \"yarn run start:pokemon:rest\" \"yarn run start:form\" \"yarn nx:graph\"",
-
-    "start": "lerna run start --parallel",
-    "build": "lerna run build --parallel",
-    "test": "CI=true lerna run test --parallel",
-    "typecheck": "lerna run typecheck --parallel",
-    "start:form": "lerna exec --scope @monorepo/form -- yarn start",
-    "start:type:mvc": "lerna exec --scope @monorepo/form -- yarn start",
-    "start:form:storybook": "lerna exec --scope @monorepo/form -- yarn storybook",
-    "start:form:cyperss": "lerna exec --scope @monorepo/form -- yarn cy:test",
-    "start:cypress:open": "lerna exec --scope @monorepo/cypress -- yarn test:cy",
-
-    "start:pokemon": "lerna exec --scope @monorepo/pokemonrest -- yarn start",
-    "start:storybook": "lerna exec --scope @monorepo/storybook -- yarn storybook",
-    "format": "lerna run format",
-    "lint": "lerna run lint --parallel",
-    "lint:fix": "lerna run format --parallel",
-    "graph": "nx graph",
-    "clean": "lerna clean",
-    "clean:update": "lerna clean && lerna bootstrap",
-    "docs": "lerna run docs"
-  },
   "workspaces": {
     "packages": [
       "packages/**"
     ]
   },
+  "scripts": {
+    "build": "lerna run build --parallel",
+    "clean": "lerna clean",
+    "clean:update": "lerna clean && lerna bootstrap",
+    "docs": "lerna run docs",
+    "format": "lerna run format",
+    "graph": "nx graph",
+    "lint": "lerna run lint --parallel",
+    "lint:fix": "lerna run format --parallel",
+    "packagyes:update": "npx npm-check-updates -u --deep && npx sort-package-json \"package.json\" \"packages/*/package.json\"",
+    "start": "lerna run start --parallel",
+    "start0": "concurrently \"yarn run start:pokemon:rest\" \"yarn run start:form\" \"yarn nx:graph\"",
+    "start:cypress:open": "lerna exec --scope @monorepo/cypress -- yarn test:cy",
+    "start:form": "lerna exec --scope @monorepo/form -- yarn start",
+    "start:form:cyperss": "lerna exec --scope @monorepo/form -- yarn cy:test",
+    "start:form:storybook": "lerna exec --scope @monorepo/form -- yarn storybook",
+    "start:my-app-redux": "lerna exec --scope my-app-redux -- yarn start",
+    "start:my-app-workbox": "lerna exec --scope my-app-workbox -- yarn start",
+    "start:pokemon": "lerna exec --scope @monorepo/pokemonrest -- yarn start",
+    "start:pokemon:grapql": "lerna exec --scope @monorepo/pokedex-graphql -- yarn start",
+    "start:storybook": "lerna exec --scope @monorepo/storybook -- yarn storybook",
+    "start:type:mvc": "lerna exec --scope @monorepo/form -- yarn start",
+    "test": "CI=true lerna run test --parallel",
+    "typecheck": "lerna run typecheck --parallel"
+  },
   "dependencies": {
     "axios": "^0.27.2",
     "concurrently": "^7.4.0"
+  },
+  "devDependencies": {
+    "craco": "^0.0.3",
+    "lerna": "^5.5.1"
   }
 }

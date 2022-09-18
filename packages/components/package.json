@@ -3,16 +3,58 @@
   "version": "1.0.0",
   "private": true,
   "main": "./src/index.tsx",
+  "scripts": {
+    "build0": "craco build",
+    "eject": "react-scripts eject",
+    "lint": "eslint ./src/**/*.tsx --max-warnings=0 --format=codeframe",
+    "start0": "craco start",
+    "test0": "craco test --collect-coverage",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/setupTests.{ts,tsx}",
+      "!src/serviceWorker.{ts,jsx}",
+      "!src/**/*.(spec|test|stories).{ts,tsx}"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 98,
+        "branches": 98,
+        "functions": 98,
+        "lines": 98
+      }
+    }
+  },
   "dependencies": {
     "@craco/craco": "^6.4.5",
     "@mui/icons-material": "5.10.3",
     "@mui/material": "^5.10.5",
-    "@mui/x-data-grid": "5.17.2",
+    "@mui/x-data-grid": "5.17.3",
     "@storybook/react": "^6.5.12",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
-    "@types/jest": "^29.0.2",
+    "@types/jest": "^29.0.3",
     "@types/node": "^18.7.18",
     "@types/react": "^18.0.20",
     "@types/react-dom": "^18.0.6",
@@ -42,7 +84,7 @@
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
-    "@types/jest": "^29.0.2",
+    "@types/jest": "^29.0.3",
     "@types/node": "18.7.18",
     "@types/react": "18.0.20",
     "@types/react-dom": "18.0.6",
@@ -69,47 +111,5 @@
     "ts-jest": "29.0.1",
     "typescript": "^4.8.3"
   },
-  "scripts": {
-    "start0": "craco start",
-    "build0": "craco build",
-    "typecheck": "tsc -p tsconfig.json",
-    "test0": "craco test --collect-coverage",
-    "eject": "react-scripts eject",
-    "lint": "eslint ./src/**/*.tsx --max-warnings=0 --format=codeframe"
-  },
-  "cracoConfig": "craco.config.js",
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{ts,tsx}",
-      "!src/setupTests.{ts,tsx}",
-      "!src/serviceWorker.{ts,jsx}",
-      "!src/**/*.(spec|test|stories).{ts,tsx}"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "statements": 98,
-        "branches": 98,
-        "functions": 98,
-        "lines": 98
-      }
-    }
-  }
+  "cracoConfig": "craco.config.js"
 }

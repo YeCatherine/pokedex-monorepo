@@ -3,11 +3,40 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://yecatherine.github.io/pokedex/",
+  "scripts": {
+    "build": "CI='' react-scripts build",
+    "deploy": "gh-pages -b master -d build",
+    "docs": "typedoc",
+    "eject": "react-scripts eject",
+    "start": "PORT=3001 craco start",
+    "test": "npm run test:jest; npm run test:cy",
+    "test:cy": "cypress run --headless --browser chrome",
+    "test:cy:open": "cypress open",
+    "test:jest": "craco test --collect-coverage"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
-    "@types/jest": "^29.0.2",
+    "@types/jest": "^29.0.3",
     "@types/node": "^18.7.18",
     "@types/react": "^18.0.20",
     "@types/react-bootstrap": "^0.32.30",
@@ -42,38 +71,9 @@
     "workbox-strategies": "^6.5.4",
     "workbox-streams": "^6.5.4"
   },
-  "scripts": {
-    "start": "PORT=3001 craco start",
-    "build": "CI='' react-scripts build",
-    "deploy": "gh-pages -b master -d build",
-    "test:jest": "craco test --collect-coverage",
-    "test:cy": "cypress run --headless --browser chrome",
-    "test:cy:open": "cypress open",
-    "test": "npm run test:jest; npm run test:cy",
-    "eject": "react-scripts eject",
-    "docs": "typedoc"
-  },
-  "cracoConfig": "craco.config.js",
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
     "cypress": "^10.8.0",
     "gh-pages": "^4.0.0"
-  }
+  },
+  "cracoConfig": "craco.config.js"
 }

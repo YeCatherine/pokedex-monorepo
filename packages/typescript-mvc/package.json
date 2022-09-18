@@ -2,21 +2,27 @@
   "name": "@monorepo/typescript-mvc",
   "version": "1.0.0",
   "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
   "main": "index.ts",
   "scripts": {
+    "build": "webpack --mode production",
+    "docs": "npx typedoc src",
+    "format": "npm run lint:style;npm run lint:fix;",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write .",
     "lint:script": "eslint src/* --fix",
     "lint:style": "stylelint **/*.scss --fix",
-    "format": "npm run lint:style;npm run lint:fix;",
-    "test:jest": "jest --coverage",
-    "test:cy": "cypress run --headless --browser chrome",
-    "test:cy:open": "cypress open",
-    "test": "npm run test:jest; npm run test:cy",
     "prepare": "husky install",
     "start": "webpack serve --mode development",
-    "build": "webpack --mode production",
-    "docs": "npx typedoc src"
+    "test": "npm run test:jest; npm run test:cy",
+    "test:cy": "cypress run --headless --browser chrome",
+    "test:cy:open": "cypress open",
+    "test:jest": "jest --coverage"
+  },
+  "dependencies": {
+    "miragejs": "^0.1.45"
   },
   "devDependencies": {
     "@babel/core": "^7.19.1",
@@ -59,11 +65,5 @@
     "webpack-bundle-analyzer": "^4.6.1",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.11.0"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "miragejs": "^0.1.45"
   }
 }
