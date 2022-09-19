@@ -4,8 +4,9 @@ import { Counter } from './features/counter/Counter';
 import './App.css';
 import { Link, useRoutes } from 'react-router-dom';
 //import { Layout } from '@monorepo/components';
-import Layout from '@/Layout';
+// import Layout from '@/Layout';
 import { Container } from '@mui/material';
+import Layout from './components/04-Templates/Layout';
 
 
 //import { ErrorBoundary } from
@@ -13,23 +14,23 @@ import { Container } from '@mui/material';
 
 function Navigation() {
   return (<Container>
-    <Link to={'/'}>Dashboard</Link>
+    <Link to={'/'}>Home</Link>
+    <Link to={'/dashboard'}>Dashboard</Link>
     <Link to={'/team'}>AboutPage</Link>
   </Container>);
 }
+
+const Homepage = () => (<h1>Homepage</h1>);
 
 function App() {
   let element = useRoutes([
     {
       path: '/',
+      element: <Homepage/>,
+    },
+    {
+      path: '/dashboard',
       element: <Dashboard/>,
-      children: [
-        {
-          path: 'messages',
-          element: <DashboardMessages/>
-        },
-        { path: 'tasks', element: <DashboardTasks/> }
-      ]
     },
     { path: 'team', element: <AboutPage/> }
   ]);
