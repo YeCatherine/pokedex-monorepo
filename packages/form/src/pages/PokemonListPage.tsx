@@ -1,6 +1,6 @@
 import React from 'react';
 import { fetchPokemon } from '@/services/graphQLUtils';
-import {Layout} from '@monorepo/components';
+import { Layout } from '@monorepo/components';
 import { Filters } from '@/components/02-Molecules/Filters';
 import pokemonLogo from '@/assets/pokemon-logo.png';
 import { PokemonCardsList } from '@/components/03-Organisms/PokemonCardsList';
@@ -47,5 +47,5 @@ export const PokemonListPage = () => {
       <PokemonCardsList listData={pokedexData} />
     </Layout>
   );
-}
+};
 export default PokemonListPage;
