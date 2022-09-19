@@ -5,47 +5,7 @@ import pokemonLogo from './assets/pokemon-logo.png';
 import { fetchPokemon } from './services/graphQLUtils';
 // import {DataLoading} from '@monorepo/components'
 import Layout from './components/04-Templates/Layout';
-
+import PokemonListPage from './pages/PokemonListPage';
 export default function App() {
-  const [pokedexData, setPokedexData] = React.useState(null);
-  const [pokemonTypeFilter, setPokemonTypeFilter] = React.useState('Any');
-  const [capturedFilter, setCapturedFilter] = React.useState('Any');
-
-  const fetchPokedexData = React.useCallback(async () => {
-    const { errors, data } = await fetchPokemon({
-      pokemonType: pokemonTypeFilter,
-      isCaptured: capturedFilter
-    });
-
-    if (errors) {
-      console.error(errors);
-    }
-
-    const result = data.queryPokemon.sort((pokemonA, pokemonB) => pokemonA.id - pokemonB.id);
-
-    setPokedexData(result);
-  }, [pokemonTypeFilter, capturedFilter]);
-
-  React.useEffect(() => {
-    fetchPokedexData();
-  }, [fetchPokedexData]);
-
-  return (
-    <Layout
-      title={'Pokémon Pokédex'}
-      top={
-        <Filters
-          pokemonTypeFilter={pokemonTypeFilter}
-          setPokemonTypeFilter={setPokemonTypeFilter}
-          capturedFilter={capturedFilter}
-          setCapturedFilter={setCapturedFilter}
-        />
-      }
-      sidebar={<h2>Section under construction.</h2>}
-      logo={pokemonLogo}
-      loading={pokedexData}
-    >
-      <PokemonCardsList listData={pokedexData} />
-    </Layout>
-  );
+  return (<PokemonListPage/>);
 }
