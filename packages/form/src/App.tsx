@@ -12,7 +12,6 @@ import { DEFAULT_SEARCH_PARAMS } from '@/constants';
 import { Container } from '@mui/material';
 import Dashboard from '@/pages/Dashboard/Dashboard';
 
-
 function Navigation() {
   return (
     <Container>

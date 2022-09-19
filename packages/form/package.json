@@ -5,7 +5,7 @@
   "license": "MIT",
   "main": "index.jsx",
   "scripts": {
-    "build": "craco build",
+    "build": "PORT=3010 craco build",
     "build-storybook": "build-storybook -s public",
     "cy:open:all": "concurrently --kill-others \"npm run webpack:server\" \"npm run cy:open\"",
     "cy:run:all": "concurrently --kill-others \"npm run webpack:server\" \"npm run cy:run\"",
