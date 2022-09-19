@@ -71,6 +71,7 @@ export const Layout: React.FC<Props> = (
           <>
             {top}
             <Grid container className={classes.root} spacing={4}>
+              {sidebar &&
               <Grid
                 item
                 xs={12}
@@ -78,8 +79,8 @@ export const Layout: React.FC<Props> = (
                 md={columnSize}
                 lg={columnSize}
               >
-                {sidebar && <Card variant="outlined">{sidebar}</Card>}
-              </Grid>
+                <Card variant="outlined">{sidebar}</Card>
+              </Grid>}
               <Grid
                 item
                 xs={12}

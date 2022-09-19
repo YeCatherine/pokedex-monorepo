@@ -2,12 +2,21 @@ import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
-import { useRoutes } from 'react-router-dom';
-import { Layout } from '@monorepo/components';
-// import Layout from '@/Layout';
+import { Link, useRoutes } from 'react-router-dom';
+//import { Layout } from '@monorepo/components';
+import Layout from '@/Layout';
+import { Container } from '@mui/material';
+
 
 //import { ErrorBoundary } from
 // '@monorepo/components/src/components/05-Pages/ErrorBoundary/ErrorBoundary';
+
+function Navigation() {
+  return (<Container>
+    <Link to={'/'}>Dashboard</Link>
+    <Link to={'/team'}>AboutPage</Link>
+  </Container>);
+}
 
 function App() {
   let element = useRoutes([
@@ -27,7 +36,7 @@ function App() {
 
   return (
     <Layout
-      header={<><h1>Header</h1></>}
+      top={<Navigation/>}
     >
       {element}
     </Layout>);

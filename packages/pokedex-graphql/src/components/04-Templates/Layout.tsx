@@ -1,10 +1,10 @@
+import React from 'react';
+import Container from '@mui/material/Container';
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import React from 'react';
 import { GridSize } from '@material-ui/core/Grid/Grid';
 
 const useStyles = makeStyles((theme) => ({
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    color: '#FFF',
+    color: '#fff',
     fontSize: 24,
     textTransform: 'uppercase'
   },
@@ -29,7 +29,26 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export const Layout = ({ top, sidebar, children, loading, logo, title }) => {
+type Props = {
+  children: React.ReactNode;
+  header?: React.ReactNode;
+  top?: React.ReactNode;
+  sidebar?: React.ReactNode;
+  loading?: boolean;
+  logo?: string | undefined;
+  title?: React.ReactNode;
+};
+
+export const Layout: React.FC<Props> = (
+  {
+    children,
+    header,
+    top,
+    sidebar,
+    logo, title,
+    loading = true
+  }) => {
+
   const classes = useStyles();
   let columnSize = 0 as GridSize;
   let contentSize = 12 as GridSize;
@@ -41,8 +60,10 @@ export const Layout = ({ top, sidebar, children, loading, logo, title }) => {
   // @ts-ignore
   return (
     <main className={classes.root}>
+      {header}
       <Container>
-        <img src={logo} alt="" className={classes.pokemonLogo}/>
+
+        {logo && <img src={logo} alt="" className={classes.pokemonLogo}/>}
         <Typography variant="srOnly">
           <h1>{title}</h1>
         </Typography>
@@ -50,6 +71,7 @@ export const Layout = ({ top, sidebar, children, loading, logo, title }) => {
           <>
             {top}
             <Grid container className={classes.root} spacing={4}>
+              {sidebar &&
               <Grid
                 item
                 xs={12}
@@ -58,7 +80,7 @@ export const Layout = ({ top, sidebar, children, loading, logo, title }) => {
                 lg={columnSize}
               >
                 <Card variant="outlined">{sidebar}</Card>
-              </Grid>
+              </Grid>}
               <Grid
                 item
                 xs={12}
@@ -82,3 +104,4 @@ export const Layout = ({ top, sidebar, children, loading, logo, title }) => {
 };
 
 export default Layout;
+

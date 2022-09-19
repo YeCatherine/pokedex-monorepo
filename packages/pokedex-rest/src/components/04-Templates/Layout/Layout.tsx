@@ -1,30 +1,11 @@
 import React from 'react';
-import Grid, { GridProps } from '@mui/material/Grid';
-import { BoxProps } from '@mui/material';
-import { Sidebar } from '@/components/04-Templates/Sidebar/Sidebar';
+import Container from '@mui/material/Container';
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CircularProgress from '@material-ui/core/CircularProgress';
-
-type SideBarType = JSX.Element | JSX.Element[] | undefined;
-
-/**
- * Lauout type
- */
-type Props = GridProps & {
-  className?: string;
-  headerProps?: BoxProps;
-  top?: SideBarType;
-  children: JSX.Element | JSX.Element[];
-  sidebar?: SideBarType;
-  title?: string;
-  loading?: boolean;
-  logo?: any;
-
-  [key: string]: any;
-};
+import { GridSize } from '@material-ui/core/Grid/Grid';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -39,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    color: '#5db9ff',
+    color: '#fff',
     fontSize: 24,
     textTransform: 'uppercase',
   },
@@ -48,64 +29,52 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-/**
- * Sidebar checker will display it if sidebar filled with JSX entities.
- * @param sidebar SideBarType
- * @constructor
- */
-const SidebarWrapper = ({ sidebar }: { sidebar: SideBarType }) => {
-  if (sidebar === undefined) {
-    return null;
-  }
-  return (
-    <Sidebar gridArea="sidebar" display={{ xs: 'none', md: 'block' }}>
-      {sidebar}
-    </Sidebar>
-  );
+type Props = {
+  children: React.ReactNode;
+  header?: React.ReactNode;
+  top?: React.ReactNode;
+  sidebar?: React.ReactNode;
+  loading?: boolean;
+  logo?: string | undefined;
+  title?: React.ReactNode;
 };
 
-/**
- * Main Layout component.
- *
- * @param children
- *
- * @constructor
- */
-const Layout: React.FC<Props> = ({
-  className = 'layout',
-  headerProps,
+export const Layout: React.FC<Props> = ({
   children,
-  sidebar,
+  header,
   top,
-  loading = true,
+  sidebar,
   logo,
   title,
+  loading = true,
 }) => {
   const classes = useStyles();
-  let columnSize = 0;
-
+  let columnSize = 0 as GridSize;
+  let contentSize = 12 as GridSize;
   if (sidebar !== undefined) {
-    columnSize = 3;
+    columnSize = 3 as GridSize;
+    contentSize = 9 as GridSize;
   }
 
-  console.log(title);
+  // @ts-ignore
   return (
     <main className={classes.root}>
+      {header}
       <Container>
         {logo && <img src={logo} alt="" className={classes.pokemonLogo} />}
-        {title && (
-          <Typography variant="srOnly">
-            <h1>{title}</h1>
-          </Typography>
-        )}
+        <Typography variant="srOnly">
+          <h1>{title}</h1>
+        </Typography>
         {loading ? (
           <>
-            {top && <Card variant="outlined">{top}</Card>}
+            {top}
             <Grid container className={classes.root} spacing={4}>
-              <Grid item xs={12} sm={12} md={columnSize} lg={columnSize}>
-                <Card variant="outlined">{sidebar}</Card>
-              </Grid>
-              <Grid item xs={12} sm={12} md={12 - columnSize} lg={12 - columnSize}>
+              {sidebar && (
+                <Grid item xs={12} sm={12} md={columnSize} lg={columnSize}>
+                  <Card variant="outlined">{sidebar}</Card>
+                </Grid>
+              )}
+              <Grid item xs={12} sm={12} md={contentSize} lg={contentSize}>
                 {children}
               </Grid>
             </Grid>
@@ -119,29 +88,6 @@ const Layout: React.FC<Props> = ({
       </Container>
     </main>
   );
-  //
-  // return (
-  //   <Grid
-  //     className={className}
-  //     display="grid"
-  //     height="100vh"
-  //     width="100%"
-  //     minWidth={(theme) => theme.breakpoints.values.sm}
-  //     bgcolor="background.paper"
-  //     gridTemplateRows="1fr"
-  //     gridTemplateColumns={{ xs: '1fr', md: 'auto 1fr' }}
-  //     gridTemplateAreas={{ xs: "'main'", md: "'sidebar main'" }}
-  //   >
-  //     <nav>
-  //       <Link to="/">Home</Link>
-  //       <Link to="/captured">Captured</Link>
-  //     </nav>
-  //     <Main gridArea="main" headerProps={headerProps}>
-  //       {children}
-  //     </Main>
-  //     <SidebarWrapper sidebar={sidebar} />
-  //   </Grid>
-  // );
 };
 
 export default Layout;
