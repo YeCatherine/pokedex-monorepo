@@ -1,6 +1,0 @@
-# Ignore artifacts:
-.git
-.idea
-node_modules
-build
-coverage
