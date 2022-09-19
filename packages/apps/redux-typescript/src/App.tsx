@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
-import { Link, useRoutes } from 'react-router-dom';
+
 //import { Layout } from '@monorepo/components';
 // import Layout from '@/Layout';
 import { Container } from '@mui/material';
@@ -10,7 +10,7 @@ import Layout from './components/04-Templates/Layout';
 
 //import { ErrorBoundary } from
 // '@monorepo/components/src/components/05-Pages/ErrorBoundary/ErrorBoundary';
-
+import { Link, useRoutes } from 'react-router-dom';
 function Navigation() {
   return (
     <Container>
@@ -39,7 +39,6 @@ function App() {
   return <Layout top={<Navigation />}>{element}</Layout>;
 }
 const AboutPage = () => <h1>About</h1>;
-// const Dashboard = () => (<h1>Dashboard</h1>);
 
 const Dashboard = () => (
   <div className="App">
