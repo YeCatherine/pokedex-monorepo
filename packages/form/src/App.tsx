@@ -6,6 +6,7 @@ import { Programs as ProgramsPage } from '@/pages';
 import { DEFAULT_SEARCH_PARAMS } from '@/constants';
 import { Container } from '@mui/material';
 import Dashboard from '@/pages/Dashboard/Dashboard';
+import PokemonListPage from './pages/PokemonListPage';
 
 function Navigation() {
   return (
@@ -32,6 +33,10 @@ function App() {
     {
       path: '/table',
       element: <ProgramsPage />
+    },
+    {
+      path: '/pokedex-graphql',
+      element: <PokemonListPage />
     },
     {
       path: '/dashboard',
