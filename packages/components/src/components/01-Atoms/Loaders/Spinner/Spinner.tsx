@@ -6,12 +6,7 @@ import React from 'react';
  */
 export const Spinner: React.FC = () => (
   <div className="post loading">
-    <svg
-      width="80"
-      height="80"
-      viewBox="0 0 100 100"
-      preserveAspectRatio="xMidYMid"
-    >
+    <svg width="80" height="80" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
       <circle
         cx="50"
         cy="50"

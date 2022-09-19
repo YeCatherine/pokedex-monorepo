@@ -8,8 +8,8 @@ const { formSearchReducer } = require('@/reducers');
 const defaultEvent = {
   target: {
     value: '',
-    checked: false,
-  },
+    checked: false
+  }
 };
 
 describe('Reducer | form search testing', () => {
@@ -17,7 +17,7 @@ describe('Reducer | form search testing', () => {
     const state = DEFAULT_SEARCH_PARAMS;
     const action = {
       type: FormEvent.TEXT,
-      event: defaultEvent,
+      event: defaultEvent
     };
 
     // Check that word will be updated.
@@ -43,7 +43,7 @@ describe('Reducer | form search testing', () => {
 
     const action = {
       type: FormEvent.STATUS,
-      event: defaultEvent,
+      event: defaultEvent
     };
 
     state.statuses['active'] = true;

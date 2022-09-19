@@ -33,7 +33,7 @@ type CardItem = {
   imgUrl: string;
   captured: boolean;
   pokemonTypes: string[];
-}
+};
 
 /**
  * Pokemon Card.
@@ -48,10 +48,7 @@ export function PokemonCard<CardItem>({ pokemon }) {
   const classes = useStyles();
 
   const handleCapturedChange = async () => {
-    const { errors } = await updatePokemonCapturedStatus(
-      pokemon.id,
-      !pokemon.captured
-    );
+    const { errors } = await updatePokemonCapturedStatus(pokemon.id, !pokemon.captured);
 
     if (errors) {
       console.error(errors);
@@ -67,24 +64,14 @@ export function PokemonCard<CardItem>({ pokemon }) {
   return (
     <Card className={classes.root} variant="outlined">
       <CardContent>
-        <Typography
-          className={classes.pokemonIdNumber}
-          color="textSecondary"
-          gutterBottom
-        >
+        <Typography className={classes.pokemonIdNumber} color="textSecondary" gutterBottom>
           {pokemon.id}
         </Typography>
-        <img
-          alt={pokemon.name}
-          src={pokemon.imgUrl}
-          className={classes.avatar}
-        />
+        <img alt={pokemon.name} src={pokemon.imgUrl} className={classes.avatar} />
         <Typography variant="h5" component="h2">
           {pokemon.name}
         </Typography>
-        <Typography color="textSecondary">
-          {pokemon.pokemonTypes.join(', ')}
-        </Typography>
+        <Typography color="textSecondary">{pokemon.pokemonTypes.join(', ')}</Typography>
       </CardContent>
       <CardActions className={classes.cardActions}>
         <FormControlLabel

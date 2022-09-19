@@ -39,7 +39,7 @@ export function useLocalStorage<T>(key: string, initialValue: T): [T, SetValue<T
   const setValue: SetValue<T> = (value) => {
     if (typeof window === 'undefined') {
       console.warn(
-        `Tried setting localStorage key “${key}” even though environment is not a client,`,
+        `Tried setting localStorage key “${key}” even though environment is not a client,`
       );
     }
     try {

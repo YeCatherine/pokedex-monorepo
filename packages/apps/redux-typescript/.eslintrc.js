@@ -1,29 +1,28 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es2021: true
   },
   extends: [
     'plugin:react/recommended',
     'airbnb',
     'plugin:prettier/recommended',
-    "react-app/jest",
-    'plugin:import/typescript',
+    'plugin:import/typescript'
   ],
   settings: {
     'import/resolver': {
       typescript: {
-        alwaysTryTypes: true,
-      },
-    },
+        alwaysTryTypes: true
+      }
+    }
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
+      jsx: true
     },
     ecmaVersion: 'latest',
-    sourceType: 'module',
+    sourceType: 'module'
   },
   plugins: ['react', '@typescript-eslint', 'prettier', 'jest'],
   rules: {
@@ -39,15 +38,15 @@ module.exports = {
         js: 'never',
         jsx: 'never',
         ts: 'never',
-        tsx: 'never',
-      },
+        tsx: 'never'
+      }
     ],
     'import/no-extraneous-dependencies': [
       'error',
       {
         devDependencies: ['**/*.stories.*', '**/.storybook/**/*.*'],
-        peerDependencies: true,
-      },
+        peerDependencies: true
+      }
     ],
     'import/no-named-as-default': 'off',
     'import/no-cycle': 'off',
@@ -57,6 +56,6 @@ module.exports = {
     '@typescript-eslint/no-shadow': ['error'],
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error'],
-    'react/jsx-props-no-spreading': 'off',
-  },
+    'react/jsx-props-no-spreading': 'off'
+  }
 };

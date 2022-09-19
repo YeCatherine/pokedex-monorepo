@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import IPokemonData from '../../Types/IPokemonData';
-import { getIdFromURL } from '../../Services/Common';
-import PokemonListService from '../../Services/PokemonListService';
-import PokemonCard from './PokemonCard';
-import { ListGroup as Ul, ListGroupItem as Li } from 'react-bootstrap';
+import React, { useEffect, useState } from "react";
+import IPokemonData from "../../Types/IPokemonData";
+import { getIdFromURL } from "../../Services/Common";
+import PokemonListService from "../../Services/PokemonListService";
+import PokemonCard from "./PokemonCard";
+import { ListGroup as Ul, ListGroupItem as Li } from "react-bootstrap";
 
 /**
  * Item of chain evolution sequence.
@@ -31,34 +31,32 @@ const EvolutionChain: React.FC<IEvolutionComponent> = (props) => {
     // Get evolution id.
     if (pokemonSpecies.evolution_chain?.url) {
       const evolutionId = getIdFromURL(pokemonSpecies.evolution_chain?.url);
-      if (typeof evolutionId === 'undefined') {
+      if (typeof evolutionId === "undefined") {
         return undefined;
       }
 
       PokemonListService.getEvolutionChain(evolutionId)
         .then((response: any) => {
           // Restructure chain.
-          if (typeof response.data.chain === 'undefined') {
+          if (typeof response.data.chain === "undefined") {
             return;
           }
 
           const evolutionChain = response.data.chain;
           const evolutionList: Array<IPokemonData> = [];
-          if (typeof evolutionChain === 'undefined') {
+          if (typeof evolutionChain === "undefined") {
             return;
           }
 
           (function getItem(chainItem: IEvolutionChainItem): any {
-              if (chainItem.species) {
-                evolutionList.push(chainItem.species);
-                if (chainItem.evolves_to.length) {
-                  getItem(chainItem.evolves_to[0]);
-                }
+            if (chainItem.species) {
+              evolutionList.push(chainItem.species);
+              if (chainItem.evolves_to.length) {
+                getItem(chainItem.evolves_to[0]);
               }
             }
-          )(evolutionChain);
+          })(evolutionChain);
           setEvolution(evolutionList);
-
         })
         .catch((e: any) => {
           console.log(e);
@@ -78,14 +76,14 @@ const EvolutionChain: React.FC<IEvolutionComponent> = (props) => {
       <h3>Evolution Chain</h3>
       <Ul horizontal className="card text-dark text-center">
         {evolution.map((currentPokemon, index) => {
-          return (<Li>
-            <PokemonCard
-              key={index}
-              pokemon={currentPokemon}/>
-          </Li>);
+          return (
+            <Li>
+              <PokemonCard key={index} pokemon={currentPokemon} />
+            </Li>
+          );
         })}
       </Ul>
     </>
-  )
-}
+  );
+};
 export default EvolutionChain;

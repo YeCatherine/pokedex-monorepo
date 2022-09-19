@@ -1,19 +1,16 @@
 // Main generic GraphQL request
 async function fetchGraphQL(operationsDoc, operationName, variables) {
-  const result = await fetch(
-    'https://pokedex.us-west-2.aws.cloud.dgraph.io/graphql',
-    {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        query: operationsDoc,
-        operationName,
-        variables
-      })
-    }
-  );
+  const result = await fetch('https://pokedex.us-west-2.aws.cloud.dgraph.io/graphql', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      query: operationsDoc,
+      operationName,
+      variables
+    })
+  });
 
   return await result.json();
 }
@@ -78,10 +75,7 @@ function fetchPokemonByCapturedStatus(isCaptured) {
 }
 
 // Fetch Pokemon by Type and by Captured Status
-const fetchPokemonOfCertainTypeAndByCapturedStatusOperationsDoc = ({
-  pokemonType,
-  isCaptured
-}) => `
+const fetchPokemonOfCertainTypeAndByCapturedStatusOperationsDoc = ({ pokemonType, isCaptured }) => `
   query fetchPokemonOfCertainTypeAndByCapturedStatus {
     queryPokemon(filter: { captured: ${isCaptured}, pokemonTypes: { eq: [${pokemonType}] } }) {
       id
@@ -93,10 +87,7 @@ const fetchPokemonOfCertainTypeAndByCapturedStatusOperationsDoc = ({
   }
 `;
 
-function fetchPokemonOfCertainTypeAndByCapturedStatus({
-  pokemonType,
-  isCaptured
-}) {
+function fetchPokemonOfCertainTypeAndByCapturedStatus({ pokemonType, isCaptured }) {
   return fetchGraphQL(
     fetchPokemonOfCertainTypeAndByCapturedStatusOperationsDoc({
       pokemonType,
@@ -116,11 +107,9 @@ export function fetchPokemon({ pokemonType, isCaptured }) {
       pokemonType,
       isCaptured: isCaptured === 'Captured'
     });
-  }
-  else if (pokemonType !== 'Any') {
+  } else if (pokemonType !== 'Any') {
     return fetchPokemonOfCertainType(pokemonType);
-  }
-  else if (isCaptured !== 'Any') {
+  } else if (isCaptured !== 'Any') {
     return fetchPokemonByCapturedStatus(isCaptured === 'Captured');
   }
 
@@ -145,8 +134,7 @@ const updatePokemonCapturedStatusOperationsDoc = (
   }
 `;
 
-export function updatePokemonCapturedStatus(
-  pokemonId: number, newIsCapturedValue: boolean) {
+export function updatePokemonCapturedStatus(pokemonId: number, newIsCapturedValue: boolean) {
   return fetchGraphQL(
     updatePokemonCapturedStatusOperationsDoc(pokemonId, newIsCapturedValue),
     'updatePokemonCapturedStatus',

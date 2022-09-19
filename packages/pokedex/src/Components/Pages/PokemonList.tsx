@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import PokemonListService from '../../Services/PokemonListService';
-import IPokemonData from '../../Types/IPokemonData';
-import PokemonCard from '../UI/PokemonCard';
-import PokemonSearchBox from '../UI/PokemonSearchBox';
-import Spinner from '../UI/Spinner';
-import useLocalStorage from '../../Hooks/useLocalStorage';
-import { getIdFromURL } from '../../Services/Common';
+import React, { useEffect, useState } from "react";
+import PokemonListService from "../../Services/PokemonListService";
+import IPokemonData from "../../Types/IPokemonData";
+import PokemonCard from "../UI/PokemonCard";
+import PokemonSearchBox from "../UI/PokemonSearchBox";
+import Spinner from "../UI/Spinner";
+import useLocalStorage from "../../Hooks/useLocalStorage";
+import { getIdFromURL } from "../../Services/Common";
 
 enum SortDirection {
-  SortIDAsc = 'SortIDAsc',
-  SortIDDesc = 'SortIDDesc',
-  SortNameAZ = 'SortNameAZ',
-  SortNameZA = 'SortNameZA',
+  SortIDAsc = "SortIDAsc",
+  SortIDDesc = "SortIDDesc",
+  SortNameAZ = "SortNameAZ",
+  SortNameZA = "SortNameZA"
 }
 
 /**
@@ -22,9 +22,8 @@ enum SortDirection {
  * @constructor The functional component of PokemonList.
  */
 const PokemonList: React.FC = (props) => {
-  const [pokemons, setPokemons] = useLocalStorage<Array<IPokemonData>>(
-    'pokemonsList', []);
-  const [searchPokemon, setSearchPokemon] = useState<string>('');
+  const [pokemons, setPokemons] = useLocalStorage<Array<IPokemonData>>("pokemonsList", []);
+  const [searchPokemon, setSearchPokemon] = useState<string>("");
   const [sortStatus, setSortStatus] = useState<string>(SortDirection.SortIDAsc);
 
   /**
@@ -36,7 +35,7 @@ const PokemonList: React.FC = (props) => {
     }
     PokemonListService.getAll()
       .then((response: any) => {
-        const responsePoke = response.data.results.map(poke => {
+        const responsePoke = response.data.results.map((poke) => {
           poke.id = getIdFromURL(poke.url);
           return poke;
         });
@@ -45,7 +44,6 @@ const PokemonList: React.FC = (props) => {
       .catch((e: any) => {
         console.warn(e);
       });
-
   }, []);
 
   /**
@@ -60,8 +58,7 @@ const PokemonList: React.FC = (props) => {
    * Filter pokemon by name in SearchBox.
    * @param pokemon All pokemons.
    */
-  const filterPokemon = pokemon => pokemon.name.toLowerCase()
-    .includes(searchPokemon);
+  const filterPokemon = (pokemon) => pokemon.name.toLowerCase().includes(searchPokemon);
 
   /**
    * Sorts pokemon by ID or Name Desc and Asc.
@@ -90,7 +87,6 @@ const PokemonList: React.FC = (props) => {
         break;
 
       case SortDirection.SortNameAZ:
-
         if (a.name > b.name) {
           return 1;
         }
@@ -113,9 +109,13 @@ const PokemonList: React.FC = (props) => {
     return 0;
   };
 
-  if (!pokemons || typeof pokemons === 'undefined') {
+  if (!pokemons || typeof pokemons === "undefined") {
     return (
-      <h1><Spinner/>Loading...</h1>);
+      <h1>
+        <Spinner />
+        Loading...
+      </h1>
+    );
   }
 
   const handleSortChange = (event) => {
@@ -125,38 +125,29 @@ const PokemonList: React.FC = (props) => {
   return (
     <>
       <>
-        <PokemonSearchBox placeholder="Pokemon name"
-                          handleSearch={handleSearch}/>
+        <PokemonSearchBox placeholder="Pokemon name" handleSearch={handleSearch} />
         <select onChange={handleSortChange}>
-          <option
-            key={SortDirection.SortIDAsc}
-            value={SortDirection.SortIDAsc}>Sort by Id: start-end
+          <option key={SortDirection.SortIDAsc} value={SortDirection.SortIDAsc}>
+            Sort by Id: start-end
           </option>
-          <option
-            key={SortDirection.SortIDDesc}
-            value={SortDirection.SortIDDesc}>Sort
-            by Id: end-start
+          <option key={SortDirection.SortIDDesc} value={SortDirection.SortIDDesc}>
+            Sort by Id: end-start
           </option>
-          <option
-            key={SortDirection.SortNameAZ}
-            value={SortDirection.SortNameAZ}>Sort
-            by Name: A-Z
+          <option key={SortDirection.SortNameAZ} value={SortDirection.SortNameAZ}>
+            Sort by Name: A-Z
           </option>
-          <option
-            key={SortDirection.SortNameZA}
-            value={SortDirection.SortNameZA}>Sort
-            by Name: Z-A
+          <option key={SortDirection.SortNameZA} value={SortDirection.SortNameZA}>
+            Sort by Name: Z-A
           </option>
         </select>
       </>
-      <div
-        className="list-group d-flex flex-wrap flex-row align-content-between lazy-test pokemon-card-list">
-        {pokemons.filter(filterPokemon)
+      <div className="list-group d-flex flex-wrap flex-row align-content-between lazy-test pokemon-card-list">
+        {pokemons
+          .filter(filterPokemon)
           .sort(sortingLogic)
-          .map((pokemon, index) =>
-            <PokemonCard key={index} pokemon={pokemon}/>
-          )}
-
+          .map((pokemon, index) => (
+            <PokemonCard key={index} pokemon={pokemon} />
+          ))}
       </div>
     </>
   );

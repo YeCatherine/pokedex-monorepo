@@ -5,9 +5,8 @@ import { DataLoading } from '@monorepo/components';
 // import { GridColumns } from '@mui/x-data-grid/models/colDef/gridColDef';
 
 export const DataTable = ({ preparedData: preparedData }) => {
-
   if (!preparedData.status) {
-    return <DataLoading/>;
+    return <DataLoading />;
   }
 
   return (

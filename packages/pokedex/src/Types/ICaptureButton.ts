@@ -1,4 +1,4 @@
-import IPokemonData from './IPokemonData';
+import IPokemonData from "./IPokemonData";
 
 /**
  * The interface for ICaptureButton button.

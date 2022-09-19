@@ -9,7 +9,7 @@ export default {
 } as ComponentMeta<typeof ClearButton>;
 
 const Template: ComponentStory<typeof ClearButton> = ({ onClick }) => (
-  <ClearButton onClick={onClick}/>
+  <ClearButton onClick={onClick} />
 );
 
 export const Default = Template.bind({});

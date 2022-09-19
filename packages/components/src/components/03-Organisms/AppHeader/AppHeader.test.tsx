@@ -4,7 +4,7 @@ import AppHeader from './AppHeader';
 
 describe('Check that component loaded properly', () => {
   test('Component Rendered "AppHeader"', () => {
-    render(<AppHeader/>);
+    render(<AppHeader />);
     const linkElement = screen.getByText(/Monorepo Example/i);
     expect(linkElement).toBeInTheDocument();
   });

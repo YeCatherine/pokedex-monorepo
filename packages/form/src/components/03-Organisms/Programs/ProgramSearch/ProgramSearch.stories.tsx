@@ -7,7 +7,7 @@ import ProgramSearch from './ProgramSearch';
 // https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Organisms/ProductSearch',
-  component: ProgramSearch,
+  component: ProgramSearch
 } as ComponentMeta<typeof ProgramSearch>;
 
 // More on component templates:

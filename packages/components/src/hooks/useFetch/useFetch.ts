@@ -5,13 +5,13 @@ interface State<T> {
   error?: Error;
 }
 
-type Cache<T> = { [url: string]: T }
+type Cache<T> = { [url: string]: T };
 
 // discriminated union type
 type Action<T> =
   | { type: 'loading' }
   | { type: 'fetched'; payload: T }
-  | { type: 'error'; payload: Error }
+  | { type: 'error'; payload: Error };
 
 /**
  * https://usehooks-ts.com/react-hook/use-fetch
@@ -76,8 +76,7 @@ function useFetch<T = unknown>(url?: string, options?: RequestInit): State<T> {
         }
 
         dispatch({ type: 'fetched', payload: data });
-      }
-      catch(error) {
+      } catch (error) {
         if (cancelRequest.current) {
           return;
         }

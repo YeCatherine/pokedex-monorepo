@@ -19,9 +19,9 @@ function App() {
   const element = useRoutes([
     {
       path: '/',
-      element: <ProgramsPage />,
+      element: <ProgramsPage />
     },
-    { path: 'team', element: <AboutPage /> },
+    { path: 'team', element: <AboutPage /> }
   ]);
 
   const [formState, setFormState] = useState<formSearchType>(DEFAULT_SEARCH_PARAMS);

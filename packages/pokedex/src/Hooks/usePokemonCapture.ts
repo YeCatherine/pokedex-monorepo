@@ -1,5 +1,5 @@
-import useLocalStorage from './useLocalStorage';
-import IPokemonData from '../Types/IPokemonData';
+import useLocalStorage from "./useLocalStorage";
+import IPokemonData from "../Types/IPokemonData";
 
 interface CapturedPokemonType {
   capturedPokemons: Array<IPokemonData>;
@@ -12,16 +12,17 @@ interface CapturedPokemonType {
  */
 export default function usePokemonCapture(): CapturedPokemonType {
   const [capturedPokemons, setCapturedPokemonList] = useLocalStorage<Array<IPokemonData>>(
-    'capturedPokemonList', []);
+    "capturedPokemonList",
+    []
+  );
 
   /**
    * Checks if the pokemon is captured.
    * @param {IPokemonData} pokemon The pokemon.
    */
   const checkCapturedPokemon = (pokemon: IPokemonData): boolean => {
-    const finding = capturedPokemons.find(
-      currentPokemon => currentPokemon.name === pokemon.name);
-    return typeof finding === 'object';
+    const finding = capturedPokemons.find((currentPokemon) => currentPokemon.name === pokemon.name);
+    return typeof finding === "object";
   };
 
   /**
@@ -30,10 +31,10 @@ export default function usePokemonCapture(): CapturedPokemonType {
    */
   const setCapturedPokemons = (pokemon: IPokemonData): void => {
     if (checkCapturedPokemon(pokemon)) {
-      setCapturedPokemonList(capturedPokemons.filter(
-        currentPokemon => currentPokemon.name !== pokemon.name));
-    }
-    else {
+      setCapturedPokemonList(
+        capturedPokemons.filter((currentPokemon) => currentPokemon.name !== pokemon.name)
+      );
+    } else {
       setCapturedPokemonList([...capturedPokemons, pokemon]);
     }
   };

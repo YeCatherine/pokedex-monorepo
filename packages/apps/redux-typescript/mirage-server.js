@@ -20,11 +20,11 @@ createServer({
           movies: [
             { id: 1, name: 'Inception', year: 2010 },
             { id: 2, name: 'Interstellar', year: 2014 },
-            { id: 3, name: 'Dunkirk', year: 2017 },
-          ],
+            { id: 3, name: 'Dunkirk', year: 2017 }
+          ]
         };
       },
-      { timing: 4000 },
+      { timing: 4000 }
     );
 
     // Using the `Response` class to return a 500
@@ -34,5 +34,5 @@ createServer({
 
       return new Response(500, headers, data);
     });
-  },
+  }
 });

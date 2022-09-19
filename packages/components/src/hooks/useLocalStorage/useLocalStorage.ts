@@ -8,10 +8,7 @@ type SetValue<T> = Dispatch<SetStateAction<T>>;
  * @param {String} key The key for storage.
  * @param initialValue The value to be held in storage.
  */
-export function useLocalStorage<T>(
-  key: string,
-  initialValue: T): [T, SetValue<T>] {
-
+export function useLocalStorage<T>(key: string, initialValue: T): [T, SetValue<T>] {
   /**
    * Get from local storage, then parse stored json or return initialValue
    */
@@ -22,8 +19,7 @@ export function useLocalStorage<T>(
     try {
       const item = window.localStorage.getItem(key);
       return item ? (JSON.parse(item) as T) : initialValue;
-    }
-    catch(error) {
+    } catch (error) {
       console.warn(`Error reading localStorage key “${key}”:`, error);
       return initialValue;
     }
@@ -40,7 +36,7 @@ export function useLocalStorage<T>(
    * persists the new value to localStorage.
    * @param value
    */
-  const setValue: SetValue<T> = value => {
+  const setValue: SetValue<T> = (value) => {
     if (typeof window === 'undefined') {
       console.warn(
         `Tried setting localStorage key “${key}” even though environment is not a client,`
@@ -51,8 +47,7 @@ export function useLocalStorage<T>(
       window.localStorage.setItem(key, JSON.stringify(newValue));
       setStoredValue(newValue);
       window.dispatchEvent(new Event('local-storage'));
-    }
-    catch(error) {
+    } catch (error) {
       console.warn(`Error setting localStorage key “${key}”:`, error);
     }
   };

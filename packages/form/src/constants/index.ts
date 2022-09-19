@@ -7,9 +7,9 @@ export const DEFAULT_SEARCH_PARAMS = {
   statuses: {
     active: false,
     paused: false,
-    pause_scheduled: false,
+    pause_scheduled: false
   },
-  isFetching: true,
+  isFetching: true
 };
 
 /**
@@ -25,5 +25,5 @@ export const DEFAULT_SEARCH_PARAMS = {
 export enum FormEvent {
   RESET = 'reset',
   STATUS = 'status',
-  TEXT = 'text',
+  TEXT = 'text'
 }

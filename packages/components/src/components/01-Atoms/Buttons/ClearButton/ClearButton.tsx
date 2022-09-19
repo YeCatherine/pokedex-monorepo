@@ -14,7 +14,7 @@ export const ClearButton = ({ onClick }) => {
   return (
     <Button
       id="clear-button"
-      startIcon={<ClearIcon/>}
+      startIcon={<ClearIcon />}
       name="reset"
       aria-label="Reset"
       onClick={onClick}

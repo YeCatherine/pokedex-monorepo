@@ -38,7 +38,7 @@ export const PokemonPage: React.FC = (props) => {
       .then((response: any) => {
         setPokemonSpecies(response.data);
         const translatedName = response.data.names.filter(
-          (lang) => lang.language.name === language,
+          (lang) => lang.language.name === language
         );
         setName(translatedName[0].name ? translatedName[0].name : params.name);
       })

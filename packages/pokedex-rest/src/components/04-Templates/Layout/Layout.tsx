@@ -9,11 +9,11 @@ import { GridSize } from '@material-ui/core/Grid/Grid';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    textAlign: 'center',
+    textAlign: 'center'
   },
   pokemonLogo: {
     maxWidth: '90%',
-    width: 400,
+    width: 400
   },
   loadingContainer: {
     display: 'flex',
@@ -22,11 +22,11 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     color: '#fff',
     fontSize: 24,
-    textTransform: 'uppercase',
+    textTransform: 'uppercase'
   },
   loadingText: {
-    marginTop: theme.spacing(2),
-  },
+    marginTop: theme.spacing(2)
+  }
 }));
 
 type Props = {
@@ -46,7 +46,7 @@ export const Layout: React.FC<Props> = ({
   sidebar,
   logo,
   title,
-  loading = true,
+  loading = true
 }) => {
   const classes = useStyles();
   let columnSize = 0 as GridSize;

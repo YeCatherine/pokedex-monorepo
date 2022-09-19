@@ -19,8 +19,7 @@ export const Checkboxes = ({ state, handleChange }: CheckboxesProps) => {
       }}
     >
       {Object.entries(state).map(([name, value]) => (
-        <StatusCheckbox key={name} name={name} value={value}
-                        handleChange={handleChange}/>
+        <StatusCheckbox key={name} name={name} value={value} handleChange={handleChange} />
       ))}
     </Box>
   );

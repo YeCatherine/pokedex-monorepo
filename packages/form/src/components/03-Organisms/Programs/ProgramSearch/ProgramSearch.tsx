@@ -33,7 +33,7 @@ export const ProgramSearch = ({ formState, setFormState }) => {
           sx={{
             flex: 1,
             display: 'flex',
-            alignContent: 'center',
+            alignContent: 'center'
           }}
         >
           <ClearButton onClick={handleFormEvent(FormEvent.RESET, dispatch)} />

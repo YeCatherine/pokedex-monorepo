@@ -4,12 +4,8 @@ import { ComponentStory } from '@storybook/react';
 
 import StatusCheckbox from './StatusCheckbox';
 
-const Template: ComponentStory<typeof StatusCheckbox> = ({
-  name,
-  value,
-  handleChange
-}) => (
-  <StatusCheckbox name={name} value={value} handleChange={handleChange}/>
+const Template: ComponentStory<typeof StatusCheckbox> = ({ name, value, handleChange }) => (
+  <StatusCheckbox name={name} value={value} handleChange={handleChange} />
 );
 
 export const Default = Template.bind({});

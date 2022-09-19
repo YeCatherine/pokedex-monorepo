@@ -7,7 +7,7 @@ describe('Find element by text', () => {
     render(
       <Layout>
         <h1>Layout Text</h1>
-      </Layout>,
+      </Layout>
     );
     const linkElement = screen.getByText(/Layout Text/i);
     expect(linkElement).toBeInTheDocument();
@@ -17,7 +17,7 @@ describe('Find element by text', () => {
     render(
       <Layout sidebar={<h2>Sidebar exists</h2>}>
         <h1>Layout Text</h1>
-      </Layout>,
+      </Layout>
     );
     const linkElement = screen.getByText(/Sidebar exists/i);
     expect(linkElement).toBeInTheDocument();

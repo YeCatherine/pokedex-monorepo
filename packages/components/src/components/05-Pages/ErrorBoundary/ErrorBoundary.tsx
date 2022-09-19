@@ -52,11 +52,11 @@ export class ErrorBoundary extends React.Component<{}, { hasError: boolean }> {
             <Box sx={{ p: 2, display: 'flex' }}>
               <h2>Something went wrong.</h2>
             </Box>
-            <Divider/>
+            <Divider />
             <Box>
               <details style={{ whiteSpace: 'pre-wrap' }}>
                 {this.state.error && this.state.error.toString()}
-                <br/>
+                <br />
                 {this.state.errorInfo.componentStack}
               </details>
             </Box>

@@ -26,4 +26,4 @@ module.exports = {
       // the version of React to use
     }
   }
-}
+};

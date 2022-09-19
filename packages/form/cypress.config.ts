@@ -13,16 +13,16 @@ module.exports = defineConfig({
         height: 940,
         deviceScaleRatio: 1,
         mobile: false,
-        disable: false,
-      },
+        disable: false
+      }
     },
     thresholds: {
       performance: 60,
       accessibility: 80,
       'best-practices': 80,
       seo: 80,
-      pwa: 0,
-    },
+      pwa: 0
+    }
   },
   e2e: {
     baseUrl: 'http://localhost:3002/', // this is your app
@@ -36,17 +36,17 @@ module.exports = defineConfig({
       require('@cypress/code-coverage/task')(on, config);
       on('task', {
         lighthouse: lighthouse(),
-        pa11y: pa11y(console.log.bind(console)),
+        pa11y: pa11y(console.log.bind(console))
       });
 
       getCompareSnapshotsPlugin(on, config);
-    },
+    }
   },
 
   component: {
     devServer: {
       framework: 'create-react-app',
-      bundler: 'webpack',
-    },
-  },
+      bundler: 'webpack'
+    }
+  }
 });

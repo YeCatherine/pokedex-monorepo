@@ -25,5 +25,5 @@ export const DEFAULT_SEARCH_PARAMS = {
 export enum FormEvent {
   RESET = 'reset',
   STATUS = 'status',
-  TEXT = 'text',
+  TEXT = 'text'
 }

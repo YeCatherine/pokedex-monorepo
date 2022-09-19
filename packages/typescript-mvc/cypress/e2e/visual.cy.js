@@ -9,7 +9,7 @@ describe('Visuals', () => {
       {
         performance: 60,
         accessibility: 70,
-        seo: 70,
+        seo: 70
       },
       {
         formFactor: 'desktop',
@@ -18,8 +18,8 @@ describe('Visuals', () => {
           disable: false,
           width: Cypress.config('viewportWidth'),
           height: Cypress.config('viewportHeight'),
-          deviceScaleRatio: 1,
-        },
+          deviceScaleRatio: 1
+        }
       }
     );
   });

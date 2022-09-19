@@ -14,17 +14,17 @@ import PokemonCard from '../../02-Organisms/PokemonCard/PokemonCard';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+    flexGrow: 1
   },
   noResultsContainer: {
-    textAlign: 'center',
+    textAlign: 'center'
   },
   noResults: {
     color: '#FFF',
     fontSize: 24,
     textTransform: 'uppercase',
-    marginTop: theme.spacing(6),
-  },
+    marginTop: theme.spacing(6)
+  }
 }));
 
 // import { LanguageSwitcher } from
@@ -34,7 +34,7 @@ enum SortDirection {
   SortIDAsc = 'SortIDAsc',
   SortIDDesc = 'SortIDDesc',
   SortNameAZ = 'SortNameAZ',
-  SortNameZA = 'SortNameZA',
+  SortNameZA = 'SortNameZA'
 }
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -42,7 +42,7 @@ const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: 'center',
-  color: theme.palette.text.secondary,
+  color: theme.palette.text.secondary
 }));
 /**
  * Generates the list of pokemon.

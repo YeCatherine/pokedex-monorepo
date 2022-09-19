@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { getIdFromURL } from '../../Services/Common';
-import IPokemonSimpleComponent from '../../Types/IPokemonSimpleComponent';
-import ReactImageFallback from 'react-image-fallback';
+import React, { useEffect, useState } from "react";
+import { getIdFromURL } from "../../Services/Common";
+import IPokemonSimpleComponent from "../../Types/IPokemonSimpleComponent";
+import ReactImageFallback from "react-image-fallback";
 
 /**
  * Gets the image of the pokemon.
@@ -13,44 +13,43 @@ const PokemonImage: React.FC<IPokemonSimpleComponent> = (props) => {
   /**
    * Pokemon Id.
    */
-  const [pokemonImageURL, setPokemonImageURL] = useState<string>('');
-  const [pokemonFallbackImageURL, setFallbackPokemonImageURL] = useState<string>(
-    '');
+  const [pokemonImageURL, setPokemonImageURL] = useState<string>("");
+  const [pokemonFallbackImageURL, setFallbackPokemonImageURL] = useState<string>("");
 
   useEffect(() => {
     let pokemonId: number | undefined;
-    if (typeof pokemon.id !== 'undefined') {
+    if (typeof pokemon.id !== "undefined") {
       pokemonId = pokemon.id;
-    }
-    else {
+    } else {
       pokemonId = getIdFromURL(pokemon.url);
     }
 
-    if (typeof pokemon.sprites?.other?.front_default?.front_default !==
-      'undefined') {
+    if (typeof pokemon.sprites?.other?.front_default?.front_default !== "undefined") {
       setPokemonImageURL(pokemon.sprites.other.front_default.front_default);
-    }
-    else {
+    } else {
       setPokemonImageURL(
-        `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonId}.png`);
+        `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonId}.png`
+      );
     }
 
-    if (typeof pokemon.sprites?.other?.front_default?.front_default !==
-      'undefined') {
+    if (typeof pokemon.sprites?.other?.front_default?.front_default !== "undefined") {
       setPokemonImageURL(pokemon.sprites.front_default);
-    }
-    else {
+    } else {
       setFallbackPokemonImageURL(
-        `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`);
+        `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`
+      );
     }
   }, [pokemon]);
 
-  return <ReactImageFallback
-    src={pokemonImageURL}
-    fallbackImage={pokemonFallbackImageURL}
-    initialImage="loader.gif"
-    alt={pokemon.name}
-    className="pokemon-main-image"/>;
+  return (
+    <ReactImageFallback
+      src={pokemonImageURL}
+      fallbackImage={pokemonFallbackImageURL}
+      initialImage="loader.gif"
+      alt={pokemon.name}
+      className="pokemon-main-image"
+    />
+  );
 };
 
 export default PokemonImage;

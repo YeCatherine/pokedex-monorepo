@@ -8,11 +8,8 @@ export default {
   component: Checkboxes
 } as ComponentMeta<typeof Checkboxes>;
 
-const Template: ComponentStory<typeof Checkboxes> = ({
-  state,
-  handleChange
-}) => (
-  <Checkboxes state={state} handleChange={handleChange}/>
+const Template: ComponentStory<typeof Checkboxes> = ({ state, handleChange }) => (
+  <Checkboxes state={state} handleChange={handleChange} />
 );
 
 export const Default = Template.bind({});

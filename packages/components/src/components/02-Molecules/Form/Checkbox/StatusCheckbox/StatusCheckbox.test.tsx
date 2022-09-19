@@ -10,8 +10,7 @@ describe('Basic testing', () => {
     const onChange = jest.fn();
     const testValue = false;
     const { getByLabelText } = render(
-      <StatusCheckbox name="test checkbox" value={testValue}
-                      handleChange={onChange}/>
+      <StatusCheckbox name="test checkbox" value={testValue} handleChange={onChange} />
     );
     const component = getByLabelText('Test Checkbox');
     // check that component exists on the page.

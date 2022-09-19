@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "@monorepo/redux",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,6 +12,7 @@
     "@craco/craco": "6.4.5",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
+    "@monorepo/components": "*",
     "@mui/icons-material": "5.10.3",
     "@mui/material": "^5.10.5",
     "@mui/x-data-grid": "5.17.3",
@@ -23,7 +24,6 @@
     "@types/node": "^18.7.18",
     "@types/react": "^18.0.20",
     "@types/react-dom": "^18.0.6",
-    "@mui/x-data-grid": "5.17.3",
     "currency-symbol-map": "5.1.0",
     "husky": "8.0.1",
     "json-server": "^0.17.0",
@@ -35,12 +35,11 @@
     "react-redux": "^8.0.2",
     "react-router-dom": "^6.4.0",
     "react-scripts": "5.0.1",
-    "typescript": "^4.8.3",
-    "web-vitals": "^3.0.2",
     "styled-components": "^5.3.5",
     "styled-normalize": "^8.0.7",
     "typedoc": "0.23.14",
-    "@monorepo/components": "*"
+    "typescript": "^4.8.3",
+    "web-vitals": "^3.0.2"
   },
   "devDependencies": {
     "cypress": "10.8.0",

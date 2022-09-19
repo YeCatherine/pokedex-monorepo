@@ -8,7 +8,7 @@ import LanguageSwitcher from './LanguageSwitcher';
 
 export default {
   title: 'Pokedex/Atoms',
-  component: LanguageSwitcher,
+  component: LanguageSwitcher
 } as ComponentMeta<typeof LanguageSwitcher>;
 
 // More on component templates:

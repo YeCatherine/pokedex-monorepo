@@ -34,7 +34,7 @@ export function PokemonCardsList({ listData }) {
     <Grid container className={classes.root} spacing={4}>
       {listData.map((pokemon) => (
         <Grid key={pokemon.name} item xs={12} sm={12} md={6} lg={4}>
-          <PokemonCard pokemon={pokemon}/>
+          <PokemonCard pokemon={pokemon} />
         </Grid>
       ))}
     </Grid>

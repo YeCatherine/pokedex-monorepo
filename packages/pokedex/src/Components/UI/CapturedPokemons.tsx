@@ -1,6 +1,6 @@
-import React from 'react';
-import PokemonCard from './PokemonCard';
-import usePokemonCapture from '../../Hooks/usePokemonCapture';
+import React from "react";
+import PokemonCard from "./PokemonCard";
+import usePokemonCapture from "../../Hooks/usePokemonCapture";
 
 /**
  * Functional component for list of captured pokemon.
@@ -9,15 +9,14 @@ import usePokemonCapture from '../../Hooks/usePokemonCapture';
  */
 const CapturedPokemons: React.FC = (props) => {
   const { capturedPokemons } = usePokemonCapture();
-  const list = capturedPokemons.map((currentPokemon, index) =>
-    <PokemonCard key={index} pokemon={currentPokemon}/>
-  );
+  const list = capturedPokemons.map((currentPokemon, index) => (
+    <PokemonCard key={index} pokemon={currentPokemon} />
+  ));
 
   return (
     <>
       <h4>Captured</h4>
-      <div
-        className="list-group d-flex flex-wrap flex-row justify-content-center">{list}</div>
+      <div className="list-group d-flex flex-wrap flex-row justify-content-center">{list}</div>
     </>
   );
 };

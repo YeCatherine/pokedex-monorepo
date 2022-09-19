@@ -1,4 +1,4 @@
-import IPokemonData from './IPokemonData';
+import IPokemonData from "./IPokemonData";
 
 /**
  * The Interface for pokemon image.

@@ -1,10 +1,10 @@
-import http from '../http-common';
+import http from "../http-common";
 
 /**
  * Retrieves the Get request from "/pokemon?limit= ".
  */
 const getAll = (): any => {
-  return http.get('/pokemon-species?limit=1200');
+  return http.get("/pokemon-species?limit=1200");
 };
 
 /**
@@ -37,7 +37,7 @@ const getSpecies = (name: string): any => {
  * Get List of available languages.
  */
 const getLanguages = () => {
-  return http.get('/language');
+  return http.get("/language");
 };
 /**
  * Retrieves the Get request from `/move/${name}`.

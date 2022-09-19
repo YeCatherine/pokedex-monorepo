@@ -10,6 +10,6 @@ export default {
   component: DataLoading
 } as ComponentMeta<typeof DataLoading>;
 
-const Template: ComponentStory<typeof DataLoading> = () => <DataLoading/>;
+const Template: ComponentStory<typeof DataLoading> = () => <DataLoading />;
 
 export const Default = Template.bind({});

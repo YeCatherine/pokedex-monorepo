@@ -18,22 +18,14 @@ module.exports = defineConfig({
         // let's increase the browser window size when running headlessly
         // this will produce higher resolution images and videos
         // https://on.cypress.io/browser-launch-api
-        console.log(
-          'launching browser %s is headless? %s',
-          browser.name,
-          browser.isHeadless
-        );
+        console.log('launching browser %s is headless? %s', browser.name, browser.isHeadless);
 
         // the browser width and height we want to get
         // our screenshots and videos will be of that resolution
         const width = 1000;
         const height = 660;
 
-        console.log(
-          'setting the browser window size to %d x %d',
-          width,
-          height
-        );
+        console.log('setting the browser window size to %d x %d', width, height);
 
         if (browser.name === 'chrome' && browser.isHeadless) {
           launchOptions.args.push(`--window-size=${width},${height}`);
@@ -80,8 +72,8 @@ module.exports = defineConfig({
           // insert the text into the report returned the test
           report.txt = txt;
           return report;
-        },
+        }
       });
-    },
-  },
+    }
+  }
 });

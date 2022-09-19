@@ -74,10 +74,7 @@ export default class Controller {
    */
   // eslint-disable-next-line class-methods-use-this
   handleProgramClick = (e: HTMLElementEvent<HTMLButtonElement>) => {
-    if (
-      e.target.dataset !== undefined &&
-      e.target.dataset.version !== undefined
-    ) {
+    if (e.target.dataset !== undefined && e.target.dataset.version !== undefined) {
       alert(`version: ${e.target.dataset.version}`);
     } else {
       console.warn('no version provided');

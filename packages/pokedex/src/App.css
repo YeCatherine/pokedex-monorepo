@@ -1,103 +1,103 @@
 body {
-    background-color: #b9e4e6 !important;
+  background-color: #b9e4e6 !important;
 }
 
 .App {
-    padding-top: 4rem;
-    text-align: center;
-    background-color: #b9e4e6;
+  padding-top: 4rem;
+  text-align: center;
+  background-color: #b9e4e6;
 }
 
 .card {
-    width: 10rem !important;
+  width: 10rem !important;
 }
 
 .card:hover {
-    box-shadow: 3px 5px lightgray !important;
+  box-shadow: 3px 5px lightgray !important;
 }
 
 input.p-2.flex-grow-1 {
-    margin: 20px;
+  margin: 20px;
 }
 
 .card.text-dark.text-center {
-    margin: 5px 5px;
+  margin: 5px 5px;
 }
 
 .pokemon.list-group-item {
-    width: 300px;
-    height: auto;
-    box-shadow: 0 0 10px 10px gainsboro !important;
+  width: 300px;
+  height: auto;
+  box-shadow: 0 0 10px 10px gainsboro !important;
 }
 
 .pokemon-card .card-header {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .pokemon-id {
-    font-size: 14px;
-    font-weight: bold;
-    color: #000;
-
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
 }
 
 /* horizontal and vertival align*/
 .pokemon-name {
-    font-size: 1.25rem;
-    line-height: 70px;
-    height: 70px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: capitalize;
-    color: #000;
+  font-size: 1.25rem;
+  line-height: 70px;
+  height: 70px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #000;
 }
 
 .pokemon-name span {
-    line-height: normal;
-    display: inline-block;
-    vertical-align: middle;
+  line-height: normal;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.pokemon-name:hover, .pokemon-name:active {
-    text-decoration: none;
+.pokemon-name:hover,
+.pokemon-name:active {
+  text-decoration: none;
 }
 
 .class-logo {
-    width: 100px;
+  width: 100px;
 }
 
 .pokemon-main-image {
-    width: 100px;
-    height: auto;
+  width: 100px;
+  height: auto;
 }
 
 .pokemon .pokemon-main-image {
-    width: 300px;
+  width: 300px;
 }
 
 .pokemon .card {
-    width: auto !important;
+  width: auto !important;
 }
 
 .pokemon-moves.list-group .list-group-item {
-    width: 180px;
+  width: 180px;
 }
 
 .pokemon-moves a {
-    font-weight: bold;
-    text-decoration: none;
-    color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
 }
 
 .pokemon-moves a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .capture-free-button img {
-    width: 20px;
-    height: auto;
+  width: 20px;
+  height: auto;
 }
 
 .card img.rounded-circle {
-    width: 130px;
+  width: 130px;
 }

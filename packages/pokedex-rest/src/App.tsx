@@ -35,7 +35,7 @@ const Navigation = () => (
 const PokemonList = React.lazy(() => import('@/components/05-Pages/PokemonList/PokemonList'));
 
 const PokemonMovePage = React.lazy(
-  () => import('@/components/05-Pages/PokemonMovePage/PokemonMovePage'),
+  () => import('@/components/05-Pages/PokemonMovePage/PokemonMovePage')
 );
 const PokemonPage = React.lazy(() => import('@/components/05-Pages/PokemonPage/PokemonPage'));
 const PokemonTable = React.lazy(() => import('@/components/05-Pages/PokemonTable/PokemonTable'));

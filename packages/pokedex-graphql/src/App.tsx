@@ -21,9 +21,7 @@ export default function App() {
       console.error(errors);
     }
 
-    const result = data.queryPokemon.sort(
-      (pokemonA, pokemonB) => pokemonA.id - pokemonB.id
-    );
+    const result = data.queryPokemon.sort((pokemonA, pokemonB) => pokemonA.id - pokemonB.id);
 
     setPokedexData(result);
   }, [pokemonTypeFilter, capturedFilter]);
@@ -47,9 +45,7 @@ export default function App() {
       logo={pokemonLogo}
       loading={pokedexData}
     >
-      <PokemonCardsList
-        listData={pokedexData}
-      />
+      <PokemonCardsList listData={pokedexData} />
     </Layout>
   );
 }

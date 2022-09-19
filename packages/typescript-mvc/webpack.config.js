@@ -6,31 +6,31 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = () => ({
   output: {
     path: path.join(__dirname, '/dist'),
-    filename: 'bundle.js',
+    filename: 'bundle.js'
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'src/index.html',
+      template: 'src/index.html'
     }),
     // new BundleAnalyzerPlugin(),
     new CopyPlugin({
       patterns: [
         {
           from: path.resolve(__dirname, 'public', 'host-app-data.json'),
-          to: path.resolve(__dirname, 'dist', 'host-app-data.json'),
-        },
-      ],
-    }),
+          to: path.resolve(__dirname, 'dist', 'host-app-data.json')
+        }
+      ]
+    })
   ],
   devServer: {
     open: true,
-    port: 3030,
+    port: 3030
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
-      '@': path.resolve(__dirname, 'src'),
-    },
+      '@': path.resolve(__dirname, 'src')
+    }
   },
   module: {
     rules: [
@@ -38,24 +38,24 @@ module.exports = () => ({
         test: /\.(js|jsx)$/, // .js and .jsx files
         exclude: /node_modules/, // excluding the node_modules folder
         use: {
-          loader: 'babel-loader',
-        },
+          loader: 'babel-loader'
+        }
       },
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
-        exclude: /node_modules/,
+        exclude: /node_modules/
       },
       {
         test: /\.(sa|sc|c)ss$/, // styles files
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.(png|woff|woff2|eot|ttf|svg|json)$/, // to import images and
         // fonts
         loader: 'url-loader',
-        options: { limit: false },
-      },
-    ],
-  },
+        options: { limit: false }
+      }
+    ]
+  }
 });

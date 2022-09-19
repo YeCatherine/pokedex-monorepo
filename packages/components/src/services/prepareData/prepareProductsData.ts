@@ -17,9 +17,7 @@ import { iProgramGrid } from '../../types';
  *
  * @return
  */
-export const prepareProductsData = (
-  programs: iProgramGrid, columns?: GridColumns | undefined) => {
-
+export const prepareProductsData = (programs: iProgramGrid, columns?: GridColumns | undefined) => {
   if (!programs || !Array.isArray(programs)) {
     return { status: false };
   }
@@ -33,8 +31,7 @@ export const prepareProductsData = (
     if (preparedItem.pause_at !== null) {
       const date = moment(item.pause_at);
       preparedItem.pause_at = date.format('YYYY/MM/DD');
-    }
-    else {
+    } else {
       preparedItem.pause_at = '-';
     }
 
@@ -42,8 +39,7 @@ export const prepareProductsData = (
     const preparedThreshold = (Number(item.threshold) / 100).toFixed(2);
 
     // Prepare the currency symbol.
-    preparedItem.threshold = `${preparedThreshold} ${getSymbolFromCurrency(
-      item.currency)}`;
+    preparedItem.threshold = `${preparedThreshold} ${getSymbolFromCurrency(item.currency)}`;
 
     // Prepare the format of the status.
     preparedItem.status = toTitleCase(item.status.replace('_', ' '));
@@ -54,8 +50,7 @@ export const prepareProductsData = (
   // Prepare columns.
   if (columns) {
     table.columns = columns;
-  }
-  else {
+  } else {
     // table.columns = [
     //   { field: 'currency', hide: true, headerName: 'currency' },
     //   { field: 'id', hide: true, headerName: 'id' },

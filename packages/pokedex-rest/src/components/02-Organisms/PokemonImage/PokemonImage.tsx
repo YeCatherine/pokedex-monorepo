@@ -29,7 +29,7 @@ const PokemonImage: React.FC<IPokemonSimpleComponent> = (props) => {
       setPokemonImageURL(pokemon.sprites.other.front_default.front_default);
     } else {
       setPokemonImageURL(
-        `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonId}.png`,
+        `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonId}.png`
       );
     }
 
@@ -37,7 +37,7 @@ const PokemonImage: React.FC<IPokemonSimpleComponent> = (props) => {
       setPokemonImageURL(pokemon.sprites.front_default);
     } else {
       setFallbackPokemonImageURL(
-        `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`,
+        `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`
       );
     }
   }, [pokemon]);

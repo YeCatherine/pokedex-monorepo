@@ -150,10 +150,7 @@ export default class View implements ViewInterface {
   displayList(items: HostGroupedType) {
     // const p = this.createElement('p');
     Object.entries(items).forEach(([host, value]) => {
-      this.applicationList.insertAdjacentHTML(
-        'beforeend',
-        this.cardTemplate(host, value)
-      );
+      this.applicationList.insertAdjacentHTML('beforeend', this.cardTemplate(host, value));
     });
   }
 

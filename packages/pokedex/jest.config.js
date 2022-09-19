@@ -26,7 +26,7 @@ module.exports = {
   // information should be collected collectCoverageFrom: undefined,
 
   // The directory where Jest should output its coverage files
-  coverageDirectory: 'coverage',
+  coverageDirectory: "coverage",
 
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [
@@ -34,10 +34,10 @@ module.exports = {
   // ],
 
   // Indicates which provider should be used to instrument code for coverage
-  coverageProvider: 'v8',
+  coverageProvider: "v8",
 
   // A list of reporter names that Jest uses when writing coverage reports
-  coverageReporters: ['json', 'text', 'lcov', 'clover'],
+  coverageReporters: ["json", "text", "lcov", "clover"],
   // An object that configures minimum threshold enforcement for coverage
   // results coverageThreshold: undefined,
 
@@ -88,7 +88,7 @@ module.exports = {
   // names that allow to stub out resources with a single module
   // moduleNameMapper: {},
   moduleNameMapper: {
-    '^@/(.+)': '<rootDir>/src/$1'
+    "^@/(.+)": "<rootDir>/src/$1"
   },
   // An array of regexp pattern strings, matched against all module paths
   // before considered 'visible' to the module loader modulePathIgnorePatterns:
@@ -109,11 +109,11 @@ module.exports = {
   // Use this configuration option to add custom reporters to Jest
   // Reporter for Jest Project Report
   reporters: [
-    'default',
+    "default",
     [
-      './node_modules/jest-html-reporter',
+      "./node_modules/jest-html-reporter",
       {
-        pageTitle: 'Project Jest Report'
+        pageTitle: "Project Jest Report"
       }
     ]
   ],
@@ -153,7 +153,7 @@ module.exports = {
   // snapshot testing snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  testEnvironment: 'jsdom',
+  testEnvironment: "jsdom",
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -176,7 +176,7 @@ module.exports = {
 
   // This option allows the use of a custom results processor
   // Add report with the help of "jest-html-reporter"
-  testResultsProcessor: './node_modules/jest-html-reporter'
+  testResultsProcessor: "./node_modules/jest-html-reporter"
   // This option allows use of a custom test runner
   // testRunner: "jest-circus/runner",
 
@@ -199,4 +199,4 @@ module.exports = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
-}
+};

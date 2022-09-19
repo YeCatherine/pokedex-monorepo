@@ -13,7 +13,7 @@ interface CapturedPokemonType {
 export default function usePokemonCapture(): CapturedPokemonType {
   const [capturedPokemons, setCapturedPokemonList] = useLocalStorage<Array<IPokemonData>>(
     'capturedPokemonList',
-    [],
+    []
   );
 
   /**
@@ -32,7 +32,7 @@ export default function usePokemonCapture(): CapturedPokemonType {
   const setCapturedPokemons = (pokemon: IPokemonData): void => {
     if (checkCapturedPokemon(pokemon)) {
       setCapturedPokemonList(
-        capturedPokemons.filter((currentPokemon) => currentPokemon.name !== pokemon.name),
+        capturedPokemons.filter((currentPokemon) => currentPokemon.name !== pokemon.name)
       );
     } else {
       setCapturedPokemonList([...capturedPokemons, pokemon]);

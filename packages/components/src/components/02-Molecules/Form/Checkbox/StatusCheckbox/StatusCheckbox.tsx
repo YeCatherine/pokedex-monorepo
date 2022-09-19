@@ -15,12 +15,7 @@ type StatusCheckboxProps = {
  * @param handleChange
  * @constructor
  */
-export function StatusCheckbox({
-  name,
-  value,
-  handleChange
-}: StatusCheckboxProps) {
-
+export function StatusCheckbox({ name, value, handleChange }: StatusCheckboxProps) {
   const label: string = toTitleCase(name.replace('_', ' '));
 
   return (
@@ -28,8 +23,7 @@ export function StatusCheckbox({
       sx={{ justifyContent: 'space-around' }}
       key={name}
       control={
-        <Checkbox id={`status-${name}`} checked={value} onChange={handleChange}
-                  name={name}/>
+        <Checkbox id={`status-${name}`} checked={value} onChange={handleChange} name={name} />
       }
       label={label}
     />

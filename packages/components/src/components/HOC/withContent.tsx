@@ -15,15 +15,13 @@ import { formSearchType, iProgramGrid } from '../../types';
  */
 export function withContent(Component, searchCallback) {
   return function ComponentWithContent({ formState }) {
-    const [preparedData, setPreparedData] = useState<iProgramGrid | null>(
-      {
-        status: false
-      });
+    const [preparedData, setPreparedData] = useState<iProgramGrid | null>({
+      status: false
+    });
 
     const debouncedFormState = useDebounce<formSearchType>(formState, 500);
     const href = prepareUrlLink(debouncedFormState);
-    const data = useDataSource<iProgramGrid>(searchCallback, { href },
-      { status: false });
+    const data = useDataSource<iProgramGrid>(searchCallback, { href }, { status: false });
 
     useEffect(() => {
       const productTable = prepareProductsData(data);
@@ -32,6 +30,6 @@ export function withContent(Component, searchCallback) {
         setPreparedData(productTable);
       }
     }, [data]);
-    return <Component preparedData={preparedData}/>;
+    return <Component preparedData={preparedData} />;
   };
 }

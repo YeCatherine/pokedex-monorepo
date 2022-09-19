@@ -39,16 +39,15 @@ type Props = {
   title?: React.ReactNode;
 };
 
-export const Layout: React.FC<Props> = (
-  {
-    children,
-    header,
-    top,
-    sidebar,
-    logo, title,
-    loading = true
-  }) => {
-
+export const Layout: React.FC<Props> = ({
+  children,
+  header,
+  top,
+  sidebar,
+  logo,
+  title,
+  loading = true
+}) => {
   const classes = useStyles();
   let columnSize = 0 as GridSize;
   let contentSize = 12 as GridSize;
@@ -62,8 +61,7 @@ export const Layout: React.FC<Props> = (
     <main className={classes.root}>
       {header}
       <Container>
-
-        {logo && <img src={logo} alt="" className={classes.pokemonLogo}/>}
+        {logo && <img src={logo} alt="" className={classes.pokemonLogo} />}
         <Typography variant="srOnly">
           <h1>{title}</h1>
         </Typography>
@@ -71,30 +69,19 @@ export const Layout: React.FC<Props> = (
           <>
             {top}
             <Grid container className={classes.root} spacing={4}>
-              {sidebar &&
-              <Grid
-                item
-                xs={12}
-                sm={12}
-                md={columnSize}
-                lg={columnSize}
-              >
-                <Card variant="outlined">{sidebar}</Card>
-              </Grid>}
-              <Grid
-                item
-                xs={12}
-                sm={12}
-                md={contentSize}
-                lg={contentSize}
-              >
+              {sidebar && (
+                <Grid item xs={12} sm={12} md={columnSize} lg={columnSize}>
+                  <Card variant="outlined">{sidebar}</Card>
+                </Grid>
+              )}
+              <Grid item xs={12} sm={12} md={contentSize} lg={contentSize}>
                 {children}
               </Grid>
             </Grid>
           </>
         ) : (
           <div className={classes.loadingContainer}>
-            <CircularProgress color="inherit" size={60}/>
+            <CircularProgress color="inherit" size={60} />
             <Typography className={classes.loadingText}>Loading</Typography>
           </div>
         )}
@@ -104,4 +91,3 @@ export const Layout: React.FC<Props> = (
 };
 
 export default Layout;
-
